@@ -1,9 +1,9 @@
 # My Villages, Florida Butterfly & Food Garden – Master Context File
 **Location**: The Villages, Central Florida (USDA 9b)  
 **Site**: North–south fence line, east side of house (wall only 10 ft away)  
-**Sun pattern**: Most direct sun at the back (Pos 1) → progressively shadier toward front (Pos 12)  
-**Layout**: 12 × 30-gal big pots @ exactly 4 ft 8 in (56 in) center-to-center | Total run ≈53 ft  
-**Last updated**: November 17, 2025 – 02:20 PM EST
+**Sun pattern**: Most direct sun at back (Pos 1) → progressively shadier toward front (Pos 12)  
+**Layout**: 12 × 30-gal big pots @ exactly 4 ft 8 in centers | Total run ≈53 ft  
+**Last updated**: November 17, 2025 – 02:30 PM EST
 
 ## 1. BIG POTS – Final Layout (Back → Front)
 
@@ -46,9 +46,36 @@ Drip stations exist between: 1–2, 4–5, 5–6, 6–7, 7–8, 8–9, 11–12
 - [ ] Buy French marigolds (see placement below)
 - [ ] Diagnose front-yard plants
 - [ ] Make waterproof plant signs
+- [ ] Plant the back 6 big pots this week## 3. ACTIVE TO-DO LIST – November–December 2025
+- [ ] Buy 4 Celebrity tomato transplants
+- [ ] Buy frost fabric + Christmas/rope lights
+- [ ] Buy 5 bags pine bark nuggets/mini-nuggets
+- [ ] Fix/add drip emitter at position 12
+- [ ] Test & adjust every drip emitter
+- [ ] Buy/start green bell & jalapeño seeds/transplants
+- [ ] Buy French marigolds
+- [ ] Diagnose front-yard plants
+- [ ] Make plant signs
+- [ ] **Make 8–10 homemade yellow sticky traps** (recipe below)
 - [ ] Plant the back 6 big pots this week
 
-## 4. French Marigold Placement (pest protection)
+## 4. Homemade Yellow Sticky Trap Recipe (permanent)
+**Best version for Florida weather**  
+**Materials** (Dollar Tree / Walmart / Home Depot)  
+- Bright yellow poster board or disposable plates  
+- Wide clear packing tape or contact paper  
+- Vaseline (big jar) or Tangle-Trap paste  
+- Bamboo stakes, wire hangers, or golf tees  
+
+**Steps**  
+1. Cut yellow card into 6×9 in rectangles (or use yellow plates).  
+2. Cover both sides with clear packing tape (rain-proof).  
+3. Smear thin layer of Vaseline or Tangle-Trap on both sides.  
+4. Poke hole, attach to stake/wire, place 6–12 in above plant canopy.  
+5. One trap above each tomato & pepper pot (Pos 2, 8, 9, 10) + extras.  
+**Replace** when black with bugs or after heavy rain.
+
+## 5. French Marigold Placement (pest protection)
 Plant 2–3 short French marigolds around the base of:
 - Pos 2 (tomatoes) – nematode control
 - Pos 8 (jalapeño)
@@ -56,7 +83,7 @@ Plant 2–3 short French marigolds around the base of:
 - Pos 10 (poblano)
 - Pos 11 (basil)
 
-## 5. Fertilizing Plan
+## 6. Fertilizing Plan
 | Timing            | Product                         | Rate (30-gal pot)          |
 |-------------------|---------------------------------|----------------------------|
 | At planting       | Espoma Tomato-tone or 6-6-6     | ½ cup                      |
@@ -64,16 +91,16 @@ Plant 2–3 short French marigolds around the base of:
 | Fruit set onward  | Add 0-10-10 or banana water     | 1 Tbsp per plant           |
 | Herbs             | Half-strength everything        | Light feeders              |
 
-## 6. Pest Mitigation – Butterfly & Bee Safe ONLY
+## 7. Pest Mitigation – Butterfly & Bee Safe ONLY
 - Whitefly/aphid spray (dusk): 1 gal water + 2 Tbsp Dr. Bronner’s Peppermint Castile + 1 Tbsp hort soap or cold-pressed neem  
 - Hornworms → hand-pick or BT only on tomatoes/peppers  
 - Yellow sticky traps above every tomato & pepper pot  
 - NEVER spray neem on milkweed, parsley, dill, fennel
 
-## 7. Mulch (permanent)
+## 8. Mulch (permanent)
 12 × 30-gal pots → 3" layer pine bark nuggets/mini-nuggets → 5 bags (2 cu ft each)
 
-## 8. February 2026 One-Time Task
+## 9. February 2026 One-Time Task
 Remove in-ground bush at real position 9 → slide temporary 30-gal into spot → plant green bell pepper
 
 You’re fully restored and completely current!  
