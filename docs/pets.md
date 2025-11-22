@@ -1,3 +1,7 @@
+---
+layout: default
+title: Backyard Garden
+---
 # Our Pets & Aquariums
 
 ### The Dogs
