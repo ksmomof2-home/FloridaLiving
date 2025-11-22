@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Key / Persian Lime
 **Citrus × aurantiifolia** | Rutaceae
 
