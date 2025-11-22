@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Passionflower (Maypop)
 **Passiflora incarnata** | Passifloraceae
 
