@@ -5,7 +5,7 @@ Welcome to our little slice of paradise in Central Florida (USDA 9b)!
 We’re slowly turning our backyard fence line into a year-round food + butterfly factory, while the front yard stays mostly native wildflowers and bird-friendly chaos.
 
 ### Explore the Gardens
-- [Backyard Fence-Line Garden (12 big pots + drip system)](docs/backyard.md) – tomatoes, citrus, swallowtails, monarchs  
+- [Backyard Fence-Line Garden (12 big pots + drip system)](backyard.md) – tomatoes, citrus, swallowtails, monarchs  
 - Front yard – coming soon!  
 - Native wildflower patches – coming soon!
 
