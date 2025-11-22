@@ -1,18 +1,15 @@
-# Our Villages Garden & Nature Journal
+---
+layout: default
+title: Home
+---
+# Welcome to Our Villages Garden
 
-Welcome to our little slice of paradise in Central Florida (USDA 9b)!
+Central Florida (USDA 9b) – where we grow food, butterflies, and chaos.
 
-We’re slowly turning our backyard fence line into a year-round food + butterfly factory, while the front yard stays mostly native wildflowers and bird-friendly chaos.
+### Explore
+- [Backyard Fence-Line Garden](backyard.html) – 12 big pots of tomatoes, citrus, swallowtails & monarchs  
+- [Pets & Aquarium](pets.html) – dogs, cats, and a very spoiled 75-gallon tank  
+- [All Plant Pages](/FloridaLiving/plants/) – detailed care sheets (QR codes on stakes!)
 
-### Explore the Gardens
-- [Backyard Fence-Line Garden (12 big pots + drip system)](backyard.md) – tomatoes, citrus, swallowtails, monarchs  
-- Front yard – coming soon!  
-- Native wildflower patches – coming soon!
-
-### Other Living Things We Love
-- [Our Pets & Aquariums](pets.md) – dogs, cats, and a very spoiled 75-gallon planted tank  
-- Bird feeders & hummingbird station  
-- Occasional wildlife visitors (gopher tortoises, sandhill cranes, etc.)
-
-Last updated: November 2025  
-Built with love & GitHub Pages
+Slowly turning our little patch into a year-round paradise.  
+New content added weekly!
