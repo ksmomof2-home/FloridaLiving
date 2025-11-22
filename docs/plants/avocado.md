@@ -26,4 +26,21 @@ title: Avocado Tree
 - Wrap trunk + frost cloth below 28 °F
 - Current status: Pos 5 – fertilized, foiled, mulched Nov 20
 
+<hr>
+<div class="plant-nav">
+  <p>
+    {% if page.prev %}
+      ← <a href="{{ page.prev }}">&laquo; Previous: {{ page.prev_name }}</a>
+    {% endif %}
+    &nbsp; &nbsp; 
+    {% if page.next %}
+      <a href="{{ page.next }}">Next: {{ page.next_name }} &raquo;</a>
+    {% endif %}
+  </p>
+  <p style="text-align:center; margin-top:1rem;">
+    <a href="/FloridaLiving/plants/">← All Plants</a> • 
+    <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
+  </p>
+</div>
+
 [← Back to Backyard](/FloridaLiving/backyard.html)
