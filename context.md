@@ -5,37 +5,36 @@
 **Layout**: 12 × 30-gal big pots @ exactly 4 ft 8 in (56 in) center-to-center | Total run ≈53 ft  
 **Last updated**: November 22, 2025
 
-## 1. CURRENT STATUS (as of Nov 22)
+## 1. CURRENT PHYSICAL LAYOUT (exactly what is sitting where right now)
 
-### BIG POTS (30-gal)
+| Pos  | BIG POT (30-gal) – CURRENT CONTENTS                              | FINAL PLAN / NOTES                                      |
+|------|-------------------------------------------------------------------|---------------------------------------------------------|
+| 1    | 2 Pineapple crowns + 3 basil cuttings                             | Stays – 2 × Pineapple                                   |
+| 2    | Empty – ready                                                     | 2 × Celebrity tomatoes (arriving ~Dec 1)                |
+| 3    | Passionflower vine                                                | Final                                                   |
+| 4    | Lime tree                                                         | Final                                                   |
+| 5    | Avocado tree                                                      | Final                                                   |
+| 6    | Rosemary (temporary)                                              | Will move to Pos 12 when drip fixed                     |
+| 7    | 2 pineapples + 2 scallions + 1 avocado (temporary junk pot)       | Future: Parsley + swamp milkweed                        |
+| 8    | Dill + a few marigold seeds                                       | Add bronze fennel later                                 |
+| 9    | Cilantro + marigold seeds                                         | Add jalapeño later                                      |
+| 10   | Empty – ready                                                     | Poblano pepper                                          |
+| 11   | Junk pot (needs emptying)                                         | Future: Basil (move from 7a)                            |
+| 12   | Junk pot (needs emptying)                                         | Future: Rosemary (move from 6) + Italian oregano        |
 
-| Pos | CURRENT (Nov 22)                          | Status      |
-|-----|-------------------------------------------|-------------|
-| 1   | 2 pineapple crowns rooting                | Done        |
-| 2   | Empty                                     | Tomatoes arriving ~Dec 1 |
-| 3   | Passionflower (fertilized, foiled, mulched) | Done        |
-| 4   | Lime tree (fertilized, foiled, mulched)   | Done        |
-| 5   | Avocado tree (fertilized, foiled, mulched)| Done        |
-| 6   | Empty                                     | —           |
-| 7   | Empty                                     | —           |
-| 8   | Empty                                     | —           |
-| 9   | In-ground bush (moving Feb) + temp empty pot | Bush moves Feb |
-| 10  | Empty                                     | —           |
-| 11  | Empty                                     | —           |
-| 12  | Empty                                     | —           |
+### SMALL POTS (a-spots)
 
-### SMALL POTS (half-positions on drip stations)
-
-| Half-pos | Size | CURRENT (Nov 22)                                      | Status |
-|----------|------|-------------------------------------------------------|--------|
-| 1–2      | 14"  | 4 rooting rosemary sprigs + marigold seeds (no foil)  | Done   |
-| 4–5      | 14"  | empty                                                 | —      |
-| 5–6      | 14"  | empty                                                 | —      |
-| 6–7      | 12"  | empty                                                 | —      |
-| 7–8      | 8"   | empty                                                 | —      |
-| 8–9      | 8"   | empty                                                 | —      |
-| 11–12    | 11"  | Wandering Jew (gift)                                  | Done   |
-| Spare    | 8"   | empty                                                 | —      |
+| Spot | CURRENT CONTENTS                                      | FINAL PLAN / NOTES                                      |
+|------|-------------------------------------------------------|---------------------------------------------------------|
+| 1a   | Rosemary sprigs + marigold seeds + chive seeds        | Chives (rosemary temporary)                             |
+| 4a   | Mint                                                  | Final                                                   |
+| 5a   | Parsley                                               | Moving to big pot 7                                     |
+| 6a   | Marigold seeds (temporary)                            | Future extra dill                                       |
+| 7a   | Basil plant                                           | Moving to big pot 11 → then becomes bronze fennel      |
+| 8a   | Empty                                                 | Future swamp milkweed                                   |
+| 9a   | Empty – ready                                         | Flex / future use                                       |
+| 10a  | Empty – ready                                         | Flex / future use                                       |
+| 11a  | Wandering Jew                                         | Final                                                   |
 
 ## 2. FINAL PLAN (what the fence line will look like when 100% finished)
 
@@ -73,14 +72,22 @@
 - [x] Fertilize, foil, mulch passionflower, lime, avocado (Nov 20)
 - [x] Plant 2 pineapple crowns in Pos 1 (Nov 22)
 - [x] Start rosemary cuttings + marigold seeds in small 14" between 1–2 (Nov 22)
-- [ ] Plant 2 × Celebrity tomatoes in Pos 2 (arriving soon)
-- [ ] Buy remaining 4 bags pine bark nuggets/mini-nuggets
+- [x] Buy remaining 4 bags pine bark nuggets/mini-nuggets
+- [x] Plant cilantro + marigold seeds in Pos 9
+- [x] Plant dill + marigold seeds in Pos 8
+- [x] Seed chives in 1a
 - [ ] Buy frost fabric + Christmas lights
-- [ ] Fix/add drip emitter at position 12
 - [ ] Make 8–10 homemade yellow sticky traps
 - [ ] Buy/start green bell & jalapeño
 - [ ] Buy French marigolds (some seeds started)
-- [ ] Make plant signs
+- [ ] Run/fix drip line to Pos 12 (so rosemary can move from 6 → 12)
+- [ ] Empty junk pots 11 & 12
+- [ ] Move basil from 7a → big pot 11
+- [ ] Move parsley from 5a → big pot 7
+- [ ] Swap big pot 6 and big pot 12
+- [ ] Plant 2 × Celebrity tomatoes in Pos 2 (arriving ~Dec 1)
+- [ ] Buy/start: bronze fennel, swamp milkweed, jalapeño, green bell, poblano
+- [ ] Make plant signs / QR codes
 
 ## 4. Approved Soil Amendments (ongoing)
 - Crushed egg shells → calcium boost, prevents blossom-end rot  
