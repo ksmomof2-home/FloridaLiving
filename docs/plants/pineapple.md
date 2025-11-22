@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Pineapple
 **Ananas comosus** | Bromeliaceae (the bromeliad family!)
 
