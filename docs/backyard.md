@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Backyard Garden
 ---
 # Backyard Fence-Line Garden
 North–south fence, east side of house · 12 × 30-gal pots + 8 small pots on drip · November 2025
