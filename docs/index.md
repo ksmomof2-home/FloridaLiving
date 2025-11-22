@@ -10,7 +10,7 @@ We’re slowly turning our backyard fence line into a year-round food + butterfl
 - Native wildflower patches – coming soon!
 
 ### Other Living Things We Love
-- [Our Pets & Aquariums](docs/pets.md) – dogs, cats, and a very spoiled 75-gallon planted tank  
+- [Our Pets & Aquariums](pets.md) – dogs, cats, and a very spoiled 75-gallon planted tank  
 - Bird feeders & hummingbird station  
 - Occasional wildlife visitors (gopher tortoises, sandhill cranes, etc.)
 
