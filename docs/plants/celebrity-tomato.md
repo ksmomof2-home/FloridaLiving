@@ -5,7 +5,7 @@ title: Celebrity Tomato
 # Celebrity Tomato
 **Solanum lycopersicum 'Celebrity'** | Solanaceae
 
-<img = "https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/docs/assets/pot2.jpg" width = 400 alt = "Celebrity tomato">
+<img src = "https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/docs/assets/pot2.jpg" width = 400 alt = "Celebrity tomato">
 
 ### Quick Facts
 - Type: Hybrid determinate → grows 3–4 ft in pot
