@@ -4,7 +4,8 @@ layout: default
 # Pineapple
 **Ananas comosus** | Bromeliaceae (the bromeliad family!)
 
-![Pineapple crown rooting](https://ksmomof2-home.github.io/FloridaLiving/assets/pineapple1.jpg)
+![Pineapple crown rooting](https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/assets/pineapple1.jpg)
+
 ### Quick Facts
 - USDA zones: 9b–11 (marginal in 9b — we protect it!)
 - Sun: Full sun (the more the better)
