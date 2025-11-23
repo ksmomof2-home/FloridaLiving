@@ -3,7 +3,7 @@ layout: default
 title: Pineapple
 ---
 <div class="plant-hero">
-  <img src="FloridaLiving/assets/pineapple1.jpg" alt="Pineapple crown rooting">
+  <img src="FloridaLiving/docs/assets/pineapple1.jpg" alt="Pineapple crown rooting">
 
   <div class="plant-facts">
     <h3>Quick Facts</h3>
