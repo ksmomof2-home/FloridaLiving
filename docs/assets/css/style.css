@@ -39,7 +39,7 @@ main {
 
 /* Remove ALL white backgrounds – everything stays sage */
 .plant-hero, .full-width, .plant-info, .plant-facts {
-  background: transparent !important;
+  background: #a6b794 !important;
   box-shadow: none !important;
   padding: 0;
 }
