@@ -4,7 +4,7 @@ layout: default
 # Passionflower (Maypop)
 **Passiflora incarnata** | Passifloraceae
 
-![Maypop flower](https://images.unsplash.com/photo-1594824474996-2c3e7d7b9c96?w=800)
+![Maypop flower](https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/docs/assets/passionflower.jpg?w=400)
 
 ### Quick Facts
 - USDA zones: 5–10 (native Florida wildflower!)
