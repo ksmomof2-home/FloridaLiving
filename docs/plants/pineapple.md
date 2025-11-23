@@ -3,7 +3,7 @@ layout: default
 title: Pineapple
 ---
 <div class="plant-hero">
-  <img src="/assets/pineapple1.jpg" alt="Pineapple crown rooting">
+  <img src="FloridaLiving/assets/pineapple1.jpg" alt="Pineapple crown rooting">
 
   <div class="plant-facts">
     <h3>Quick Facts</h3>
@@ -32,6 +32,9 @@ title: Pineapple
 
 <hr>
 <p style="text-align:center;">
+  <a href="/FloridaLiving/plants/celebrity-tomato.html">← Previous: Celebrity Tomato</a> • 
+  <a href="/FloridaLiving/plants/passionflower.html">Next: Passionflower →</a>
+  <br><br>
   <a href="/FloridaLiving/plants.html">← All Plants</a> • 
   <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
 </p>
