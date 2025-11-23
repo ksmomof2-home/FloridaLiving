@@ -12,13 +12,14 @@ title: Pineapple
   <div class="plant-facts">
     <h3>Quick Facts</h3>
     <ul>
-      <li><strong>USDA zones:</strong> 9b–11</li>
-      <li><strong>Sun:</strong> Full sun</li>
-      <li><strong>Water:</strong> Average</li>
+      <li><strong>USDA zones:</strong> 9b–11 (marginal in 9b — we protect it!)</li>
+      <li><strong>Sun:</strong> Full sun (the more the better)</li>
+      <li><strong>Water:</strong> Average (let top 2–3" dry between waterings)</li>
       <li><strong>Height:</strong> 3–4 ft</li>
-      <li><strong>Fruit in:</strong> 18–24 months</li>
+      <li><strong> Spacing: 2 crowns per 30-gal pot</strong> (perfect!)</li>
+     <li><strong>Fruit in:</strong> 18–24 months</li>
     </ul>
-    <p><strong>Primary Use:</strong> Culinary — sweetest home-grown pineapple ever!</p>
+    <p><strong>Primary Use:</strong> Culinary — sweetest home-grown pineapple you'll ever taste!</p>
   </div>
 </div>
 
@@ -55,18 +56,7 @@ title: Pineapple
 
 <div class="plant-hero">
    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple">
-   <div class="plant-facts">
-    <h3>Quick Facts</h3>
-    <ul>
-      <li><strong>USDA zones:</strong> 9b–11 (marginal in 9b — we protect it!)</li>
-      <li><strong>Sun:</strong> Full sun (the more the better)</li>
-      <li><strong>Water:</strong> Average (let top 2–3" dry between waterings)</li>
-      <li><strong>Height:</strong> 3–4 ft</li>
-       <li><strong> Spacing: 2 crowns per 30-gal pot</strong> (perfect!)</li>
-      <li><strong>Fruit in:</strong> 18–24 months</li>
-    </ul>
-    <p><strong>Primary Use:</strong> Culinary — sweetest home-grown pineapple you'll ever taste!</p>
-  </div>
+ 
 </div>
 
 <div class="full-width">
