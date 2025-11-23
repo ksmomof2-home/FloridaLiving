@@ -5,7 +5,8 @@ title: Avocado Tree
 # Avocado Tree
 **Persea americana** | Lauraceae
 
-![Avocado tree](https://images.unsplash.com/photo-1617126974909-cacd44d0c6f5?w=800)
+![Avocado tree](https://assets/avocado.jpg?w=800)
+![Pineapple crown rooting](https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/docs/assets/pineapple1.jpg)
 
 ### Quick Facts
 - USDA zones: 9b–11 (we protect in winter)
