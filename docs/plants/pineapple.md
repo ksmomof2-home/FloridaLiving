@@ -26,7 +26,7 @@ title: Pineapple
 <div class="plant-info">
   <h3>Wildlife Supported</h3>
   <ul>
-    <li>Occasional nectar for bees and ants</li>
+    <li>Occasional nectar for <strong>bees</strong> and <strong>ants</strong></li>
      <li>Not a butterfly host.</li>
   </ul>
 
@@ -62,24 +62,3 @@ title: Pineapple
   <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
 </p>
 
-
-<hr>
-<H1> OLD PAGE </H1>
-
-<div class="full-width">
-
-
-  
-  <br>
-     <em>Planted Nov 22, 2025 – 2 crowns in Pos 1</em>
-
-</div>
-
-<hr>
-<p style="text-align:center;">
-  <a href="/FloridaLiving/plants/celebrity-tomato.html">← Previous: Celebrity Tomato</a> • 
-  <a href="/FloridaLiving/plants/passionflower.html">Next: Passionflower →</a>
-  <br><br>
-  <a href="/FloridaLiving/plants.html">← All Plants</a> • 
-  <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
-</p>
