@@ -36,3 +36,40 @@ layout: default
 - Current status: 2 crowns rooting in Pos 1 (Nov 22, 2025)
 
 QR code on stake → https://yourusername.github.io/garden/pineapple
+
+<div class="plant-hero">
+  <img src="/assets/pineapple1.jpg" alt="Pineapple crown rooting">
+
+  <div class="plant-facts">
+    <h3>Quick Facts</h3>
+    <ul>
+      <li><strong>USDA zones:</strong> 9b–11</li>
+      <li><strong>Sun:</strong> Full sun</li>
+      <li><strong>Water:</strong> Average</li>
+      <li><strong>Height in pot:</strong> 3–4 ft</li>
+      <li><strong>Fruit in:</strong> 18–24 months</li>
+    </ul>
+
+    <h3>Primary Use</h3>
+    <p>Culinary — sweetest home-grown pineapple ever!</p>
+  </div>
+</div>
+
+<div class="full-width">
+  <h3>Wildlife Supported</h3>
+  <p>Occasional nectar for bees & ants — not a butterfly host.</p>
+
+  <h3>Pests to Watch</h3>
+  <p>Mealybugs (rare) — wipe with alcohol.</p>
+
+  <h3>Local Care Tips (The Villages)</h3>
+  <p>Mulch with pine bark • Add crushed egg shells • Protect below 28 °F</p>
+
+  <p><em>Planted Nov 22, 2025 – 2 crowns rooting in Pos 1</em></p>
+</div>
+
+<hr>
+<p style="text-align:center;">
+  <a href="/FloridaLiving/plants/">← All Plants</a> • 
+  <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
+</p>
