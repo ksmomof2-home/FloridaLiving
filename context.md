@@ -9,7 +9,7 @@
 
 ### BIG POTS (30-gal)
 
-| Pos | CURRENT CONTENTS (Nov 22)                                 | FINAL PLAN / NOTES                                      |
+| Pos | CURRENT CONTENTS (Nov 22)                                 | FINAL PLAN / NOTES                                       |
 |-----|------------------------------------------------------------|---------------------------------------------------------|
 | 1   | 2 Pineapple crowns + 3 basil cuttings                      | Stays – 2 × Pineapple                                   |
 | 2   | Empty – ready                                              | 2 × Celebrity tomatoes (arriving ~Dec 1)                |
@@ -28,11 +28,11 @@
 
 | Spot | CURRENT CONTENTS (Nov 22)                                  | FINAL PLAN / NOTES                                      |
 |------|------------------------------------------------------------|---------------------------------------------------------|
-| 1a   | Rosemary sprigs + marigold seeds + chive seeds (seeded Nov 22) | Chives (rosemary temporary)                             |
+| 1a   | Rosemary sprigs + marigold + chive seeds (seeded Nov 22)   | Chives (rosemary temporary)                             |
 | 4a   | Mint                                                       | Final                                                   |
 | 5a   | Parsley                                                    | Moving to big pot 7                                     |
 | 6a   | Marigold seeds (temporary, planted Nov 22)                 | Future extra dill                                       |
-| 7a   | Basil plant                                                | Moving to big pot 11 → then becomes bronze fennel      |
+| 7a   | Basil plant                                                | Moving to big pot 11 → then becomes bronze fennel       |
 | 8a   | Empty                                                      | Future swamp milkweed                                   |
 | 9a   | Empty – ready                                              | Flex / future use                                       |
 | 10a  | Empty – ready                                              | Flex / future use                                       |
@@ -74,23 +74,27 @@
 
 | Date       | Task                                                               |
 |------------|--------------------------------------------------------------------|
+| Spring '24 | Planted Rosemary, Mint                                             |
+| Summer '24 | Purchased Passionflower Vine                                       |
+| Spring '25 | Planted Jalapeno Peppers, Green Bell Peppers, Tomatoes from seed   |
+| Spring '25 | Inherited Basil, Parsley, Avocado, Lime, Tomatoes, Pepper          |
 | Nov 20     | Fertilize, foil, mulch passionflower, lime, avocado                |
-| Nov 21     | Started water cuttings: basil, parsley, rosemary                  |
+| Nov 21     | Started water cuttings: basil, parsley, rosemary                   |
 | Nov 22     | Started soil cuttings: rosemary & basil                            |
 | Nov 22     | Planted 2 pineapple crowns in Pos 1                                |
 | Nov 22     | Planted dill + marigold seeds in Pos 8                             |
 | Nov 22     | Planted cilantro + marigold seeds in Pos 9                         |
 | Nov 22     | Seeded chives in 1a                                                |
-| Nov 22     | Planted rosemary (temporary) in Pos 6                              |
+| Nov 22     | Planted oregano (temporary) in Pos 6 with established Rosemary     |
 | Nov 22     | Bought remaining 4 bags pine bark nuggets                          |
 
 ## 4. ACTIVE TO-DO LIST – November–December 2025
 
-- [ ] Run/fix drip line to Pos 12 (so rosemary can move from 6 → 12)
+- [ ] Run/fix drip line to Pos 12 (so rosemary can move from 6 → 12) Spouse todo
 - [ ] Empty junk pots 11 & 12
 - [ ] Move basil from 7a → big pot 11
 - [ ] Move parsley from 5a → big pot 7
-- [ ] Move rosemary from 6 → big pot 12 + add Italian oregano
+- [ ] Swap rosemary from 6 → big pot 12 + add Italian oregano
 - [ ] Plant 2 × Celebrity tomatoes in Pos 2 (arriving ~Dec 1)
 - [ ] Buy/start: bronze fennel, swamp milkweed, jalapeño, green bell, poblano, ginger
 - [ ] Buy frost fabric + Christmas lights
