@@ -1,9 +1,3 @@
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f7f0 !important;  /* soft sage green */
-  color: #333;
-  line-height: 1.6;
-  border: 3px solid red !important;  /* TEMP TEST – remove after seeing it */
+  background-color: #f0f7f0;
 }
