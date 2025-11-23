@@ -59,12 +59,19 @@ main {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 .plant-facts {
+  background: rgba(255,255,255,0.25) !important;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(4px);   /* optional – gives a frosted-glass look */
+}
+/*
+.plant-facts {
   flex: 1;
   min-width: 300px;
   padding: 1.8rem;
   border-radius: 12px;
 }
-
+*/
 .plant-info, .plant-facts {
     background: rgba(255,255,255,0.10);
 }
