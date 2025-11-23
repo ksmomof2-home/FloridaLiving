@@ -6,7 +6,7 @@ body {
   background: #32CD32 !important;  
   color: #333;
   line-height: 1.6;
-  border: 3px solid blue !important;  /* TEMP TEST – remove after seeing it */
+  border: 3px solid yellow !important;  /* TEMP TEST – remove after seeing it */
 }
 
 /* Cache bust 2025-11-22 22:45 */
