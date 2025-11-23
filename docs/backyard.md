@@ -1,39 +1,25 @@
 ---
 layout: default
+title: Backyard Fence-Line Garden
 ---
 # Backyard Fence-Line Garden
-North–south fence, east side of house · 12 × 30-gal pots + 8 small pots on drip · November 2025
+North–south fence · 12 × 30-gal pots + 8 small pots on drip · Central Florida 9b
 
-Sun pattern: most sun at the back (Pos 1) → shadier toward front (Pos 12)
+### Big Pots
 
-### Big Pots (30-gal)
+| Pos | Plant                                | Status / Link |
+|-----|--------------------------------------|-------------|
+| 1   | 2 × Pineapple                        | Growing • [Pineapple](plants/pineapple.html) |
+| 2   | 2 × Celebrity tomatoes               | Arriving ~Dec 1 |
+| 3   | Passionflower                        | Blooming • [Passionflower](plants/passionflower.html) |
+| 4   | Lime tree                            | Fruiting • [Lime](plants/lime.html) |
+| 5   | Avocado tree                         | Growing • [Avocado](plants/avocado.html) |
+| 6   | Dill                                 | Planted Nov 22 • Add bronze fennel |
+| 7   | Future: Parsley + swamp milkweed     | Moving in soon |
+| 8   | Jalapeño + cilantro                  | Cilantro seeded Nov 22 |
+| 9   | Green bell pepper                    | Coming |
+| 10  | Poblano pepper                       | Coming |
+| 11  | Basil (Genovese + Thai)              | Moving in soon |
+| 12  | Rosemary + Italian oregano           | Moving in soon |
 
-| Pos | Plant                              | QR / Link |
-|-----|------------------------------------|-----------|
-| 1   | 2 × Pineapple                      | [Pineapple](plants/pineapple.md) |
-| 2   | 2 × Celebrity tomatoes (coming soon) | [Celebrity Tomato](celebrity-tomato.md) |
-| 3   | Passionflower (maypop)             | [Passionflower](passionflower.md) |
-| 4   | Lime tree                          | [Lime](lime.md) |
-| 5   | Avocado tree                       | [Avocado](avocado.md) |
-| 6   | Bronze fennel + dill               | [Fennel & Dill](fennel-dill.md) |
-| 7   | Parsley + swamp milkweed           | [Parsley & Swamp Milkweed](parsley-milkweed.md) |
-| 8   | Jalapeño + cilantro understory     | [Jalapeño](jalapeno.md) |
-| 9   | Green bell pepper                  | [Bell Pepper](bell-pepper.md) |
-| 10  | Poblano pepper                     | [Poblano](poblano.md) |
-| 11  | Basil (Genovese + Thai)            | [Basil](basil.md) |
-| 12  | Rosemary + Greek oregano           | [Rosemary & Oregano](rosemary-oregano.md) |
-
-### Small Pots (between the big ones)
-
-| Location | Plant                     | Link |
-|----------|---------------------------|------|
-| 1–2      | Chives (temp rosemary)    | [Chives](chives.md) |
-| 4–5      | Mint                      | [Mint](mint.md) |
-| 5–6      | Extra parsley             | [Parsley](parsley.md) |
-| 6–7      | Extra dill                | [Dill](dill.md) |
-| 7–8      | Bronze fennel             | [Fennel](fennel.md) |
-| 8–9      | Swamp milkweed            | [Swamp Milkweed](swamp-milkweed.md) |
-| 11–12    | Wandering Jew             | [Wandering Jew](wandering-jew.md) |
-| Spare    | Ginger (planned)          | [Ginger](ginger.md) |
-
-[← Back to Home](index.md)
+[← Home](/FloridaLiving/) • [All Plants →](plants/)
