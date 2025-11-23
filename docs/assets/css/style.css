@@ -1,62 +1,74 @@
-/* Final Garden Theme – Nov 22, 2025 */
+/* FINAL WORKING STYLE – Nov 23, 2025 */
+* { box-sizing: border-box; }
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #6B8E7A !important;         /* your sage */
+  background: #9CAF88 !important;      /* ← your exact sage */
   color: #333;
   line-height: 1.7;
 }
+
+/* Header & Footer – dark forest green */
 header, footer {
-  background: #2d5a3d !important;       /* deep forest – forced */
+  background: #2d5a3d !important;
   color: white;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2.5rem 1rem;
 }
-header a, footer a { color: #b8e6b8; text-decoration: none; }
+header a, footer a { color: #c8e6c9; text-decoration: none; }
+nav { margin-top: 1rem; }
 nav a {
   color: white;
   margin: 0 1rem;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 30px;
+  font-weight: 600;
 }
 nav a:hover { background: rgba(255,255,255,0.25); }
 
-main { max-width: 1100px; margin: 3rem auto; padding: 0 1rem; }
+/* Main content */
+main { 
+  max-width: 1100px; 
+  margin: 3rem auto; 
+  padding: 0 1.5rem; 
+}
 
-/* NEW: Two-column hero layout */
+/* Remove ALL white backgrounds – everything stays sage */
+.plant-hero, .full-width, .plant-info, .plant-facts {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0;
+}
+
+/* Two-column hero – image left, facts right */
 .plant-hero {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
   align-items: flex-start;
-  background: transparent;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   margin-bottom: 3rem;
 }
 .plant-hero img {
   width: 32%;
   max-width: 380px;
-  height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 .plant-facts {
   flex: 1;
   min-width: 300px;
-  background: #f8fcf4;
-  padding: 1.5rem;
+  background: rgba(255,255,255,0.15) !important;
+  padding: 1.8rem;
   border-radius: 12px;
 }
-.plant-facts h3 { margin-top: 0; color: #2d5a3d; }
 
-/* Full-width sections below */
-.full-width, .plant-info {
-  background: transparent;   /* ← change this line */
+/* Full-width sections below hero */
+.plant-info {
+  background: rgba(255,255,255,0.10);
   padding: 2rem;
-  border-radius: 16px;
+  border-radius: 12px;
   margin: 2rem 0;
 }
 
