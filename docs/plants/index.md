@@ -2,22 +2,20 @@
 layout: default
 title: All Plants
 ---
-# All Plants in the Backyard Garden
+# All Plants
 
-Click any plant below for detailed care sheet (QR code on stake goes here!)
-
-| Plant                     | Position(s)       | Link |
-|---------------------------|-------------------|------|
-| Pineapple                 | Pos 1             | [Pineapple](pineapple.html) |
-| Celebrity Tomato          | Pos 2 (coming)    | [Celebrity Tomato](celebrity-tomato.html) |
-| Passionflower (Maypop)    | Pos 3             | [Passionflower](passionflower.html) |
-| Lime Tree                 | Pos 4             | [Lime](lime.html) |
-| Avocado Tree              | Pos 5             | [Avocado](avocado.html) |
-| Bronze Fennel + Dill      | Pos 6 & 8         | [Bronze Fennel & Dill](bronze-fennel.html) |
-| Parsley + Swamp Milkweed  | Pos 7 (future)    | coming soon |
-| Jalapeño + Cilantro       | Pos 9             | coming soon |
-| Rosemary + Italian Oregano| Pos 12 (future)   | coming soon |
-| Chives                    | 1a                | coming soon |
-| Wandering Jew             | 11a               | coming soon |
+| Plant                          | Position(s) | Link |
+|--------------------------------|-------------|----------------|
+| Pineapple                      | Pos 1       | [→](pineapple.html) |
+| Celebrity Tomato               | Pos 2       | [→](celebrity-tomato.html) |
+| Passionflower                  | Pos 3       | [→](passionflower.html) |
+| Lime Tree                      | Pos 4       | [→](lime.html) |
+| Avocado Tree                   | Pos 5       | [→](avocado.html) |
+| Bronze Fennel & Dill           | Pos 6 & 8   | [→](bronze-fennel.html) |
+| Parsley + Swamp Milkweed       | Pos 7       | coming |
+| Jalapeño + Cilantro            | Pos 9       | coming |
+| Rosemary + Italian Oregano     | Pos 12      | coming |
+| Chives                         | 1a          | coming |
+| Wandering Jew                  | 11a         | [→](wandering-jew.html) |
 
 [← Back to Backyard](/FloridaLiving/backyard.html)
