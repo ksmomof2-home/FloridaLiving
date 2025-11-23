@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #9CAF88;                  /* your sage */
+  background: #9CAF88 !important;         /* your sage */
   color: #333;
   line-height: 1.7;
 }
