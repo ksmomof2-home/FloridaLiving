@@ -20,7 +20,9 @@ title: Pineapple
 
 <div class="plant-info">
   <h3>Wildlife Supported</h3>
-  <p>Occasional nectar for bees — not a butterfly host.</p>
+  <ul>
+    <li>Occasional nectar for bees — not a butterfly host.</li>
+  </ul>
 
   <h3>Pests to Watch</h3>
   <p>Mealybugs (rare) — wipe with alcohol.</p>
