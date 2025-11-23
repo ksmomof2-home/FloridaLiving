@@ -4,7 +4,7 @@ layout: default
 # Key / Persian Lime
 **Citrus × aurantiifolia** | Rutaceae
 
-![Lime tree with fruit](https://images.unsplash.com/photo-1607305354686-6f2c79a2f9e5?w=800)
+<img src ="https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/docs/assets/lime.jpg width=400 alt = "Lime Tree">
 
 ### Quick Facts
 - USDA zones: 9–11 (protect below 28 °F)
