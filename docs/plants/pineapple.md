@@ -3,11 +3,8 @@ layout: default
 title: Pineapple
 ---
 <div class="plant-hero">
-<img src="https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/assets/pineapple1.jpg" width="400" alt="Pineapple Crown Rooting">
-  <img src="https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/docs/assets/pineapple1.jpg" width="400" alt="Pineapple Crown Rooting">
-  <hr>
-  Does it work
-  <hr>
+   <img src="https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/assets/pineapple1.jpg" width="400" alt="Pineapple Crown Rooting">
+
   <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple">
   <div class="plant-facts">
     <h3>Quick Facts</h3>
