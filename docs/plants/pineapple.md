@@ -13,7 +13,7 @@ title: Pineapple
       <li><strong>Sun:</strong> Full sun (the more the better)</li>
       <li><strong>Water:</strong> Average (let top 2–3" dry between waterings)</li>
       <li><strong>Height:</strong> 3–4 ft</li>
-       <li><strong> Spacing: 2 crowns per 30-gal pot (perfect!)</li>
+       <li><strong> Spacing: 2 crowns per 30-gal pot</strong> (perfect!)</li>
       <li><strong>Fruit in:</strong> 18–24 months</li>
     </ul>
     <p><strong>Primary Use:</strong> Culinary — sweetest home-grown pineapple you'll ever taste!</p>
