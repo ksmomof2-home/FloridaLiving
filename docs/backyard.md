@@ -10,7 +10,7 @@ Sun pattern: most sun at the back (Pos 1) → shadier toward front (Pos 12)
 
 | Pos | Plant                              | QR / Link |
 |-----|------------------------------------|-----------|
-| 1   | 2 × Pineapple                      | [Pineapple](pineapple.md) |
+| 1   | 2 × Pineapple                      | [Pineapple](plants/pineapple.md) |
 | 2   | 2 × Celebrity tomatoes (coming soon) | [Celebrity Tomato](celebrity-tomato.md) |
 | 3   | Passionflower (maypop)             | [Passionflower](passionflower.md) |
 | 4   | Lime tree                          | [Lime](lime.md) |
