@@ -1,63 +1,74 @@
-/* Beautiful tropical garden theme */
+/* Our Villages Garden – Final Look */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #d89d65 !important;  
+  background: #f8fcf4;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
 }
-
-/* Cache bust 2025-11-22 22:45 */
-
 header {
   background: linear-gradient(135deg, #2e8b57, #3cb371);
   color: white;
   padding: 2rem 0;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-.header-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-h1 { margin: 0; font-size: 2.5rem; }
+.header-container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+h1 { margin: 0; font-size: 2.8rem; }
 h1 a { color: white; text-decoration: none; }
 nav { margin-top: 1rem; }
 nav a {
   color: white;
-  text-decoration: none;
-  margin: 0 1rem;
+  margin: 0 1.2rem;
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
   transition: background 0.3s;
 }
-nav a:hover { background: rgba(255,255,255,0.2); }
-main {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+nav a:hover { background: rgba(255,255,255,0.25); }
+
+main { max-width: 1100px; margin: 3rem auto; padding: 0 1rem; }
+
+/* NEW: Plant page hero layout – image left, facts right */
+.plant-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
+.plant-hero img {
+  width: 380px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.plant-facts {
+  flex: 1;
+  min-width: 300px;
+}
+.plant-facts h3 { margin-top: 0; color: #2e8b57; }
+
+/* Full-width sections below hero */
+.full-width { clear: both; margin-top: 2rem; }
+
 footer {
   background: #2e8b57;
   color: white;
   text-align: center;
-  padding: 2rem;
-  margin-top: 4rem;
+  padding: 2.5rem;
+  margin-top: 5rem;
 }
 footer a { color: #b8e6b8; }
-img { max-width: 100%; border-radius: 12px; margin: 1rem 0; }
-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
-th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
-th { background: #e8f5e8; }
-.plant-nav { 
-  margin: 3rem 0; 
-  padding: 1.5rem; 
-  background: rgba(240,247,240,0.6); 
-  border-radius: 12px; 
-  text-align: center;
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plant-hero { flex-direction: column; text-align: center; }
+  .plant-hero img { width: 100%; max-width: 400px; }
 }
-.plant-nav a { font-weight: 600; color: #2e8b57; }
-/* Force refresh 2025-11-22 21:45 */
