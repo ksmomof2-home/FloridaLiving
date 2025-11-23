@@ -22,4 +22,4 @@ North–south fence · 12 × 30-gal pots + 8 small pots on drip · Central Flori
 | 11  | Basil (Genovese + Thai)              | Moving in soon |
 | 12  | Rosemary + Italian oregano           | Moving in soon |
 
-[← Home](/FloridaLiving/) • [All Plants →](plants/)
+[← Home](/FloridaLiving/) • [All Plants →](/FloridaLiving/plants.html)
