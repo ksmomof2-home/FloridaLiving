@@ -9,7 +9,7 @@ North–south fence · 12 × 30-gal pots + 8 small pots on drip · Central Flori
 
 | Pos | Plant                                | Status / Link |
 |-----|--------------------------------------|-------------|
-| 1   | 2 × Pineapple                        | Growing • [Pineapple](/FloridaLiving/pineapple.html) | 
+| 1   | 2 × Pineapple                        | Growing • [Pineapple](plants/pineapple.html) | 
 | 2   | 2 × Celebrity tomatoes               | Arriving ~Dec 1 |
 | 3   | Passionflower                        | Blooming • [Passionflower](plants/passionflower.html) |
 | 4   | Lime tree                            | Fruiting • [Lime](plants/lime.html) |
