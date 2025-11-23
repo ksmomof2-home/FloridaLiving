@@ -6,7 +6,7 @@ body {
   background: #f0f7f0 !important;  /* soft sage green */
   color: #333;
   line-height: 1.6;
-  border: 2px solid red;  /* temporary test – remove after confirming */
+  border: 3px solid red !important;  /* TEMP TEST – remove after seeing it */
 }
 
 /* Cache bust 2025-11-22 22:45 */
