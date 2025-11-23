@@ -3,9 +3,10 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f0f7f0 !important;  /* soft sage green – forces it */
+  background: #f0f7f0 !important;  /* soft sage green */
   color: #333;
   line-height: 1.6;
+  border: 2px solid red;  /* temporary test – remove after confirming */
 }
 
 /* Cache bust 2025-11-22 22:45 */
