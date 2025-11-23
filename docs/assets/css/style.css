@@ -39,7 +39,6 @@ main {
 
 /* Remove ALL white backgrounds – everything stays sage */
 .plant-hero, .full-width, .plant-info, .plant-facts {
-  background: #a6b794 !important;
   box-shadow: none !important;
   padding: 0;
 }
@@ -61,14 +60,16 @@ main {
 .plant-facts {
   flex: 1;
   min-width: 300px;
-  background: #9caf88 !important;
   padding: 1.8rem;
   border-radius: 12px;
 }
 
+.plant-info, .plant-facts {
+    background: rgba(255,255,255,0.10);
+}
+
 /* Full-width sections below hero */
 .plant-info {
-  background: rgba(255,255,255,0.10);
   padding: 2rem;
   border-radius: 12px;
   margin: 2rem 0;
