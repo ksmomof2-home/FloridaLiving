@@ -17,7 +17,9 @@ header, footer {
   text-align: center;
   padding: 2.5rem 1rem;
 }
+
 header a, footer a { color: #c8e6c9; text-decoration: none; }
+
 nav { margin-top: 1rem; }
 nav a {
   color: white;
@@ -37,7 +39,7 @@ main {
 
 /* Remove ALL white backgrounds – everything stays sage */
 .plant-hero, .full-width, .plant-info, .plant-facts {
-  background: #9caf88 !important;
+  background: transparent !important;
   box-shadow: none !important;
   padding: 0;
 }
