@@ -52,6 +52,20 @@ title: Pineapple
           <br>
      <p>QR code on stake → https://yourusername.github.io/garden/pineapple</p>
 </div>
+<hr>
+<h3>Growth Over Time</h3>
+<table>
+  <tr>
+    <td><strong>Nov 22, 2025</strong></td>
+    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="300" alt="Just planted"></td>
+    <td>Two crowns just planted — rooting begins!</td>
+  </tr>
+  <tr>
+    <td><strong>Jan 15, 2026</strong></td>
+    <td><!-- <img src="/FloridaLiving/assets/pineapple-jan2026.jpg" width="300">!-->Image Placeholder</td>
+    <td>First leaves emerging</td>
+  </tr>
+</table>
 
 <hr>
 <p style="text-align:center; font-size:1.1;">
