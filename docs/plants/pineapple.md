@@ -2,8 +2,12 @@
 layout: default
 title: Pineapple
 ---
+
+<h1>Pineapple</h1>
+<h2>**Ananas comosus** | Bromeliaceae (the bromeliad family!)</h2>
+
 <div class="plant-hero">
-  <img src="https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
+   <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
 
   <div class="plant-facts">
     <h3>Quick Facts</h3>
@@ -48,8 +52,7 @@ title: Pineapple
 
 <hr>
 <H1> OLD PAGE </H1>
-<h1>Pineapple</h1>
-<h2>**Ananas comosus** | Bromeliaceae (the bromeliad family!)</h2>
+
 <div class="plant-hero">
    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple">
    <div class="plant-facts">
