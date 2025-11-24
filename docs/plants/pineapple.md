@@ -78,7 +78,17 @@ title: Pineapple
 </table>
 
 <h3>Notes from the Gardener</h3>
-<p>/p>
+<table class = "facts-table">
+  <tr>
+     <td>Date</td>
+     <td>Comments</td>
+  </tr>
+  <tr>
+    <td>"11/21/2025"</td>
+    <td>"First pot ready, here is hoping they will both produce"</td>
+  </tr>
+</table>
+
 <h3>Harvest Log</h3>
 <table class = "facts-table">
   <tr>
@@ -86,11 +96,7 @@ title: Pineapple
      <td>Weight</td>
      <td>Comments</td>
   </tr>
-  <tr>
-    <td>"11/21/2025"</td>
-    <td></td>
-    <td>"First pot ready, here is hoping they will both produce"</td>
-  </tr>
+
 </table>
 
 </div>
