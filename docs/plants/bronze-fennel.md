@@ -3,8 +3,8 @@ layout: default
 title: Bronze Fennel & Dill
 ---
 <div class="plant-hero">
-  <a href="/FloridaLiving/assets/bronze-fennel.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/bronze-fennel.jpg" alt="Bronze Fennel & Dill">
+  <a href="/FloridaLiving/assets/dill.jpg" target="_blank">
+    <img src="/FloridaLiving/assets/dill.jpg" alt="Bronze Fennel & Dill">
   </a>
 
   <div class="plant-facts">
