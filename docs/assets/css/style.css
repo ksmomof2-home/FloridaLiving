@@ -227,6 +227,45 @@ main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+
+/* Lighter middle section – separates it from hero and log tables */
+.middle-info {
+  background: rgba(255,255,255,0.18) !important;
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin: 3rem 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Four distinct log table themes – soft & readable */
+.table-growth  { background: rgba(220,237,200,0.25); }  /* mint */
+.table-harvest { background: rgba(255,224,178,0.25); }  /* peach */
+.table-pests   { background: rgba(255,182,193,0.25); }  /* pink */
+.table-notes   { background: rgba(187,222,251,0.25); }  /* blue */
+
+/* Shared table styling */
+.log-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.log-table th {
+  background: rgba(0,0,0,0.15);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+.log-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.log-table tr:last-child td { border-bottom: none; }
+.log-table tr:nth-child(even) td { background: rgba(255,255,255,0.08); }
+.log-table img { max-width: 250px; border-radius: 8px; }
 /* Responsive */
 @media (max-width: 768px) {
   .plant-hero { flex-direction: column; text-align: center; }
