@@ -51,7 +51,9 @@ title: Pineapple
   <table class="history-table">
     <tr>
       <td><strong>Nov 22, 2025</strong></td>
-      <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="250" alt="Just planted"></td>
+      <td><a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
+    <img src="/FloridaLiving/assets/pineapple1.jpg" width="250" alt="Just planted"></a>
+      </td>
       <td>Two crowns just planted — let the adventure begin!</td>
     </tr>
     <!-- Add new rows as the years go by -->
