@@ -19,50 +19,35 @@ title: {{ PLANT NAME }}
   </div>
 </div>
 
-<div class="full-width">
-  <h3>Wildlife Supported</h3>
-  <p>{{ wildlife }}</p>
+<div>
+<h3>Growth Over Time</h3>
+<table class="log-table table-growth">
+  <tr><th>Date</th><th>Photo</th><th>Notes</th></tr>
+  <tr>
+    <td><strong>Nov 22, 2025</strong></td>
+    <td><img src="/FloridaLiving/assets/pineapple1.jpg" alt="Just planted"></td>
+    <td>Two crowns just planted — rooting begins!</td>
+  </tr>
+</table>
 
-  <h3>Pests to Watch (The Villages)</h3>
-  <p>{{ pests }}</p>
+<h3>Harvest Log</h3>
+<table class="log-table table-harvest">
+  <tr><th>Date</th><th>Weight</th><th>Notes</th></tr>
+  <!-- future rows -->
+</table>
 
-  <h3>Unusual / Fun Facts</h3>
-  <p>{{ fun facts }}</p>
+<h3>Pests Encountered</h3>
+<table class="log-table table-pests">
+  <tr><th>Date</th><th>Pest</th><th>Treatment</th></tr>
+  <!-- future rows -->
+</table>
 
-  <h3>Local Care Tips (The Villages 9b)</h3>
-  <p>{{ care tips }}</p>
-
-  <h3>Growth Over Time</h3>
-  <table class="log-table">
-    <tr><th>Date</th><th>Photo</th><th>Notes</th></tr>
-    <tr>
-      <td><strong>Nov 22, 2025</strong></td>
-      <td><img src="/FloridaLiving/assets/{{ photo1 }}" width="250"></td>
-      <td>Two crowns just planted — rooting begins!</td>
-    </tr>
-    <!-- Future rows go here -->
-  </table>
-
-  <h3>Harvest Log</h3>
-  <table class="log-table">
-    <tr><th>Date</th><th>Weight</th><th>Notes</th></tr>
-    <!-- Future harvests go here -->
-  </table>
-
-  <h3>Pests Encountered</h3>
-  <table class="log-table">
-    <tr><th>Date</th><th>Pest</th><th>Treatment</th></tr>
-    <!-- Future pest events go here -->
-  </table>
-
-  <h3>Notes from the Gardener</h3>
-  <table class="log-table">
-    <tr><th>Date</th><th>Note</th></tr>
-    <tr><td>Nov 22, 2025</td><td>Planted with love — can’t wait for that first pineapple smell!</td></tr>
-    <!-- Future notes go here -->
-  </table>
+<h3>Notes from the Gardener</h3>
+<table class="log-table table-notes">
+  <tr><th>Date</th><th>Note</th></tr>
+  <tr><td>Nov 22, 2025</td><td>Planted with love — can't wait for that first pineapple smell!</td></tr>
+</table>
 </div>
-
 <hr>
 <p style="text-align:center;">
   <a href="/FloridaLiving/plants/{{ previous-file }}.html">← Previous: {{ previous-name }}</a> • 
