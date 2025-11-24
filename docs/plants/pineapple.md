@@ -57,15 +57,33 @@ title: Pineapple
 <table>
   <tr>
     <td><strong>Nov 22, 2025</strong></td>
-    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="300" alt="Just planted"></td>
+    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="50" alt="Just planted"></td>
     <td>Two crowns just planted — rooting begins!</td>
   </tr>
   <tr>
     <td><strong>Jan 15, 2026</strong></td>
     <td><!-- <img src="/FloridaLiving/assets/pineapple-jan2026.jpg" width="300">!-->Image Placeholder</td>
-    <td>First leaves emerging</td>
+    <td>Text Placeholder</td>
   </tr>
 </table>
+
+<h3>Harvest Log</h3>
+<ul>
+  <li>DATE — First fruit harvested: ?? lbs, ?sweetest ever!?</li>
+</ul>
+
+<h3>Pests Encountered</h3>
+<table>
+  <tr>
+     <td>Date</td>
+     <td>Pest</td>
+     <td>action</td>
+     <td>result</td>
+  </tr>
+</table>
+
+<h3>Notes from Kelly</h3>
+<p>"The smell when it finally ripened was unreal — like vacation in a fruit."</p>
 
 <hr>
 <p style="text-align:center; font-size:1.1;">
