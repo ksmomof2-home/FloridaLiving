@@ -67,23 +67,25 @@ title: Pineapple
   </tr>
 </table>
 
-<h3>Harvest Log</h3>
-<ul>
-  <li>DATE — First fruit harvested: ?? lbs, ?sweetest ever!?</li>
-</ul>
-
 <h3>Pests Encountered</h3>
 <table>
   <tr>
      <td>Date</td>
      <td>Pest</td>
-     <td>action</td>
-     <td>result</td>
+     <td>Action</td>
+     <td>Result</td>
   </tr>
 </table>
 
-<h3>Notes from Kelly</h3>
-<p>"The smell when it finally ripened was unreal — like vacation in a fruit."</p>
+<h3>Harvest Log</h3>
+<ul>
+  <li>DATE — First fruit harvested: ?? lbs, ?sweetest ever!?</li>
+</ul>
+
+
+
+<h3>Notes from the Gardener</h3>
+<p>"First pot ready, here is hoping they will both produce"</p>
 
 <hr>
 <p style="text-align:center; font-size:1.1;">
