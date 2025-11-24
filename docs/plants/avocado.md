@@ -13,7 +13,7 @@ title: {{ PLANT NAME }}
       <li><strong>Water:</strong> {{ water }}</li>
       <li><strong>Height:</strong> {{ height }}</li>
       <li><strong>Spacing:</strong> {{ spacing }}</li>
-      <li><strong>Fruit/Harvest:</strong> {{ time to fruit }}</li>
+      <li><strong>Fruit/Harvest:</strong> {{ time }}</li>
     </ul>
     <p><strong>Primary Use:</strong> {{ use }}</p>
   </div>
@@ -34,16 +34,33 @@ title: {{ PLANT NAME }}
 
   <h3>Growth Over Time</h3>
   <table class="log-table">
+    <tr><th>Date</th><th>Photo</th><th>Notes</th></tr>
     <tr>
       <td><strong>Nov 22, 2025</strong></td>
       <td><img src="/FloridaLiving/assets/{{ photo1 }}" width="250"></td>
-      <td>Planted / moved / seeded</td>
+      <td>Two crowns just planted — rooting begins!</td>
     </tr>
-    <!-- Add future rows here -->
+    <!-- Future rows go here -->
   </table>
 
   <h3>Harvest Log</h3>
-  <p>No harvest yet — stay tuned!</p>
+  <table class="log-table">
+    <tr><th>Date</th><th>Weight</th><th>Notes</th></tr>
+    <!-- Future harvests go here -->
+  </table>
+
+  <h3>Pests Encountered</h3>
+  <table class="log-table">
+    <tr><th>Date</th><th>Pest</th><th>Treatment</th></tr>
+    <!-- Future pest events go here -->
+  </table>
+
+  <h3>Notes from the Gardener</h3>
+  <table class="log-table">
+    <tr><th>Date</th><th>Note</th></tr>
+    <tr><td>Nov 22, 2025</td><td>Planted with love — can’t wait for that first pineapple smell!</td></tr>
+    <!-- Future notes go here -->
+  </table>
 </div>
 
 <hr>
