@@ -126,7 +126,7 @@ title: Pineapple
     <td><strong>Nov 22, 2025</strong></td>
 <!--    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="50" alt="Just planted"></td> -->
     <td>  <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" class=hero-img>
+    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" class="hero-img">
   </a></td>
     <td>Two crowns just planted — rooting begins!</td>
   </tr>
