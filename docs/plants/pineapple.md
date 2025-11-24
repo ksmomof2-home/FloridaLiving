@@ -24,6 +24,7 @@ title: Pineapple
   <p class="highlight"><strong>Use:</strong> Culinary — sweetest pineapple ever!</p>
 </div>
 </div>
+
 <div class="plant-info">
   <h3>Wildlife</h3>
   <p>Bees & ants love the flowers — not a butterfly host.</p>
@@ -74,7 +75,7 @@ title: Pineapple
 <div class="plant-hero">
   <!-- Full-size clickable hero image (not tiny) -->
   <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
+    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" class="hero-img">
   </a>
 
   <div class="plant-facts">
