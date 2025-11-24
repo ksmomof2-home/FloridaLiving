@@ -93,7 +93,8 @@ main { max-width: 1100px; margin: 3rem auto; padding: 0 1.5rem; }
 .log-table tr:last-child td { border-bottom: none; }
 .log-table tr:nth-child(even) td { background: rgba(255,255,255,0.08); }
 .log-table img { max-width: 250px; border-radius: 8px; }
-
+.log-table a { display: inline-block; }
+.log-table img { vertical-align: top; }
 /* Responsive */
 @media (max-width: 768px) {
   .plant-hero { flex-direction: column; text-align: center; }
