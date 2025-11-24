@@ -3,8 +3,8 @@ layout: default
 title: Green Bell Pepper
 ---
 <div class="plant-hero">
-  <a href="/FloridaLiving/assets/bell_pepper.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/bell_pepper.jpg" alt="Green Bell Pepper">
+  <a href="/FloridaLiving/assets/empty-pot.jpg" target="_blank">
+    <img src="/FloridaLiving/assets/empty-pot.jpg" alt="Green Bell Pepper">
   </a>
 
   <div class="plant-facts">
