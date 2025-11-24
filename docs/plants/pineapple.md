@@ -44,41 +44,6 @@ title: Pineapple
   <h3>Local Care Tips (The Villages 9b)</h3>
   <p>Mulch with pine bark (acidic — they love it) • Add crushed egg shells • Bring inside or wrap + Christmas lights below 28 °F</p>
 
-  <h3>Notes from the Gardener</h3>
-  <p>Planted two crowns Nov 22, 2025 in Pos 1 — rooting like champs! Can’t wait for that first home-grown pineapple smell.</p>
-
-  <h3>Growth Over Time</h3>
-  <table class="history-table">
-    <tr>
-      <td><strong>Nov 22, 2025</strong></td>
-      <td><a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/pineapple1.jpg" width="250" alt="Just planted"></a>
-      </td>
-      <td>Two crowns just planted — let the adventure begin!</td>
-    </tr>
-    <!-- Add new rows as the years go by -->
-  </table>
-
-  <h3>Harvest Log</h3>
-  <p>No harvest yet — stay tuned!</p>
-  
-       <em>Planted Nov 22, 2025 – 2 crowns rooting in Pos 1</em>
-          <br>
-     <p>QR code on stake → https://yourusername.github.io/garden/pineapple</p>
-</div>
-
-<hr>
-<p class="nav-bottom">
-  <a href="/FloridaLiving/plants/celebrity-tomato.html">← Previous: Celebrity Tomato</a> • 
-  <a href="/FloridaLiving/plants/passionflower.html">Next: Passionflower →</a>
-  <br><br>
-  <a href="/FloridaLiving/plants.html">← All Plants</a> • 
-  <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
-</p>
-
-<hr><h1>COPYING THIS</h1>
-
-
 <h3>Growth Over Time</h3>
 <table class="facts-table">
   <tr>
@@ -127,6 +92,21 @@ title: Pineapple
     <td>"First pot ready, here is hoping they will both produce"</td>
   </tr>
 </table>
+
+</div>
+
+<hr>
+<p class="nav-bottom">
+  <a href="/FloridaLiving/plants/celebrity-tomato.html">← Previous: Celebrity Tomato</a> • 
+  <a href="/FloridaLiving/plants/passionflower.html">Next: Passionflower →</a>
+  <br><br>
+  <a href="/FloridaLiving/plants.html">← All Plants</a> • 
+  <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
+</p>
+
+<hr><h1>COPYING THIS</h1>
+
+
 
 <hr>
 <h1>OLD FILE
