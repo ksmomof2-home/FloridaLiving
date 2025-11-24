@@ -1,28 +1,13 @@
- /* FINAL WORKING STYLE – Nov 23, 2025 */
+/* OUR VILLAGES GARDEN – FINAL STYLE v1.0 – Nov 23, 2025 */
+/* Background & base */
 * { box-sizing: border-box; }
-
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #b2d8b2 !important;   /* richer sage – my favorite */
+  background: #b2d8b2 !important;   /* your chosen richer sage */
   color: #333;
   line-height: 1.7;
-}
-
-.page-title h1 { 
-  margin: 0; 
-  font-size: 2.8rem; 
-}
-.page-title .sci { 
-  font-style: italic; 
-  font-size: 2rem; 
-  color: #4a6b4a; 
-}
-.tagline { 
-  margin: 0.5rem 0 2rem; 
-  font-size: 1.3rem; 
-  color: #555; 
 }
 
 /* Header & Footer – dark forest green */
@@ -32,9 +17,7 @@ header, footer {
   text-align: center;
   padding: 2.5rem 1rem;
 }
-
 header a, footer a { color: #c8e6c9; text-decoration: none; }
-
 nav { margin-top: 1rem; }
 nav a {
   color: white;
@@ -45,58 +28,14 @@ nav a {
 }
 nav a:hover { background: rgba(255,255,255,0.25); }
 
-/* Main content */
-main { 
-  max-width: 1100px; 
-  margin: 3rem auto; 
-  padding: 0 1.5rem; 
-}
+/* Main content container */
+main { max-width: 1100px; margin: 3rem auto; padding: 0 1.5rem; }
 
-.hero-img {
-  width: 50%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-  margin: 2rem auto;
-  display: block;
-}
-
-/* Hero image –  1/3 width, clickable */
-.plant-hero img {
-  flex: 1;
-  min-width: 280px;
-  max-width: 380px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-.plant-hero img:hover { transform: scale(1.02); }
-
-/* History table – beautiful, shaded rows */
-.history-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-}
-.history-table td {
-  padding: 1rem;
-  vertical-align: top;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-}
-.history-table tr:nth-child(even) { background: rgba(255,255,255,0.12); }
-.history-table img { border-radius: 8px; }
-
-/* Remove ALL white backgrounds – everything stays sage */
-.plant-hero, .full-width, .plant-info, .plant-facts {
-  box-shadow: none !important;
-  padding: 0;
-}
-
-/* Perfect side-by-side hero (1/3 image, 2/3 facts) */
+/* Hero section – image left, facts right */
 .plant-hero {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   align-items: flex-start;
   margin-bottom: 3rem;
 }
@@ -104,146 +43,33 @@ main {
   width: 32%;
   max-width: 380px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-.plant-facts {
-  background: rgba(255,255,255,0.25) !important;
-  padding: 2rem;
-  border-radius: 16px;
-  backdrop-filter: blur(4px);   /* optional – gives a frosted-glass look */
-  flex: 2;
-  min-width: 300px;
-}
-
-
-
-.plant-info, .plant-facts {
-    background: rgba(255,255,255,0.10);
-}
-
-/* Full-width sections below hero */
-.plant-info {
-  padding: 2rem;
-  border-radius: 12px;
-  margin: 2rem 0;
-}
-
-/* New polished look */
-.plant-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.plant-header h1 { margin: 0; font-size: 3rem; color: #2d5a3d; }
-.subtitle { 
-  font-size: 1.4rem; 
-  color: #4a6b4a; 
-  margin-top: 0.5rem;
-}
-
-/* Clickable thumbnail */
-.thumb {
-  width: 340px;
-  border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   transition: transform 0.3s;
 }
-.thumb:hover { transform: scale(1.05); }
-
-/* Beautiful facts table */
-.facts-table {
-  width: 100%;
-  border-collapse: collapse;
+.plant-hero img:hover { transform: scale(1.02); }
+.plant-facts {
+  flex: 2;
+  min-width: 300px;
   background: rgba(255,255,255,0.25);
-  border-radius: 12px;
-  overflow: hidden;
-}
-.facts-table td {
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-}
-.facts-table td:first-child { 
-  font-weight: 600; 
-  width: 40%;
-  background: rgba(255,255,255,0.15);
-}
-.facts-table td:second-child { 
-  font-weight: 600; 
-  width: 30%;
-  background: rgba(255,255,255,0.15);
-}
-.highlight { 
-  margin-top: 1rem; 
-  font-size: 1.1rem; 
-  font-weight: 600; 
-  color: #2d5a3d; 
+  padding: 2rem;
+  border-radius: 16px;
 }
 
-/* Navigation at bottom */
-.nav-bottom { 
-  text-align: center; 
-  font-size: 1.2rem; 
-  margin: 3rem 0; 
-}
-.nav-bottom a { 
-  color: #2d5a3d; 
-  font-weight: 600; 
-}
-
-/* Four beautiful, readable table themes */
-.table-growth     { background: rgba(220,237,200,0.25); }   /* light mint */
-.table-harvest    { background: rgba(255,224,178,0.25); }   /* soft peach */
-.table-pests      { background: rgba(255,182,193,0.25); }   /* pale pink */
-.table-notes      { background: rgba(187,222,251,0.25); }   /* baby blue */
-
-/* Shared table styling – clean & readable */
-.log-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.log-table th {
-  background: rgba(0,0,0,0.12);
-  color: #222;
-  font-weight: 600;
-  padding: 1rem;
-  text-align: left;
-}
-.log-table td {
-  padding: 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-  vertical-align: top;
-}
-.log-table tr:last-child td { border-bottom: none; }
-.log-table tr:nth-child(even) td { background: rgba(255,255,255,0.08); }
-
-/* Responsive images in tables */
-.log-table img {
-  max-width: 250px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-
-/* Lighter middle section – separates it from hero and log tables */
+/* Middle info section – bullets */
 .middle-info {
-  background: rgba(255,255,255,0.18) !important;
+  background: rgba(255,255,255,0.18);
   padding: 2.5rem;
   border-radius: 16px;
   margin: 3rem 0;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-/* Four distinct log table themes – soft & readable */
+/* Four log tables – each with its own subtle color */
 .table-growth  { background: rgba(220,237,200,0.25); }  /* mint */
 .table-harvest { background: rgba(255,224,178,0.25); }  /* peach */
 .table-pests   { background: rgba(255,182,193,0.25); }  /* pink */
 .table-notes   { background: rgba(187,222,251,0.25); }  /* blue */
 
-/* Shared table styling */
 .log-table {
   width: 100%;
   border-collapse: separate;
@@ -267,49 +93,8 @@ main {
 .log-table tr:nth-child(even) td { background: rgba(255,255,255,0.08); }
 .log-table img { max-width: 250px; border-radius: 8px; }
 
-/* Middle section – light background for bullets */
-.middle-section {
-  background: rgba(255,255,255,0.12);
-  padding: 2rem;
-  border-radius: 16px;
-  margin: 3rem 0;
-}
-
-/* Table column differentiation – subtle shading */
-.log-table th:first-child, .log-table td:first-child { background: rgba(220,237,200,0.3); } /* First column light mint */
-.log-table th:nth-child(2), .log-table td:nth-child(2) { background: rgba(255,224,178,0.2); } /* Second column peach */
-.log-table th:nth-child(3), .log-table td:nth-child(3) { background: rgba(255,182,193,0.2); } /* Third column pink */
-.log-table th:nth-child(4), .log-table td:nth-child(4) { background: rgba(187,222,251,0.2); } /* Fourth column blue */
-
-.log-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.log-table th {
-  background: rgba(0,0,0,0.12);
-  color: #222;
-  font-weight: 600;
-  padding: 1rem;
-  text-align: left;
-}
-.log-table td {
-  padding: 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-  vertical-align: top;
-  font-size: 0.95rem;
-}
-.log-table tr:last-child td { border-bottom: none; }
-.log-table tr:nth-child(even) { background: rgba(255,255,255,0.08); }
-.log-table img { max-width: 250px; border-radius: 8px; }
-
 /* Responsive */
 @media (max-width: 768px) {
   .plant-hero { flex-direction: column; text-align: center; }
   .plant-hero img { width: 80%; max-width: 400px; }
 }
-
