@@ -11,6 +11,21 @@ body {
   line-height: 1.7;
 }
 
+.page-title h1 { 
+  margin: 0; 
+  font-size: 2.8rem; 
+}
+.page-title .sci { 
+  font-style: italic; 
+  font-size: 2rem; 
+  color: #4a6b4a; 
+}
+.tagline { 
+  margin: 0.5rem 0 2rem; 
+  font-size: 1.3rem; 
+  color: #555; 
+}
+
 /* Header & Footer – dark forest green */
 header, footer {
   background: #2d5a3d !important;
@@ -38,6 +53,15 @@ main {
   padding: 0 1.5rem; 
 }
 
+.hero-img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  margin: 2rem auto;
+  display: block;
+}
 /* Hero image –  1/3 width, clickable */
 .plant-hero img {
   width: 300px;
