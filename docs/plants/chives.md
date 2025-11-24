@@ -3,8 +3,8 @@ layout: default
 title: Chives
 ---
 <div class="plant-hero">
-  <a href="/FloridaLiving/assets/chives.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/chives.jpg" alt="Chives">
+  <a href="/FloridaLiving/assets/pot1a.jpg" target="_blank">
+    <img src="/FloridaLiving/assets/pot1a.jpg" alt="Chives">
   </a>
 
   <div class="plant-facts">
@@ -46,8 +46,8 @@ title: Chives
   <tr><th>Date</th><th>Photo</th><th>Notes</th></tr>
   <tr>
     <td><strong>Nov 22, 2025</strong></td>
-    <td><a href="/FloridaLiving/assets/chives.jpg" target="_blank">
-      <img src="/FloridaLiving/assets/chives.jpg" width="100">
+    <td><a href="/FloridaLiving/assets/pot1a.jpg" target="_blank">
+      <img src="/FloridaLiving/assets/pot1a.jpg" width="100">
     </a></td>
     <td>Chive seeds planted in 1a — waiting for sprouts</td>
   </tr>
