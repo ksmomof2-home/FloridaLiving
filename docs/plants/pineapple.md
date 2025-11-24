@@ -67,9 +67,9 @@ title: Pineapple
 
 
 <hr><H1>OLDFILE</H1><hr>
-<div class="plant-header">
-  <h1>Pineapple</h1>
-  <p class="subtitle"><strong>Ananas comosus</strong> · Bromeliaceae (the bromeliad family!)</p>
+<div class="page-title">
+  <h1>Pineapple <span class="sci">Ananas comosus</span></h1>
+  <p class="tagline">Bromeliaceae – the bromeliad family!</p>
 </div>
  
 <div class="plant-hero">
