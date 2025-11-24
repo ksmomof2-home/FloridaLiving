@@ -61,6 +61,10 @@ title: Pineapple
 
   <h3>Harvest Log</h3>
   <p>No harvest yet — stay tuned!</p>
+  
+       <em>Planted Nov 22, 2025 – 2 crowns rooting in Pos 1</em>
+          <br>
+     <p>QR code on stake → https://yourusername.github.io/garden/pineapple</p>
 </div>
 
 <hr>
@@ -71,6 +75,59 @@ title: Pineapple
   <a href="/FloridaLiving/plants.html">← All Plants</a> • 
   <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
 </p>
+
+<hr><h1>COPYING THIS</h1>
+
+
+<h3>Growth Over Time</h3>
+<table class="facts-table">
+  <tr>
+    <td><strong>Nov 22, 2025</strong></td>
+    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="50" alt="Just planted"></td>
+    <td>Two crowns just planted — rooting begins!</td>
+  </tr>
+  <tr>
+    <td><strong>Jan 15, 2026</strong></td>
+    <td><!-- <img src="/FloridaLiving/assets/pineapple-jan2026.jpg" width="300">!-->Image Placeholder</td>
+    <td>Text Placeholder</td>
+  </tr>
+</table>
+
+<h3>Pests Encountered</h3>
+<table class = "facts-table">
+  <tr>
+     <td>Date</td>
+     <td>Pest</td>
+     <td>Action</td>
+     <td>Result</td>
+  </tr>
+</table>
+
+<h3>Harvest Log</h3>
+<table class = "facts-table">
+  <tr>
+     <td>Date</td>
+     <td>Weight</td>
+     <td>Comments</td>
+  </tr>
+</table>
+
+<h3>Notes from the Gardener</h3>
+<p>/p>
+<h3>Harvest Log</h3>
+<table class = "facts-table">
+  <tr>
+     <td>Date</td>
+     <td>Weight</td>
+     <td>Comments</td>
+  </tr>
+  <tr>
+    <td>"11/21/2025"</td>
+    <td></td>
+    <td>"First pot ready, here is hoping they will both produce"</td>
+  </tr>
+</table>
+
 <hr>
 <h1>OLD FILE
 </h1>
