@@ -54,7 +54,7 @@ main {
 
 .hero-img {
   width: 40%;
-  max-width: 400px;
+  max-width: 800px;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
