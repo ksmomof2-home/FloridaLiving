@@ -3,7 +3,9 @@ layout: default
 title: Pineapple
 ---
 <div class="plant-hero">
-  <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
+  <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
+    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
+  </a>
 
   <div class="plant-facts">
     <h3>Quick Facts</h3>
@@ -15,29 +17,62 @@ title: Pineapple
       <li><strong>Spacing:</strong> 2 crowns per 30-gal pot (perfect!)</li>
       <li><strong>Days to fruit from crown:</strong> 18–24 months</li>
     </ul>
-
     <p><strong>Primary Use:</strong> Culinary → sweetest home-grown pineapple you’ll ever taste</p>
   </div>
 </div>
 
 <div class="full-width">
   <h3>Wildlife Supported</h3>
-  <p>Occasional nectar for bees & ants — not a butterfly host.</p>
+  <ul>
+    <li>Occasional nectar for bees & ants — not a butterfly host.</li>
+  </ul>
 
   <h3>Pests to Watch (The Villages)</h3>
-  <p>Whiteflies → ignore pineapples, no foil needed while rooting<br>
-     Mealybugs → rare, wipe with alcohol swab</p>
+  <ul>
+    <li>Whiteflies → ignore pineapples, no foil needed while rooting</li>
+    <li>Mealybugs → rare, wipe with alcohol swab</li>
+  </ul>
 
   <h3>Unusual / Fun Facts</h3>
-  <p>Each plant only fruits once, then dies — but produces pups (baby plants) you can replant forever!<br>
-     The crown you twist off a store pineapple is genetically identical to the fruit you just ate.</p>
+  <ul>
+    <li>Each plant only fruits once, then dies — but produces pups (baby plants) you can replant forever!</li>
+    <li>The crown you twist off a store pineapple is genetically identical to the fruit you just ate.</li>
+  </ul>
 
   <h3>Local Care Tips (The Villages 9b)</h3>
-  <p>Mulch with pine bark (acidic — they love it)<br>
-     Add crushed egg shells for calcium<br>
-     Bring inside or wrap + Christmas lights below 28 °F<br>
-     Current status: 2 crowns rooting in Pos 1 (Nov 22, 2025)</p>
+  <ul>
+    <li>Mulch with pine bark (acidic — they love it)</li>
+    <li>Add crushed egg shells for calcium</li>
+    <li>Bring inside or wrap + Christmas lights below 28 °F</li>
+    <li>Current status: 2 crowns rooting in Pos 1 (Nov 22, 2025)</li>
+  </ul>
 </div>
+
+<h3>Growth Over Time</h3>
+<table class="log-table table-growth">
+  <tr><th>Date</th><th>Photo</th><th>Notes</th></tr>
+  <tr>
+    <td><strong>Nov 22, 2025</strong></td>
+    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="250"></td>
+    <td>Two crowns just planted — rooting begins!</td>
+  </tr>
+</table>
+
+<h3>Harvest Log</h3>
+<table class="log-table table-harvest">
+  <tr><th>Date</th><th>Weight</th><th>Notes</th></tr>
+</table>
+
+<h3>Pests Encountered</h3>
+<table class="log-table table-pests">
+  <tr><th>Date</th><th>Pest</th><th>Treatment</th></tr>
+</table>
+
+<h3>Notes from the Gardener</h3>
+<table class="log-table table-notes">
+  <tr><th>Date</th><th>Note</th></tr>
+  <tr><td>Nov 22, 2025</td><td>Planted with love — can't wait for that first pineapple smell!</td></tr>
+</table>
 
 <hr>
 <p style="text-align:center;">
