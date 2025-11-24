@@ -7,7 +7,7 @@ title: Pineapple
   <p class="tagline">Bromeliaceae – the bromeliad family!</p>
 </div>
 
-<div class="page-hero">
+<div class="plant-hero">
 <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
   <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" class="hero-img">
 </a>
