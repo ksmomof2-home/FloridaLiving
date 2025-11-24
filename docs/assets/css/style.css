@@ -266,6 +266,47 @@ main {
 .log-table tr:last-child td { border-bottom: none; }
 .log-table tr:nth-child(even) td { background: rgba(255,255,255,0.08); }
 .log-table img { max-width: 250px; border-radius: 8px; }
+
+/* Middle section – light background for bullets */
+.middle-section {
+  background: rgba(255,255,255,0.12);
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 3rem 0;
+}
+
+/* Table column differentiation – subtle shading */
+.log-table th:first-child, .log-table td:first-child { background: rgba(220,237,200,0.3); } /* First column light mint */
+.log-table th:nth-child(2), .log-table td:nth-child(2) { background: rgba(255,224,178,0.2); } /* Second column peach */
+.log-table th:nth-child(3), .log-table td:nth-child(3) { background: rgba(255,182,193,0.2); } /* Third column pink */
+.log-table th:nth-child(4), .log-table td:nth-child(4) { background: rgba(187,222,251,0.2); } /* Fourth column blue */
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.log-table th {
+  background: rgba(0,0,0,0.12);
+  color: #222;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+}
+.log-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  vertical-align: top;
+  font-size: 0.95rem;
+}
+.log-table tr:last-child td { border-bottom: none; }
+.log-table tr:nth-child(even) { background: rgba(255,255,255,0.08); }
+.log-table img { max-width: 250px; border-radius: 8px; }
+
 /* Responsive */
 @media (max-width: 768px) {
   .plant-hero { flex-direction: column; text-align: center; }
