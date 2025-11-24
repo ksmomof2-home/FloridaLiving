@@ -1,4 +1,4 @@
----
+**---
 layout: default
 title: {{ PLANT NAME }}
 ---
@@ -100,3 +100,4 @@ title: {{ PLANT NAME }}
 </div>
 
 [← Back to Backyard](/FloridaLiving/backyard.html)
+**
