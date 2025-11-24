@@ -98,16 +98,6 @@ title: Pineapple
   </tr>
 </table>
 
-<h3>Harvest Log</h3>
-<table class = "facts-table">
-  <tr>
-     <td>Date</td>
-     <td>Weight</td>
-     <td>Comments</td>
-  </tr>
-
-</table>
-
 </div>
 
 <hr>
