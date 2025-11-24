@@ -20,31 +20,47 @@ title: Passionflower (Maypop)
   </div>
 </div>
 
-<div class="middle-info">
+<div class="full-width">
   <h3>Wildlife Supported</h3>
-  <p>Only host for Gulf fritillary • Nectar for bees, butterflies, hummingbirds</p>
+  <ul>
+    <li>Only host for Gulf fritillary caterpillars</li>
+    <li>Nectar for bees, butterflies, hummingbirds</li>
+  </ul>
 
   <h3>Pests to Watch</h3>
-  <p>Gulf fritillary caterpillars → **DO NOT KILL** — they’re the whole point!</p>
+  <ul>
+    <li>Gulf fritillary caterpillars → **DO NOT KILL** — they’re the whole point!</li>
+  </ul>
 
   <h3>Unusual / Fun Facts</h3>
-  <p>Fruit (maypop) is edible when yellow — tastes like tropical bubblegum<br>
-     Used by Native Americans as calming tea</p>
+  <ul>
+    <li>Fruit (maypop) is edible when yellow — tastes like tropical bubblegum</li>
+    <li>Used by Native Americans as a calming tea</li>
+  </ul>
 
   <h3>Local Care Tips (The Villages 9b)</h3>
-  <p>Let climb the fence • Dies back in winter, explodes in spring<br>
-     Current status: Pos 3 — fertilized, foiled, mulched Nov 20</p>
+  <ul>
+    <li>Let it climb the fence — no trellis needed</li>
+    <li>Dies back in winter, explodes in spring</li>
+    <li>Current status: Pos 3 — fertilized, foiled, mulched Nov 20</li>
+  </ul>
 </div>
 
 <h3>Growth Over Time</h3>
 <table class="log-table table-growth">
   <tr><th>Date</th><th>Photo</th><th>Notes</th></tr>
-  <tr><td><strong>Nov 20, 2025</strong></td><td><img src="/FloridaLiving/assets/passionflower.jpg" width="250"></td><td>Fertilized, foiled, mulched — ready for winter</td></tr>
+  <tr>
+    <td><strong>Nov 20, 2025</strong></td>
+    <td><a href="/FloridaLiving/assets/passionflower.jpg" target="_blank">
+      <img src="/FloridaLiving/assets/passionflower.jpg" width="100" alt="Nov 20, 2025">
+    </a></td>
+    <td>Fertilized, foiled, mulched — ready for winter</td>
+  </tr>
 </table>
 
 <h3>Harvest Log</h3>
 <table class="log-table table-harvest">
-  <tr><th>Date</th><th>Weight</th><th>Notes</th></tr>
+  <tr><th>Date</th><th>Fruit Count</th><th>Notes</th></tr>
 </table>
 
 <h3>Pests Encountered</h3>
@@ -60,7 +76,7 @@ title: Passionflower (Maypop)
 
 <hr>
 <p style="text-align:center;">
-  <a href="/FloridaLiving/plants/celebrity-tomato.html">← Previous: Celebrity Tomato</a> • 
+  <a href="/FloridaLiving/plants/pineapple.html">← Previous: Pineapple</a> • 
   <a href="/FloridaLiving/plants/lime.html">Next: Lime Tree →</a>
   <br><br>
   <a href="/FloridaLiving/plants.html">← All Plants</a> • 
