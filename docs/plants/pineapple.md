@@ -8,9 +8,9 @@ title: Pineapple
 </div>
 
 <div class="plant-hero">
-  <!-- Clickable thumbnail → opens full-size image -->
+  <!-- Full-size clickable hero image (not tiny) -->
   <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" class="thumb">
+    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
   </a>
 
   <div class="plant-facts">
@@ -32,14 +32,33 @@ title: Pineapple
   <p>Occasional nectar for bees & ants — not a butterfly host.</p>
 
   <h3>Pests to Watch (The Villages)</h3>
-  <p>Mealybugs (rare) — wipe with alcohol • Whiteflies ignore pineapples</p>
+  <ul>
+    <li>Mealybugs (rare) — wipe with alcohol</li>
+    <li>Whiteflies → ignore pineapples</li>
+  </ul>
 
   <h3>Unusual & Fun Facts</h3>
-  <p>Each plant fruits only once, then dies — but gives you pups to replant forever!<br>
+  <p>Each plant only fruits once, then dies — but produces pups you can replant forever!<br>
      The crown you twist off a store pineapple is a perfect clone of the fruit you ate.</p>
 
-  <h3>My Garden Notes</h3>
-  <p>Planted two crowns Nov 22, 2025 in Pos 1 — rooting like champs!</p>
+  <h3>Local Care Tips (The Villages 9b)</h3>
+  <p>Mulch with pine bark (acidic — they love it) • Add crushed egg shells • Bring inside or wrap + Christmas lights below 28 °F</p>
+
+  <h3>Notes from the Gardener</h3>
+  <p>Planted two crowns Nov 22, 2025 in Pos 1 — rooting like champs! Can’t wait for that first home-grown pineapple smell.</p>
+
+  <h3>Growth Over Time</h3>
+  <table class="history-table">
+    <tr>
+      <td><strong>Nov 22, 2025</strong></td>
+      <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="250" alt="Just planted"></td>
+      <td>Two crowns just planted — let the adventure begin!</td>
+    </tr>
+    <!-- Add new rows as the years go by -->
+  </table>
+
+  <h3>Harvest Log</h3>
+  <p>No harvest yet — stay tuned!</p>
 </div>
 
 <hr>
@@ -50,7 +69,6 @@ title: Pineapple
   <a href="/FloridaLiving/plants.html">← All Plants</a> • 
   <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
 </p>
-
 <hr>
 <h1>OLD FILE
 </h1>
