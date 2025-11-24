@@ -3,7 +3,9 @@ layout: default
 title: Bronze Fennel & Dill
 ---
 <div class="plant-hero">
-  <img src="/FloridaLiving/assets/bronze-fennel.jpg" alt="Bronze Fennel & Dill">
+  <a href="/FloridaLiving/assets/bronze-fennel.jpg" target="_blank">
+    <img src="/FloridaLiving/assets/bronze-fennel.jpg" alt="Bronze Fennel & Dill">
+  </a>
 
   <div class="plant-facts">
     <h3>Quick Facts</h3>
@@ -20,46 +22,63 @@ title: Bronze Fennel & Dill
 
 <div class="full-width">
   <h3>Wildlife Supported</h3>
-  <p>Only host for Black Swallowtail caterpillars • Nectar for bees & butterflies</p>
+  <ul>
+    <li>Only host for Black Swallowtail caterpillars</li>
+    <li>Nectar for bees & butterflies</li>
+  </ul>
 
   <h3>Pests to Watch</h3>
-  <p>Swallowtail caterpillars → **DO NOT KILL** — they’re the whole point!</p>
+  <ul>
+    <li>Swallowtail caterpillars → **DO NOT KILL** — they’re the whole point!</li>
+  </ul>
 
   <h3>Unusual / Fun Facts</h3>
-  <p>Bronze fennel looks like purple smoke • Dill smells like pickles</p>
+  <ul>
+    <li>Bronze fennel looks like purple smoke</li>
+    <li>Dill smells like pickles</li>
+  </ul>
 
   <h3>Local Care Tips (The Villages 9b)</h3>
-  <p>Pos 6 & 8 • Dill planted Nov 22 • Add bronze fennel when available<br>
-     Let go to flower — swallowtail paradise!</p>
+  <ul>
+    <li>Pos 6 & 8 • Dill planted Nov 22</li>
+    <li>Add bronze fennel when available</li>
+    <li>Let go to flower — swallowtail paradise!</li>
+  </ul>
 </div>
+
+<h3>Growth Over Time</h3>
+<table class="log-table table-growth">
+  <tr><th>Date</th><th>Photo</th><th>Notes</th></tr>
+  <tr>
+    <td><strong>Nov 22, 2025</strong></td>
+    <td><a href="/FloridaLiving/assets/dill.jpg" target="_blank">
+      <img src="/FloridaLiving/assets/dill.jpg" width="100">
+    </a></td>
+    <td>Dill planted in Pos 8 — waiting on bronze fennel</td>
+  </tr>
+</table>
+
+<h3>Harvest Log</h3>
+<table class="log-table table-harvest">
+  <tr><th>Date</th><th>Use</th><th>Notes</th></tr>
+</table>
+
+<h3>Pests Encountered</h3>
+<table class="log-table table-pests">
+  <tr><th>Date</th><th>Pest</th><th>Treatment</th></tr>
+</table>
+
+<h3>Notes from the Gardener</h3>
+<table class="log-table table-notes">
+  <tr><th>Date</th><th>Note</th></tr>
+  <tr><td>Nov 22, 2025</td><td>Dill is up — swallowtail buffet coming soon!</td></tr>
+</table>
 
 <hr>
 <p style="text-align:center;">
   <a href="/FloridaLiving/plants/avocado.html">← Previous: Avocado Tree</a> • 
-  <a href="/FloridaLiving/plants/parsley-swamp-milkweed.html">Next: Parsley + Swamp Milkweed →</a>
+  <a href="/FloridaLiving/plants/jalapeno-cilantro.html">Next: Jalapeño + Cilantro →</a>
   <br><br>
   <a href="/FloridaLiving/plants.html">← All Plants</a> • 
   <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
 </p>
-<hr>OLDFILE<hr>
-# Bronze Fennel & Dill
-**Foeniculum vulgare 'Rubrum'** + **Anethum graveolens** | Apiaceae
-
-<img src = "https://raw.githubusercontent.com/ksmomof2-home/FloridaLiving/main/docs/assets/dill.jpg?" width=400 alt = "Bronze Fennel and Dill">
-
-### Quick Facts
-- Sun: Full sun to part shade
-- Height: 4–6 ft (let them flower!)
-- Host plant: **Black Swallowtail butterfly**
-
-### Primary Use
-- Butterfly host → dozens of caterpillars guaranteed
-- Culinary → fennel bulb & fronds, dill weed & seed
-
-### Local Care Tips
-- Plant together in Pos 6 & 7a
-- Let go to flower → swallowtail magnets
-- Self-seeds happily
-- Current: Dill planted Pos 8 (Nov 22), fennel coming soon
-
-[← Back to Backyard](/FloridaLiving/backyard.html)
