@@ -88,14 +88,7 @@ main {
   border-radius: 16px;
   backdrop-filter: blur(4px);   /* optional – gives a frosted-glass look */
 }
-/*
-.plant-facts {
-  flex: 1;
-  min-width: 300px;
-  padding: 1.8rem;
-  border-radius: 12px;
-}
-*/
+
 .plant-info, .plant-facts {
     background: rgba(255,255,255,0.10);
 }
@@ -143,6 +136,11 @@ main {
 .facts-table td:first-child { 
   font-weight: 600; 
   width: 40%;
+  background: rgba(255,255,255,0.15);
+}
+.facts-table td:second-child { 
+  font-weight: 600; 
+  width: 30%;
   background: rgba(255,255,255,0.15);
 }
 .highlight { 
