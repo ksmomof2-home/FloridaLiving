@@ -3,8 +3,8 @@ layout: default
 title: Poblano Pepper
 ---
 <div class="plant-hero">
-  <a href="/FloridaLiving/assets/poblano.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/poblano.jpg" alt="Poblano Pepper">
+  <a href="/FloridaLiving/assets/emptypot.jpg" target="_blank">
+    <img src="/FloridaLiving/assets/emptypot.jpg" alt="Poblano Pepper">
   </a>
 
   <div class="plant-facts">
