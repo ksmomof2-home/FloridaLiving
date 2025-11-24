@@ -61,7 +61,7 @@ title: Pineapple
     <td><strong>Nov 22, 2025</strong></td>
 <!--    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="50" alt="Just planted"></td> -->
     <td>  <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
+    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" width=300>
   </a></td>
     <td>Two crowns just planted — rooting begins!</td>
   </tr>
@@ -99,7 +99,7 @@ title: Pineapple
   </tr>
   <tr>
     <td>11/21/2025</td>
-    <td>"First pot ready, here is hoping they will both produce"</td>
+    <td>First pot ready, here is hoping they will both produce</td>
   </tr>
 </table>
 
