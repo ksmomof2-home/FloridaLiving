@@ -2,6 +2,59 @@
 layout: default
 title: Pineapple
 ---
+<div class="plant-header">
+  <h1>Pineapple</h1>
+  <p class="subtitle"><strong>Ananas comosus</strong> · Bromeliaceae (the bromeliad family!)</p>
+</div>
+
+<div class="plant-hero">
+  <!-- Clickable thumbnail → opens full-size image -->
+  <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
+    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" class="thumb">
+  </a>
+
+  <div class="plant-facts">
+    <h3>Quick Facts</h3>
+    <table class="facts-table">
+      <tr><td>USDA zones</td><td>9b–11 (protect below 28 °F)</td></tr>
+      <tr><td>Sun</td><td>Full sun – the more the better</td></tr>
+      <tr><td>Water</td><td>Average – let top 2–3" dry</td></tr>
+      <tr><td>Height in pot</td><td>3–4 ft</td></tr>
+      <tr><td>Spacing</td><td>2 crowns per 30-gal pot</td></tr>
+      <tr><td>Fruit from crown</td><td>18–24 months</td></tr>
+    </table>
+    <p class="highlight"><strong>Primary Use:</strong> Culinary — sweetest home-grown pineapple ever!</p>
+  </div>
+</div>
+
+<div class="plant-info">
+  <h3>Wildlife Supported</h3>
+  <p>Occasional nectar for bees & ants — not a butterfly host.</p>
+
+  <h3>Pests to Watch (The Villages)</h3>
+  <p>Mealybugs (rare) — wipe with alcohol • Whiteflies ignore pineapples</p>
+
+  <h3>Unusual & Fun Facts</h3>
+  <p>Each plant fruits only once, then dies — but gives you pups to replant forever!<br>
+     The crown you twist off a store pineapple is a perfect clone of the fruit you ate.</p>
+
+  <h3>My Garden Notes</h3>
+  <p>Planted two crowns Nov 22, 2025 in Pos 1 — rooting like champs!</p>
+</div>
+
+<hr>
+<p class="nav-bottom">
+  <a href="/FloridaLiving/plants/celebrity-tomato.html">← Previous: Celebrity Tomato</a> • 
+  <a href="/FloridaLiving/plants/passionflower.html">Next: Passionflower →</a>
+  <br><br>
+  <a href="/FloridaLiving/plants.html">← All Plants</a> • 
+  <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
+</p>
+
+<hr>
+<h1>OLD FILE
+</h1>
+<hr>
 
 <h1>Pineapple</h1>
 <h2>**Ananas comosus** | Bromeliaceae (the bromeliad family!)</h2>
