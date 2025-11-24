@@ -45,7 +45,7 @@ title: Pineapple
   <tr><th>Date</th><th>Photo</th><th>Notes</th></tr>
   <tr>
     <td><strong>Nov 22, 2025</strong></td>
-    <td><img src="/FloridaLiving/assets/pineapple1.jpg"></td>
+    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="250"></td>
     <td>Two crowns just planted — rooting begins!</td>
   </tr>
 </table>
@@ -73,8 +73,7 @@ title: Pineapple
   <br><br>
   <a href="/FloridaLiving/plants.html">← All Plants</a> • 
   <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
-</p>
-<hr>OLDFILE<hr>
+</p><hr>OLDFILE<hr>
 <div class="page-title">
   <h1>Pineapple <span class="sci">Ananas comosus</span></h1>
   <p class="tagline">Bromeliaceae – the bromeliad family!</p>
