@@ -55,9 +55,14 @@ title: Pineapple
 
 <h3>Growth Over Time</h3>
 <table class="facts-table">
+  <tr><td>Date</td><td>Image</td><td>Comments</td></tr>
+  
   <tr>
     <td><strong>Nov 22, 2025</strong></td>
-    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="50" alt="Just planted"></td>
+<!--    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="50" alt="Just planted"></td> -->
+    <td>  <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
+    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
+  </a></td>
     <td>Two crowns just planted — rooting begins!</td>
   </tr>
   <tr>
@@ -93,7 +98,7 @@ title: Pineapple
      <td>Comments</td>
   </tr>
   <tr>
-    <td>"11/21/2025"</td>
+    <td>11/21/2025</td>
     <td>"First pot ready, here is hoping they will both produce"</td>
   </tr>
 </table>
