@@ -3,9 +3,7 @@ layout: default
 title: Pineapple
 ---
 <div class="plant-hero">
-  <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
-  </a>
+  <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
 
   <div class="plant-facts">
     <h3>Quick Facts</h3>
@@ -17,11 +15,12 @@ title: Pineapple
       <li><strong>Spacing:</strong> 2 crowns per 30-gal pot (perfect!)</li>
       <li><strong>Days to fruit from crown:</strong> 18–24 months</li>
     </ul>
+
     <p><strong>Primary Use:</strong> Culinary → sweetest home-grown pineapple you’ll ever taste</p>
   </div>
 </div>
 
-<div class="middle-info">
+<div class="full-width">
   <h3>Wildlife Supported</h3>
   <p>Occasional nectar for bees & ants — not a butterfly host.</p>
 
@@ -40,32 +39,6 @@ title: Pineapple
      Current status: 2 crowns rooting in Pos 1 (Nov 22, 2025)</p>
 </div>
 
-<h3>Growth Over Time</h3>
-<table class="log-table table-growth">
-  <tr><th>Date</th><th>Photo</th><th>Notes</th></tr>
-  <tr>
-    <td><strong>Nov 22, 2025</strong></td>
-    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="250"></td>
-    <td>Two crowns just planted — rooting begins!</td>
-  </tr>
-</table>
-
-<h3>Harvest Log</h3>
-<table class="log-table table-harvest">
-  <tr><th>Date</th><th>Weight</th><th>Notes</th></tr>
-</table>
-
-<h3>Pests Encountered</h3>
-<table class="log-table table-pests">
-  <tr><th>Date</th><th>Pest</th><th>Treatment</th></tr>
-</table>
-
-<h3>Notes from the Gardener</h3>
-<table class="log-table table-notes">
-  <tr><th>Date</th><th>Note</th></tr>
-  <tr><td>Nov 22, 2025</td><td>Planted with love — can't wait for that first pineapple smell!</td></tr>
-</table>
-
 <hr>
 <p style="text-align:center;">
   <a href="/FloridaLiving/plants/celebrity-tomato.html">← Previous: Celebrity Tomato</a> • 
@@ -73,6 +46,7 @@ title: Pineapple
   <br><br>
   <a href="/FloridaLiving/plants.html">← All Plants</a> • 
   <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
+</p>
 </p><hr>OLDFILE<hr>
 <div class="page-title">
   <h1>Pineapple <span class="sci">Ananas comosus</span></h1>
