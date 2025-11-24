@@ -189,6 +189,44 @@ main {
   font-weight: 600; 
 }
 
+/* Four beautiful, readable table themes */
+.table-growth     { background: rgba(220,237,200,0.25); }   /* light mint */
+.table-harvest    { background: rgba(255,224,178,0.25); }   /* soft peach */
+.table-pests      { background: rgba(255,182,193,0.25); }   /* pale pink */
+.table-notes      { background: rgba(187,222,251,0.25); }   /* baby blue */
+
+/* Shared table styling – clean & readable */
+.log-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.log-table th {
+  background: rgba(0,0,0,0.12);
+  color: #222;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+}
+.log-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  vertical-align: top;
+}
+.log-table tr:last-child td { border-bottom: none; }
+.log-table tr:nth-child(even) td { background: rgba(255,255,255,0.08); }
+
+/* Responsive images in tables */
+.log-table img {
+  max-width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .plant-hero { flex-direction: column; text-align: center; }
