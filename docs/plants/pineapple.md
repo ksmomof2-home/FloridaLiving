@@ -7,6 +7,7 @@ title: Pineapple
   <p class="tagline">Bromeliaceae – the bromeliad family!</p>
 </div>
 
+<div class="page-hero">
 <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
   <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" class="hero-img">
 </a>
@@ -22,7 +23,7 @@ title: Pineapple
   </table>
   <p class="highlight"><strong>Use:</strong> Culinary — sweetest pineapple ever!</p>
 </div>
-
+</div>
 <div class="plant-info">
   <h3>Wildlife</h3>
   <p>Bees & ants love the flowers — not a butterfly host.</p>
@@ -58,6 +59,11 @@ title: Pineapple
   <a href="/FloridaLiving/plants.html">All Plants</a> • 
   <a href="/FloridaLiving/backyard.html">Backyard</a>
 </p>
+
+
+
+
+
 
 <hr><H1>OLDFILE</H1><hr>
 <div class="plant-header">
@@ -119,7 +125,7 @@ title: Pineapple
     <td><strong>Nov 22, 2025</strong></td>
 <!--    <td><img src="/FloridaLiving/assets/pineapple1.jpg" width="50" alt="Just planted"></td> -->
     <td>  <a href="/FloridaLiving/assets/pineapple1.jpg" target="_blank">
-    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" width=300>
+    <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting" class=hero-img>
   </a></td>
     <td>Two crowns just planted — rooting begins!</td>
   </tr>
