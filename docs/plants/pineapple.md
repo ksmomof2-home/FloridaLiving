@@ -2,12 +2,30 @@
 layout: default
 title: Pineapple
 ---
-
-<hr><H1>OLDFILE</H1><hr>
 <div class="page-title">
   <h1>Pineapple <span class="sci">Ananas comosus</span></h1>
   <p class="tagline">Bromeliaceae – the bromeliad family!</p>
 </div>
+
+<div class="plant-hero">
+  <img src="/FloridaLiving/assets/pineapple1.jpg" alt="Pineapple Crown Rooting">
+
+  <div class="plant-facts">
+    <h3>Quick Facts</h3>
+    <ul>
+      <li><strong>USDA zones:</strong> 9b–11 (marginal in 9b — we protect it!)</li>
+      <li><strong>Sun:</strong> Full sun (the more the better)</li>
+      <li><strong>Water:</strong> Average — let top 2–3" dry between waterings</li>
+      <li><strong>Mature height in 30-gal pot:</strong> 3–4 ft</li>
+      <li><strong>Spacing:</strong> 2 crowns per 30-gal pot (perfect!)</li>
+      <li><strong>Days to fruit from crown:</strong> 18–24 months</li>
+    </ul>
+
+    <p><strong>Primary Use:</strong> Culinary → sweetest home-grown pineapple you’ll ever taste</p>
+  </div>
+</div>
+
+
  
 <div class="plant-hero">
   <!-- Full-size clickable hero image (not tiny) -->
