@@ -29,20 +29,29 @@ title: Pineapple
 
 <div class="plant-info">
   <h3>Wildlife Supported</h3>
-  <p>Occasional nectar for bees & ants — not a butterfly host.</p>
+  <ul>
+    <li>Occasional nectar for <strong>bees</strong> and <strong>ants</strong></li>
+     <li>Not a butterfly host.</li>
+  </ul>
 
   <h3>Pests to Watch (The Villages)</h3>
   <ul>
-    <li>Mealybugs (rare) — wipe with alcohol</li>
-    <li>Whiteflies → ignore pineapples</li>
+     <li><strong>Mealybugs</strong> (rare) — wipe with alcohol.</li>
+     <li><strong>Whiteflies</strong> → ignore pineapples, no foil needed while rooting</li>
+  </ul>
+  
+  <h3>Unusual / Fun Facts</h3>
+  <ul>
+     <li>Each plant only fruits once, then dies — but produces pups you can replant forever!</li>
+     <li>The crown you twist off a store pineapple is genetically identical to the fruit you ate.</li>
   </ul>
 
-  <h3>Unusual & Fun Facts</h3>
-  <p>Each plant only fruits once, then dies — but produces pups you can replant forever!<br>
-     The crown you twist off a store pineapple is a perfect clone of the fruit you ate.</p>
-
   <h3>Local Care Tips (The Villages 9b)</h3>
-  <p>Mulch with pine bark (acidic — they love it) • Add crushed egg shells • Bring inside or wrap + Christmas lights below 28 °F</p>
+  <ul>
+     <li>Mulch with pine bark (acidic - they love it)</li>
+     <li>add crushed egg shells for calcium</li>
+     <li>Bring inside or wrap + Christmas lights below 28 °F</li>
+  </ul>
 
 <h3>Growth Over Time</h3>
 <table class="facts-table">
