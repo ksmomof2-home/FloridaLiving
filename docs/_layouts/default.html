@@ -12,6 +12,51 @@
     body { background: #9caf88 !important; }  /* soft sage green */
   </style>
 </head>
+  <script>
+  // Simple hard-coded plant order — works forever, no Jekyll needed
+  const plants = [
+    { file: 'pineapple', name: 'Pineapple' },
+    { file: 'celebrity-tomato', name: 'Celebrity Tomato' },
+    { file: 'passionflower', name: 'Passionflower (Maypop)' },
+    { file: 'lime', name: 'Lime Tree' },
+    { file: 'avocado', name: 'Avocado Tree' },
+    { file: 'bronze-fennel-dill', name: 'Bronze Fennel & Dill' },
+    { file: 'bronze-fennel', name: 'Extra Bronze Fennel' },
+    { file: 'parsley-swamp-milkweed', name: 'Parsley + Swamp Milkweed' },
+    { file: 'jalapeno-cilantro', name: 'Jalapeño + Cilantro' },
+    { file: 'green-bell-pepper', name: 'Green Bell Pepper' },
+    { file: 'poblano', name: 'Poblano Pepper' },
+    { file: 'basil', name: 'Basil (Genovese + Thai)' },
+    { file: 'rosemary-oregano', name: 'Rosemary + Italian Oregano' },
+    { file: 'chives', name: 'Chives' },
+    { file: 'mint', name: 'Mint' },
+    { file: 'wandering-jew', name: 'Wandering Jew' }
+  ];
+
+  // Get current plant from URL
+  const path = window.location.pathname;
+  const currentFile = path.split('/').pop().replace('.html', '');
+  const currentIndex = plants.findIndex(p => p.file === currentFile);
+  const prev = currentIndex > 0 ? plants[currentIndex - 1] : null;
+  const next = currentIndex < plants.length - 1 ? plants[currentIndex + 1] : null;
+
+  // Insert navigation at the bottom
+  const hr = document.querySelector('hr');
+  if (hr) {
+    const nav = document.createElement('p');
+    nav.style.textAlign = 'center';
+    nav.style.fontSize = '1.1rem';
+    nav.innerHTML = `
+      ${prev ? `<a href="/FloridaLiving/plants/${prev.file}.html">← Previous: ${prev.name}</a>` : '<span style="color:#999;">← First Plant</span>'} • 
+      ${next ? `<a href="/FloridaLiving/plants/${next.file}.html">Next: ${next.name} →</a>` : '<span style="color:#999;">Last Plant →</span>'}
+      <br><br>
+      <a href="/FloridaLiving/plants.html">← All Plants</a> • 
+      <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
+    `;
+    hr.parentNode.insertBefore(nav, hr.nextSibling);
+  }
+</script>
+  
 <body>
   {% include header.html %}
   <main>
