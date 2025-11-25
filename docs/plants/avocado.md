@@ -76,3 +76,5 @@ title: Avocado Tree
 </table>
 
 <hr>
+  <a href="/FloridaLiving/plants.html">← All Plants</a> • 
+  <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
