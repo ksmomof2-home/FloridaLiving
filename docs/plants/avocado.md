@@ -79,88 +79,31 @@ title: Avocado Tree
 {% assign plants = site.data.plant-order %}
 {% assign current = page.url | split:'/' | last | split:'.' | first %}
 
+{% assign current_index = -1 %}
 {% for plant in plants %}
   {% if plant.file == current %}
-    {% assign index = forloop.index0 %}
-    {% assign prev = plants[index | minus: 1] %}
-    {% assign next = plants[index | plus: 1] %}
+    {% assign current_index = forloop.index %}
+    break
   {% endif %}
 {% endfor %}
-
-<hr>
-{% assign plants = site.data.plant-order %}
-{% assign current = page.url | split:'/' | last | split:'.' | first %}
-
-{% for plant in plants %}
-  {% if plant.file == current %}
-    {% assign index = forloop.index0 %}
-    {% assign prev = plants[index | minus: 1] %}
-    {% assign next = plants[index | plus: 1] %}
-  {% endif %}
-{% endfor %}
-
-<hr>
-{% assign plants = site.data.plant-order %}
-{% assign current = page.url | split:'/' | last | split:'.' | first %}
-
-{% assign prev_file = '' %}
-{% assign prev_name = '' %}
-{% assign next_file = '' %}
-{% assign next_name = '' %}
-
-{% for plant in plants %}
-  {% if plant.file == current %}
-    {% assign index = forloop.index0 %}
-    {% if index > 0 %}
-      {% assign prev = plants[index | minus: 1] %}
-      {% if prev.file != '' %}
-        {% assign prev_file = prev.file %}
-        {% assign prev_name = prev.name %}
-      {% endif %}
-    {% endif %}
-    {% if index < plants.size | minus: 1 %}
-      {% assign next = plants[index | plus: 1] %}
-      {% if next.file != '' %}
-        {% assign next_file = next.file %}
-        {% assign next_name = next.name %}
-      {% endif %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-<hr>
-{% assign plants = site.data.plant-order %}
-{% assign current = page.url | split:'/' | last | split:'.' | first %}
 
 {% assign prev = null %}
 {% assign next = null %}
-
-{% for plant in plants %}
-  {% if plant.file == current %}
-    {% assign current_index = forloop.index0 %}
-    {% assign prev_index = current_index | minus: 1 %}
-    {% assign next_index = current_index | plus: 1 %}
-    {% if prev_index >= 0 %}
-      {% assign prev = plants[prev_index] %}
-    {% endif %}
-    {% if next_index < plants.size %}
-      {% assign next = plants[next_index] %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
+{% if current_index > 1 %}
+  {% assign prev = plants[current_index | minus: 2] %}
+{% endif %}
+{% if current_index < plants.size %}
+  {% assign next = plants[current_index] %}
+{% endif %}
 
 <hr>
 <p style="text-align:center; font-size:1.1rem;">
   {% if prev %}
     <a href="/FloridaLiving/plants/{{ prev.file }}.html">← Previous: {{ prev.name }}</a>
-  {% else %}
-    <span style="color:#999;">← First Plant</span>
   {% endif %}
   • 
   {% if next %}
     <a href="/FloridaLiving/plants/{{ next.file }}.html">Next: {{ next.name }} →</a>
-  {% else %}
-    <span style="color:#999;">Last Plant →</span>
   {% endif %}
   <br><br>
   <a href="/FloridaLiving/plants.html">← All Plants</a> • 
