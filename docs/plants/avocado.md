@@ -76,36 +76,3 @@ title: Avocado Tree
 </table>
 
 <hr>
-{% assign plants = site.data.plant-order %}
-{% assign current = page.url | split:'/' | last | split:'.' | first %}
-
-{% assign current_index = -1 %}
-{% for plant in plants %}
-  {% if plant.file == current %}
-    {% assign current_index = forloop.index %}
-    break
-  {% endif %}
-{% endfor %}
-
-{% assign prev = null %}
-{% assign next = null %}
-{% if current_index > 1 %}
-  {% assign prev = plants[current_index | minus: 2] %}
-{% endif %}
-{% if current_index < plants.size %}
-  {% assign next = plants[current_index] %}
-{% endif %}
-
-<hr>
-<p style="text-align:center; font-size:1.1rem;">
-  {% if prev %}
-    <a href="/FloridaLiving/plants/{{ prev.file }}.html">← Previous: {{ prev.name }}</a>
-  {% endif %}
-  • 
-  {% if next %}
-    <a href="/FloridaLiving/plants/{{ next.file }}.html">Next: {{ next.name }} →</a>
-  {% endif %}
-  <br><br>
-  <a href="/FloridaLiving/plants.html">← All Plants</a> • 
-  <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
-</p>
