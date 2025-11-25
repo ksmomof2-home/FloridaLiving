@@ -60,9 +60,30 @@ title: Celebrity Tomato
 </table>
 
 <hr>
-<p style="text-align:center;">
-  <a href="/FloridaLiving/plants/pineapple.html">← Previous: Pineapple</a> • 
-  <a href="/FloridaLiving/plants/passionflower.html">Next: Passionflower →</a>
+{% assign plants = site.data.plant-order %}
+{% assign current = page.url | split:'/' | last | split:'.' | first %}
+
+{% for plant in plants %}
+  {% if plant.file == current %}
+    {% assign index = forloop.index0 %}
+    {% assign prev = plants[index | minus: 1] %}
+    {% assign next = plants[index | plus: 1] %}
+  {% endif %}
+{% endfor %}
+
+<hr>
+<p style="text-align:center; font-size:1.1rem;">
+  {% if prev %}
+    <a href="/FloridaLiving/plants/{{ prev.file }}.html">← Previous: {{ prev.name }}</a>
+  {% else %}
+    <span style="color:#999;">← First Plant</span>
+  {% endif %}
+  • 
+  {% if next %}
+    <a href="/FloridaLiving/plants/{{ next.file }}.html">Next: {{ next.name }} →</a>
+  {% else %}
+    <span style="color:#999;">Last Plant →</span>
+  {% endif %}
   <br><br>
   <a href="/FloridaLiving/plants.html">← All Plants</a> • 
   <a href="/FloridaLiving/backyard.html">Backyard Overview</a>
