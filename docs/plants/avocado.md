@@ -100,15 +100,44 @@ title: Avocado Tree
 {% endfor %}
 
 <hr>
+{% assign plants = site.data.plant-order %}
+{% assign current = page.url | split:'/' | last | split:'.' | first %}
+
+{% assign prev_file = '' %}
+{% assign prev_name = '' %}
+{% assign next_file = '' %}
+{% assign next_name = '' %}
+
+{% for plant in plants %}
+  {% if plant.file == current %}
+    {% assign index = forloop.index0 %}
+    {% if index > 0 %}
+      {% assign prev = plants[index | minus: 1] %}
+      {% if prev.file != '' %}
+        {% assign prev_file = prev.file %}
+        {% assign prev_name = prev.name %}
+      {% endif %}
+    {% endif %}
+    {% if index < plants.size | minus: 1 %}
+      {% assign next = plants[index | plus: 1] %}
+      {% if next.file != '' %}
+        {% assign next_file = next.file %}
+        {% assign next_name = next.name %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<hr>
 <p style="text-align:center; font-size:1.1rem;">
-  {% if prev %}
-    <a href="/FloridaLiving/plants/{{ prev.file }}.html">← Previous: {{ prev.name }}</a>
+  {% if prev_file != '' %}
+    <a href="/FloridaLiving/plants/{{ prev_file }}.html">← Previous: {{ prev_name }}</a>
   {% else %}
     <span style="color:#999;">← First Plant</span>
   {% endif %}
   • 
-  {% if next %}
-    <a href="/FloridaLiving/plants/{{ next.file }}.html">Next: {{ next.name }} →</a>
+  {% if next_file != '' %}
+    <a href="/FloridaLiving/plants/{{ next_file }}.html">Next: {{ next_name }} →</a>
   {% else %}
     <span style="color:#999;">Last Plant →</span>
   {% endif %}
