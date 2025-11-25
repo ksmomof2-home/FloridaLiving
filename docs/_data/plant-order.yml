@@ -1,0 +1,32 @@
+- file: pineapple
+  name: Pineapple
+- file: celebrity-tomato
+  name: Celebrity Tomato
+- file: passionflower
+  name: Passionflower (Maypop)
+- file: lime
+  name: Lime Tree
+- file: avocado
+  name: Avocado Tree
+- file: bronze-fennel-dill
+  name: Bronze Fennel & Dill
+- file: bronze-fennel
+  name: Extra Bronze Fennel
+- file: parsley-swamp-milkweed
+  name: Parsley + Swamp Milkweed
+- file: jalapeno-cilantro
+  name: Jalapeño + Cilantro
+- file: green-bell-pepper
+  name: Green Bell Pepper
+- file: poblano
+  name: Poblano Pepper
+- file: basil
+  name: Basil (Genovese + Thai)
+- file: rosemary-oregano
+  name: Rosemary + Italian Oregano
+- file: chives
+  name: Chives
+- file: mint
+  name: Mint
+- file: wandering-jew
+  name: Wandering Jew
