@@ -17,3 +17,6 @@ $($lines -join "`n")
 "@ | Set-Content -Encoding utf8 -Path "docs\js\image-list.js"
 
 Write-Host "Image list updated! $($files.Count) photos ready for glory!" -ForegroundColor Magenta
+
+Write-Host "`nDone! Press any key to close..." -ForegroundColor Cyan
+$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
