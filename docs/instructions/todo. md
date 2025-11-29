@@ -1,0 +1,18 @@
+1. **Get all 20 pots populated**  
+   Fill in the missing ones in `garden-data.json` → `pots` object (name, type, notes, whatever you want to show on the card and pot page).
+
+2. **Restore the original beautiful look**  
+   - Replace the current plain CSS with your old beloved stylesheet (just paste it into `/docs/assets/css/style.css`)  
+   - Add back the extra pot info sections (species, sunlight needs, quirks, etc.) — we’ll make a tiny template section in `pot.html` that pulls from the JSON.
+
+3. **Clean house — delete the old Markdown graveyard**  
+   Once everything is confirmed gorgeous and working, nuke:  
+   - All the old individual `.md` pot files  
+   - `index.md.old`  
+   - Any leftover Jekyll/Lanyon cruft
+
+4. **Expand the empire**  
+   - Wildlife wonderland section  
+   - Front-garden palace  
+   - Two fishtank aquariums (same JSON magic — just new keys like `tank01`, `tank02`)  
+   - One glorious pup shrine (photos + “daily zoomies log”)
