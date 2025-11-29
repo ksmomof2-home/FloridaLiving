@@ -103,5 +103,5 @@ async function renderPhotosForPot(potId) {
 // Then just call it at the end of renderPotPage():
 // renderPhotosForPot(potId);   ← add this line!
 
-// Run on page load
-document.addEventListener('DOMContentLoaded', renderPotPage);
+// Run on page load - later commented out
+// document.addEventListener('DOMContentLoaded', renderPotPage);
