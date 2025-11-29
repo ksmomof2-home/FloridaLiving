@@ -64,7 +64,44 @@ async function renderPotPage() {
   `).join('');
 
   logDiv.innerHTML = html;
+  renderPhotosForPot(potId);
 }
+
+// Add this function anywhere in garden.js
+async function renderPhotosForPot(potId) {
+  const gallery = document.getElementById('photo-gallery');
+  if (!gallery) return; // if the page doesn't have the div, skip gracefully
+
+  // Try to fetch a directory index – GitHub Pages doesn't give real directory listings,
+  // so we cheat with a tiny pre-generated list instead (see Step 3 below)
+  const imageList = window.GARDEN_IMAGE_LIST || []; 
+
+  const myImages = imageList
+    .filter(file => file.startsWith(`pot${potId.replace('pot','').padStart(2,'0')}_`))
+    .sort() // oldest first
+    .reverse(); // newest first
+
+  if (myImages.length === 0) {
+    gallery.innerHTML = '<p class="no-photos">📷 No paparazzi shots yet…</p>';
+    return;
+  }
+
+  const html = myImages.map(src => {
+    const full = `images/${src}`;
+    const date = src.match(/_(\d{8})_/) || src.match(/_(\d{8})\./);
+    const prettyDate = date ? new Date(date[1].replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' }) : 'Some day';
+    return `
+      <a href="${full}" target="_blank" class="photo-thumb">
+        <img src="${full}" alt="${potId} on ${prettyDate}" loading="lazy">
+        <div class="photo-caption">${prettyDate}</div>
+      </a>`;
+  }).join('');
+
+  gallery.innerHTML = html;
+}
+
+// Then just call it at the end of renderPotPage():
+// renderPhotosForPot(potId);   ← add this line!
 
 // Run on page load
 document.addEventListener('DOMContentLoaded', renderPotPage);
