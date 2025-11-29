@@ -1,237 +1,166 @@
 {
-"lastUpdated": "2025-11-29",
-"pots": {
-"pot01": {
-"name": "Basil Palace",
-"species": "Ocimum basilicum",
-"variety": "Genovese",
-"planted": "2025-03-15",
-"light": "Full sun (6–8 hours)",
-"water": "Evenly moist; water when top inch is dry",
-"soil": "Rich, well-draining; pH 6.0–7.5",
-"notes": "Very dramatic. Pretends to wilt if you even glance away. Pinch tips religiously or it gets leggy."
-},
-"pot02": {
-"name": "Former 1a – Now the Official Pot 02",
-"species": "Petroselinum crispum",
-"variety": "Italian Flat-Leaf Parsley",
-"planted": "2025-11-22",
-"light": "Full sun to partial shade",
-"water": "Consistently moist but not soggy",
-"soil": "Well-draining, nutrient-rich; pH 6.0–7.0",
-"notes": "Used to be 1a, promoted to full pot status. Loves being harvested constantly."
-},
-"pot03": {
-"name": "Former Pot 02 – Now Pot 03",
-"species": "Solanum lycopersicum",
-"variety": "Celebrity Hybrid",
-"planted": "2025-11-26",
-"light": "Full sun all day",
-"water": "Consistent, deep watering; 1 inch/week",
-"soil": "Loosely packed, nutrient-rich; pH 6.2–6.8",
-"notes": "Two plants, both ~1 ft tall, aluminum foil collars, 3" pine bark mulch. Currently winning at life."
-},
-"pot04": {
-"name": "Bronze Fennel Palace",
-"species": "Foeniculum vulgare",
-"variety": "Bronze",
-"planted": "",
-"light": "Full sun",
-"water": "Moderate; drought-tolerant once established",
-"soil": "Lean to moderately fertile, well-drained; neutral pH",
-"notes": "Swallowtail butterfly host plant. Expect caterpillars and celebrate them!"
-},
-"pot05": {
-"name": "Rosemary Fortress",
-"species": "Salvia rosmarinus",
-"variety": "Arp",
-"planted": "",
-"light": "Full sun",
-"water": "Let dry between waterings",
-"soil": "Light, slightly acidic, well-drained; pH 6.0–7.0",
-"notes": "Tough as nails. Smells amazing when you brush past it."
-},
-"pot06": {
-"name": "Thyme Kingdom",
-"species": "Thymus vulgaris",
-"variety": "English Thyme",
-"planted": "",
-"light": "Full sun",
-"water": "Let dry between waterings",
-"soil": "Lean, sandy/rocky; neutral-alkaline pH 6.0–8.0",
-"notes": "Groundcover style – slowly taking over the pot"
-},
-"pot07": {
-"name": "Curly Parsley Party",
-"species": "Petroselinum crispum",
-"variety": "Curly",
-"planted": "",
-"light": "Full sun to partial shade",
-"water": "Consistently moist",
-"soil": "Well-draining, rich; pH 6.0–7.0",
-"notes": "The fancy one that looks like it belongs in a garnish museum"
-},
-"pot08": {
-"name": "Oregano Empire",
-"species": "Origanum vulgare",
-"variety": "Greek",
-"planted": "",
-"light": "Full sun",
-"water": "Low; about 1 inch/week, drought-tolerant",
-"soil": "Well-drained, light/dry; pH 6.0–8.0",
-"notes": "Spreads like crazy – perfect for pizza nights"
-},
-"pot09": {
-"name": "Mint Invasion Zone",
-"species": "Mentha × piperita",
-"variety": "Chocolate Mint",
-"planted": "",
-"light": "Full sun to partial shade",
-"water": "Regular; dry out between but consistently moist",
-"soil": "Fertile, well-drained; pH 6.0–7.0",
-"notes": "Escaped twice. Contained (for now). Smells like Thin Mints."
-},
-"pot10": {
-"name": "Sage Sanctuary",
-"species": "Salvia officinalis",
-"variety": "Garden Sage",
-"planted": "",
-"light": "Full sun",
-"water": "Low; let dry between waterings",
-"soil": "Sandy/loamy, well-drained; pH 6.0–7.0",
-"notes": "Velvety leaves, classic Thanksgiving smell"
-},
-"pot11": {
-"name": "Chives Tower",
-"species": "Allium schoenoprasum",
-"variety": "",
-"planted": "",
-"light": "Full sun to partial shade",
-"water": "Consistent moisture",
-"soil": "Rich, well-drained; pH 6.0–7.0",
-"notes": "Onion-flavored grass. Perfect on baked potatoes."
-},
-"pot12": {
-"name": "Dill Delight",
-"species": "Anethum graveolens",
-"variety": "",
-"planted": "",
-"light": "Full sun",
-"water": "Evenly moist, especially early growth",
-"soil": "Well-drained, slightly acidic; pH 5.5–6.5",
-"notes": "Another swallowtail host. Feathery and fragrant."
-},
-"pot13": {
-"name": "Succulent Kingdom #1",
-"species": "Various",
-"variety": "",
-"planted": "",
-"light": "Bright, direct sun (6+ hours)",
-"water": "Infrequent; let soil dry completely",
-"soil": "Gritty, well-draining cactus mix; pH 6.0–7.0",
-"notes": "The divas who hate water. Currently judging everyone else."
-},
-"pot14": {
-"name": "Succulent Kingdom #2",
-"species": "Various",
-"variety": "",
-"planted": "",
-"light": "Bright, direct sun (6+ hours)",
-"water": "Infrequent; let soil dry completely",
-"soil": "Gritty, well-draining cactus mix; pH 6.0–7.0",
-"notes": "Still judging, but slightly less dramatically."
-},
-"pot15": {
-"name": "Succulent Kingdom #3",
-"species": "Various",
-"variety": "",
-"planted": "",
-"light": "Bright, direct sun (6+ hours)",
-"water": "Infrequent; let soil dry completely",
-"soil": "Gritty, well-draining cactus mix; pH 6.0–7.0",
-"notes": "The royal family of neglect."
-},
-"pot16": {
-"name": "Lemon Balm Lounge",
-"species": "Melissa officinalis",
-"variety": "",
-"planted": "",
-"light": "Full sun to partial shade",
-"water": "Regular; keep lightly moist",
-"soil": "Fertile, well-drained; pH 6.5–7.0",
-"notes": "Smells like lemon candy. Makes amazing tea."
-},
-"pot17": {
-"name": "Marjoram Meadow",
-"species": "Origanum majorana",
-"variety": "",
-"planted": "",
-"light": "Full sun",
-"water": "Moderate; let dry between",
-"soil": "Well-drained, neutral-alkaline; pH 6.5–7.5",
-"notes": "Sweeter, gentler cousin of oregano"
-},
-"pot18": {
-"name": "Tarragon Terrace",
-"species": "Artemisia dracunculus",
-"variety": "French",
-"planted": "",
-"light": "Full sun",
-"water": "Moderate; consistent moisture",
-"soil": "Light, sandy, well-drained; pH 6.5–7.5",
-"notes": "Licorice flavor – essential for béarnaise sauce"
-},
-"pot19": {
-"name": "Stevia Sweetleaf",
-"species": "Stevia rebaudiana",
-"variety": "",
-"planted": "",
-"light": "Full sun",
-"water": "Regular; keep moist but not soggy",
-"soil": "Sandy, well-drained; pH 6.7–7.2",
-"notes": "Natural zero-calorie sweetener leaves"
-},
-"pot20": {
-"name": "Cuban Oregano",
-"species": "Plectranthus amboinicus",
-"variety": "",
-"planted": "",
-"light": "Partial shade to full sun",
-"water": "Low; drought-tolerant",
-"soil": "Sandy, well-drained; pH 6.0–7.0",
-"notes": "Thick fuzzy leaves, intense oregano-pizza smell"
-},
-"pot21": {
-"name": "Pineapple Sage",
-"species": "Salvia elegans",
-"variety": "",
-"planted": "",
-"light": "Full sun to partial shade",
-"water": "Regular; keep moist",
-"soil": "Light, well-drained; pH 6.0–7.0",
-"notes": "Smells exactly like pineapple. Red flowers attract hummingbirds."
-},
-"pot22": {
-"name": "Society Garlic",
-"species": "Tulbaghia violacea",
-"variety": "",
-"planted": "",
-"light": "Full sun to partial shade",
-"water": "Moderate; drought-tolerant",
-"soil": "Light, well-drained; pH 6.8–7.5",
-"notes": "Garlic-flavored edible flowers and leaves"
-},
-"pot23": {
-"name": "Lemongrass Grove",
-"species": "Cymbopogon citratus",
-"variety": "",
-"planted": "",
-"light": "Full sun",
-"water": "Regular; keep moist",
-"soil": "Rich, loamy, well-drained; pH 6.0–7.0",
-"notes": "Makes the best tea. Mosquito-repelling superpower."
-}
-},
+  "lastUpdated": "2025-11-29",
+  "pots": {
+    "pot01": {
+      "name": "Pineapple Pair",
+      "species": "Ananas comosus",
+      "variety": "Two crowns",
+      "planted": "2025-11-22",
+      "light": "Full sun",
+      "water": "Moderate – let top 2\" dry between",
+      "notes": "Two crowns rooting in big pot 1. Also holding three basil cuttings for now."
+    },
+    "pot02": {
+      "name": "Rosemary Cutting Nursery",
+      "species": "Salvia rosmarinus",
+      "variety": "Arp (cuttings)",
+      "planted": "2025-11-22",
+      "light": "Full sun",
+      "water": "Let dry between waterings",
+      "notes": "Former 1a. Temporary home for rosemary cuttings until drip line to Pos 12 is fixed."
+    },
+    "pot03": {
+      "name": "Celebrity Tomatoes",
+      "species": "Solanum lycopersicum",
+      "variety": "Celebrity",
+      "planted": "2025-11-26",
+      "light": "Full sun all day",
+      "water": "Deep, consistent",
+      "notes": "Two plants ~1 ft tall, aluminum foil collars, 3\" pine bark mulch. Currently winning at life."
+    },
+    "pot04": {
+      "name": "Empty / Flex",
+      "species": "",
+      "notes": "Former 2a – no pot here"
+    },
+    "pot05": {
+      "name": "Passionflower Vine",
+      "species": "Passiflora incarnata or edulis",
+      "variety": "Gulf Fritillary host",
+      "planted": "",
+      "light": "Full sun to part shade",
+      "water": "Moderate",
+      "notes": "Big pot 3 – final location"
+    },
+    "pot06": {
+      "name": "Empty / Flex",
+      "species": "",
+      "notes": "Former 3a – no pot"
+    },
+    "pot07": {
+      "name": "Lime Tree",
+      "species": "Citrus × aurantiifolia",
+      "variety": "Key/Bearss lime",
+      "planted": "",
+      "light": "Full sun",
+      "water": "Regular, deep",
+      "notes": "Big pot 4 – final location"
+    },
+    "pot08": {
+      "name": "Mint",
+      "species": "Mentha sp.",
+      "variety": "",
+      "planted": "",
+      "light": "Full sun to part shade",
+      "water": "Keep moist",
+      "notes": "Small pot 4a – contained and happy"
+    },
+    "pot09": {
+      "name": "Avocado Tree",
+      "species": "Persea americana",
+      "variety": "",
+      "planted": "",
+      "light": "Full sun",
+      "water": "Deep, infrequent",
+      "notes": "Big pot 5 – final location"
+    },
+    "pot10": {
+      "name": "Parsley",
+      "species": "Petroselinum crispum",
+      "variety": "Italian flat-leaf",
+      "planted": "",
+      "light": "Full sun to part shade",
+      "water": "Consistent moisture",
+      "notes": "Small pot 5a – will move to big pot 7 when ready"
+    },
+    "pot11": {
+      "name": "Rosemary (temporary)",
+      "species": "Salvia rosmarinus",
+      "variety": "Arp",
+      "planted": "",
+      "light": "Full sun",
+      "water": "Dry between waterings",
+      "notes": "Big pot 6 – will move to Pos 12 once drip line is fixed"
+    },
+    "pot12": {
+      "name": "French Marigolds",
+      "species": "Tagetes patula",
+      "variety": "",
+      "planted": "2025-11-22",
+      "light": "Full sun",
+      "water": "Moderate",
+      "notes": "Small pot 6a – companion planting"
+    },
+    "pot13": {
+      "name": "Junk Pot – Future Parsley + Swamp Milkweed",
+      "species": "Avocado sprout + scallions + pineapple head",
+      "notes": "Big pot 7 – needs emptying and replanting"
+    },
+    "pot14": {
+      "name": "Basil",
+      "species": "Ocimum basilicum",
+      "variety": "Genovese",
+      "planted": "",
+      "light": "Full sun",
+      "water": "Keep moist",
+      "notes": "Small pot 7a – will move to big pot 11"
+    },
+    "pot15": {
+      "name": "Dill + Marigold seeds",
+      "species": "Anethum graveolens + Tagetes",
+      "planted": "2025-11-22",
+      "light": "Full sun",
+      "water": "Moderate",
+      "notes": "Big pot 8 – will add bronze fennel later"
+    },
+    "pot16": {
+      "name": "Empty",
+      "notes": "Former 8a – no pot"
+    },
+    "pot17": {
+      "name": "Cilantro + Marigold seeds",
+      "species": "Coriandrum sativum + Tagetes",
+      "planted": "2025-11-22",
+      "light": "Full sun",
+      "water": "Keep moist",
+      "notes": "Big pot 9 – will add jalapeño later"
+    },
+    "pot18": {
+      "name": "Empty",
+      "notes": "Former 9a"
+    },
+    "pot19": {
+      "name": "Empty – future Poblano",
+      "notes": "Big pot 10"
+    },
+    "pot20": {
+      "name": "Empty",
+      "notes": "Former 10a"
+    },
+    "pot21": {
+      "name": "Empty – future Basil",
+      "notes": "Big pot 11 – will receive basil from 7a"
+    },
+    "pot22": {
+      "name": "Wandering Jew",
+      "species": "Tradescantia zebrina or fluminensis",
+      "notes": "Small pot 11a – permanent"
+    },
+    "pot23": {
+      "name": "Empty – future Rosemary + Italian Oregano",
+      "notes": "Big pot 12 – waiting on drip line fix"
+    }
+  },
 "log": [
     {
       "date": "2025-11-26",
