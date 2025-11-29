@@ -1,0 +1,35 @@
+{
+  "lastUpdated": "2025-11-26",
+  "pots": {
+    "pot01": { "name": "Basil Palace",        "type": "herb",     "notes": "Very dramatic" },
+    "pot02": { "name": "Tomato Tower",        "type": "veggie",   "notes": "Currently winning at life" },
+    "pot03": { "name": "Pepper Party",        "type": "veggie" },
+    "pot04": { "name": "Mint Invasion Zone",  "type": "herb",     "notes": "Escaped twice" },
+    "pot05": { "name": "Succulent Kingdom #1", "type": "succulent", "notes": "Hates water" },
+    // ... add the rest of your 20 pots here
+    "pot20": { "name": "Succulent Kingdom #3", "type": "succulent" }
+  },
+
+  "log": [
+    {
+      "date": "2025-11-26",
+      "action": "fertilized",
+      "details": "½-strength liquid seaweed + fish emulsion",
+      "pots": ["pot01","pot02","pot03","pot04","pot06","pot07","pot08","pot09","pot10","pot11","pot12","pot14","pot15","pot16","pot17"],
+      "note": "Skipped the three succulent royals because they’re on a diet"
+    },
+    {
+      "date": "2025-11-20",
+      "action": "watered",
+      "details": "deep watering after 10 dry days",
+      "pots": "all",
+      "note": "Everyone got a drink, even the drama queens"
+    },
+    {
+      "date": "2025-11-15",
+      "action": "repotted",
+      "pots": ["pot02"],
+      "note": "Tomato Tower graduated to the 7-gallon palace"
+    }
+  ]
+}
