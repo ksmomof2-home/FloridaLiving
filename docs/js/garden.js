@@ -100,13 +100,78 @@ async function renderPhotosForPot(potId) {
   gallery.innerHTML = html;
 }
 
-// Then just call it at the end of renderPotPage():
-// renderPhotosForPot(potId);   ← add this line!
+// ──────────────────────────────────────────────────────────────
+// Index-page functions (used only on index.html) – the missing magic!
+// ──────────────────────────────────────────────────────────────
+async function buildIndex() {
+  try {
+    const data = await loadGardenData();
 
-// Run on page load - later commented out
-// document.addEventListener('DOMContentLoaded', renderPotPage);
+    // Update footer date with a flourish
+    const updatedEl = document.getElementById('last-updated');
+    if (updatedEl) updatedEl.textContent = new Date(data.lastUpdated || Date.now()).toLocaleDateString();
 
-// Smart loader — runs the right thing on the right page
+    // Build the pot grid – your leafy darlings in all their glory
+    const grid = document.getElementById('pot-grid');
+    if (!grid) return; // Bail if we're not on the right page
+
+    const html = Object.keys(data.pots || {}).sort().map(id => {
+      const p = data.pots[id];
+      return `
+        <div class="pot-card">
+          <a href="pot.html?id=${id}">
+            <div class="pot-name">${p.name || id}</div>
+            ${p.notes ? `<div class="pot-note">${p.notes}</div>` : ''}
+            <div style="margin-top:0.5rem; opacity:0.5; font-size:0.8rem;">${id}</div>
+          </a>
+        </div>`;
+    }).join('');
+
+    grid.innerHTML = html || '<p>No pots yet… time to adopt some plant babies! 🌱</p>';
+
+    // Now summon the recent adventures chronicle
+    renderMasterLog(data);
+  } catch (error) {
+    console.error('Garden index build hiccup:', error);
+    document.getElementById('pot-grid').innerHTML = '<p>Oops! The garden data took a nap. <a href="index.html">Refresh and try again?</a></p>';
+  }
+}
+
+async function renderMasterLog(dataParam = null) {
+  if (!document.getElementById('master-log')) return; // Not on the chronicle page
+
+  try {
+    let data = dataParam || await loadGardenData();
+    const container = document.getElementById('master-log');
+    const entries = (data.log || []).slice().reverse(); // Newest first, darling
+
+    const html = entries.map(e => {
+      let potList = '';
+      if (e.pots === "all") potList = '<em>everybody!</em> 🌍';
+      else if (Array.isArray(e.pots)) {
+        const names = e.pots.map(id => data.pots[id]?.name || id).slice(0, 6);
+        potList = names.length > 5 ? names.join(', ') + ' …' : names.join(', ');
+      } else potList = e.pots || 'mystery pots';
+
+      return `
+        <div class="master-entry">
+          <div class="master-date">${formatDate(e.date)}</div>
+          <div class="master-action"><strong>${e.action.toUpperCase()}</strong> — ${potList}</div>
+          ${e.details ? `<div class="master-details">${e.details}</div>` : ''}
+          ${e.note ? `<div class="master-note">✦ ${e.note}</div>` : ''}
+        </div>`;
+    }).join('');
+
+    container.innerHTML = html || "<p>All quiet in the garden today… the pots are plotting something whimsical. 😏</p>";
+  } catch (error) {
+    console.error('Chronicle rendering oopsie:', error);
+    document.getElementById('master-log').innerHTML = '<p>The adventure log is shy today. Refresh for stories!</p>';
+  }
+}
+
+// ──────────────────────────────────────────────────────────────
+// Smart loader — runs the right thing on the right page (yours is already perfect here!)
+// ──────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('pot-grid')) {
     buildIndex();          // we are on index.html
@@ -114,3 +179,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPotPage();       // we are on pot.html
   }
 });
+
