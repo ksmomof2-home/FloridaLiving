@@ -6,7 +6,6 @@
     "pot03": { "name": "Pepper Party",        "type": "veggie" },
     "pot04": { "name": "Mint Invasion Zone",  "type": "herb",     "notes": "Escaped twice" },
     "pot05": { "name": "Succulent Kingdom #1", "type": "succulent", "notes": "Hates water" },
-    // ... add the rest of your 20 pots here
     "pot20": { "name": "Succulent Kingdom #3", "type": "succulent" }
   },
 
