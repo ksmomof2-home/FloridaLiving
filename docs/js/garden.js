@@ -105,3 +105,12 @@ async function renderPhotosForPot(potId) {
 
 // Run on page load - later commented out
 // document.addEventListener('DOMContentLoaded', renderPotPage);
+
+// Smart loader — runs the right thing on the right page
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('pot-grid')) {
+    buildIndex();          // we are on index.html
+  } else if (document.getElementById('pot-log') || document.getElementById('photo-gallery')) {
+    renderPotPage();       // we are on pot.html
+  }
+});
