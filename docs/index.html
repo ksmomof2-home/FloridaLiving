@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>🌿 Kelly’s Florida Garden Chronicles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: 'Georgia', serif; background: #f8f5e9; color: #3d2b1f; line-height: 1.6; max-width: 1100px; margin: 0 auto; padding: 2rem; }
+    h1 { text-align: center; color: #2e7d32; }
+    .pot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
+    .pot-card { background: #fff; border-radius: 16px; padding: 1rem; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.2s; }
+    .pot-card:hover { transform: translateY(-5px); }
+    .pot-card a { text-decoration: none; color: inherit; display: block; }
+    .pot-name { font-size: 1.3rem; margin: 0.5rem 0; color: #1b5e20; }
+    .pot-note { font-size: 0.9rem; opacity: 0.8; font-style: italic; }
+    #master-log .master-entry { background: #e8f5e9; padding: 1rem; margin: 1rem 0; border-left: 5px solid #4caf50; border-radius: 8px; }
+    footer { text-align: center; margin-top: 4rem; opacity: 0.6; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <h1>🌱 Kelly’s Florida Garden</h1>
+  <p style="text-align:center; font-size:1.2rem;">20 pots, one JSON to rule them all, zero copy-paste suffering</p>
+
+  <h2 style="text-align:center; margin-top:3rem;">My Leafy Children</h2>
+  <div id="pot-grid" class="pot-grid">Loading your darlings…</div>
+
+  <h2 style="text-align:center; margin-top:4rem;">📜 Recent Garden Adventures</h2>
+  <div id="master-log"></div>
+
+  <footer>Last tended with love on <span id="last-updated">…</span></footer>
+
+  <!-- Scripts -->
+  <script src="js/garden.js"></script>
+  <script src="js/image-list.js"></script> <!-- if photos ever want to appear here later -->
+  <script>
+    async function buildIndex() {
+      const data = await loadGardenData();
+
+      // Update last-updated footer
+      document.getElementById('last-updated').textContent = new Date(data.lastUpdated).toLocaleDateString();
+
+      // Build pot grid
+      const grid = document.getElementById('pot-grid');
+      const html = Object.keys(data.pots).sort().map(id => {
+        const p = data.pots[id];
+        return `
+          <div class="pot-card">
+            <a href="pot.html?id=${id}">
+              <div class="pot-name">${p.name || id}</div>
+              ${p.notes ? `<div class="pot-note">${p.notes}</div>` : ''}
+              <div style="margin-top:0.5rem; opacity:0.5;">${id}</div>
+            </a>
+          </div>`;
+      }).join('');
+      grid.innerHTML = html || '<p>No pots yet… time to adopt some plant babies!</p>';
+
+      // Render the master activity log (reuse the function we already have)
+      renderMasterLog();
+    }
+
+    document.addEventListener('DOMContentLoaded', buildIndex);
+  </script>
+</body>
+</html>
