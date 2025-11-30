@@ -2,6 +2,7 @@
 2025-11-30 13:19:11 === STARTED ===
 2025-11-30 13:19:11 Pulling...
 2025-11-30 13:19:11 Stashing...
+<<<<<<< Updated upstream
 2025-11-30 18:36:57 Already up to date.
 2025-11-30 18:36:57 Generated 41 photos
 2025-11-30 18:36:57 On branch main
@@ -18,3 +19,8 @@
 2025-11-30 18:36:57 
 2025-11-30 18:36:57 no changes added to commit (use "git add" and/or "git commit -a")
 2025-11-30 18:36:59 DONE
+=======
+2025-11-30 18:36:55 === STARTED ===
+2025-11-30 18:36:55 Pulling...
+2025-11-30 18:36:55 Stashing...
+>>>>>>> Stashed changes
