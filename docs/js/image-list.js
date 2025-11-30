@@ -1,4 +1,4 @@
-﻿window.GARDEN_IMAGE_LIST=[
+window.GARDEN_IMAGE_LIST=[
  $(pot24_20251126.jpg.Name)",
  $(pot23_20251126.jpg.Name)",
  $(pot23_20251122.jpg.Name)",
