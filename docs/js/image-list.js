@@ -39,4 +39,5 @@ $(pot03_20251122.jpg.Name)",
 $(pot02_20251126.jpg.Name)",
 $(pot02_20251122.jpg.Name)",
 $(pot01_20251126.jpg.Name)",
+$(pot00_20251122.jpg.Name)",
 $(pot01_20251122.jpg.Name)"];
