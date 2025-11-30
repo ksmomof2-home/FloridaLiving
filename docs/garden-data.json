@@ -175,6 +175,13 @@
       "pots": ["pot01", "pot02", "pot10", "pot11", "pot14"],
       "notes": "The cuttings that were added to pots 01 and 02 were dipped in rooting hormone"
     },
+      {
+      "date": "2025-11-22",
+      "action": "picture",
+      "details": "took close up of leaves to research damage",
+      "pots": "pot07",
+      "note": ""
+    },
     {
       "date": "2025-11-20",
       "action": "watered",
