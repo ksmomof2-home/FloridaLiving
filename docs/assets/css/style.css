@@ -154,6 +154,9 @@ h1 { text-align:center; color:#0d4f3a; font-size:3rem; margin:2rem 0 .5rem; text
 .log-details { margin: 0.5rem 0; font-size: 1rem; }
 .log-note { margin-top: 0.8rem; color: #2e7d32; font-style: italic; }
 
+#pests::before   { content:"🐛 "; }
+#diseases::before { content:"🦠 "; }
+
 .species-badge {
   font-style: italic;
   color: #2e7d32;
