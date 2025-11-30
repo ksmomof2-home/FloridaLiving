@@ -1,5 +1,12 @@
 /* FINAL — Kelly's Villages Garden — NO MORE WHITE TILES */
-body { margin:0; font-family:Georgia,serif; background:linear-gradient(to bottom,#e8f5e9,#c8e6c9); color:#1b4332; min-height:100vh; }
+body {
+  margin:0;
+  font-family:Georgia,serif;
+  background:#d4e4d4;               /* soft sage */
+  background:linear-gradient(to bottom, #c8d8c8, #b8c8b8);  /* subtle depth */
+  color:#1b4332;
+  min-height:100vh;
+}
 
 h1 { text-align:center; color:#0d4f3a; font-size:3rem; margin:2rem 0 .5rem; text-shadow:0 2px 6px rgba(0,0,0,.2); }
 
