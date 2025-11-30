@@ -171,7 +171,7 @@
     },
     {"date": "2025-11-24",
       "action": "rooted",
-      "details": "took cuttings from basil, parsley, and rosemary, planted rosemary (pot02) and basil (pot01), also put all three in water (vase) in kitchen"
+      "details": "took cuttings from basil, parsley, and rosemary, planted rosemary (pot02) and basil (pot01), also put all three in water (vase) in kitchen",
       "pots": ["pot01", "pot02", "pot10", "pot11", "pot14"],
       "notes": "The cuttings that were added to pots 01 and 02 were dipped in rooting hormone"
     },
