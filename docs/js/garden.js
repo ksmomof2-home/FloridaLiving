@@ -50,8 +50,8 @@ document.getElementById('variety').textContent = pot.variety || '—';
 document.getElementById('planted-date').textContent = pot.planted || 'Unknown';
 document.getElementById('light-needs').innerHTML = pot.light ? `☀️ ${pot.light}` : '—';
 document.getElementById('water-needs').innerHTML = pot.water ? `💧 ${pot.water}` : '—';
-document.getElementById('common-pests').innerHTML = pot.light ? `☀️ ${pot.pests}` : '—';
-document.getElementById('common-diseases').innerHTML = pot.water ? `💧 ${pot.diseases}` : '—';
+document.getElementById('pests').textContent   = pot.pests   || 'None known yet';
+document.getElementById('diseases').textContent = pot.diseases || 'None known yet';
 document.getElementById('personality').textContent = pot.notes || 'Quietly judging you';
   
   // Optional cute subtitle
