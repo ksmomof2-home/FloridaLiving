@@ -2,7 +2,7 @@
 body {
   margin:0;
   font-family:Georgia,serif;
-  background:#d4e4d4;               /* soft sage */
+  background:#f5f0e8;              /* soft sage */
   background:linear-gradient(to bottom, #c8d8c8, #b8c8b8);  /* subtle depth */
   color:#1b4332;
   min-height:100vh;
