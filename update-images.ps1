@@ -14,7 +14,7 @@ git pull | ForEach-Object {Log $_}
 
 if ($LASTEXITCODE -ne 0){
   Log "Stashing..."
-  git stash push -m "auto$(Get-Date-Format yyyy-MM-dd_HHmmm)"
+  git stash push -m "auto$(Get-Date -Format yyyy-MM-dd_HHmmm)"
   git pull | ForEach-Object{Log $_}
   $had=$true
 }else{$had=$false}
