@@ -27,6 +27,16 @@ h1 { text-align:center; color:#0d4f3a; font-size:3rem; margin:2rem 0 .5rem; text
 .pot-name { font-size:1.6rem; font-weight:bold; color:#1b5e20; margin:.6rem 0; }
 .pot-note { font-style:italic; color:#2e7d32; font-size:.95rem; }
 
+.coming-soon {
+  background: #f5f5f5 !important;
+  border: 4px dashed #aaa !important;
+  opacity: 0.7;
+}
+.coming-soon:hover {
+  opacity: 1;
+  border-color: #43a047 !important;
+}
+
 /* POT-PAGE PHOTO GALLERY — back to nice size */
 .gallery { 
   display:grid; 
