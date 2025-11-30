@@ -1,0 +1,136 @@
+/* OUR VILLAGES GARDEN – FINAL STYLE v1.0 – Nov 23, 2025 */
+/* Background & base */
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #b2d8b2 !important;   /* your chosen richer sage */
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Header & Footer – dark forest green */
+header, footer {
+  background: #2d5a3d !important;
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+header a, footer a { color: #c8e6c9; text-decoration: none; }
+nav { margin-top: 1rem; }
+nav a {
+  color: white;
+  margin: 0 1rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+}
+nav a:hover { background: rgba(255,255,255,0.25); }
+
+/* Main content container */
+main { max-width: 1100px; margin: 3rem auto; padding: 0 1.5rem; }
+
+/* Hero section – image left, facts right */
+.plant-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+.plant-hero img {
+  width: 33%;
+  max-width: 420px;
+  min-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.plant-hero img:hover { transform: scale(1.02); }
+.plant-facts {
+  flex: 2;
+  min-width: 300px;
+  background: rgba(255,255,255,0.25);
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+/* Middle info section – bullets */
+.middle-info {
+  background: rgba(255,255,255,0.18);
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin: 3rem 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Four log tables – each with its own subtle color */
+.table-growth  { background: rgba(220,237,200,0.25); }  /* mint */
+.table-harvest { background: rgba(255,224,178,0.25); }  /* peach */
+.table-pests   { background: rgba(255,182,193,0.25); }  /* pink */
+.table-notes   { background: rgba(187,222,251,0.25); }  /* blue */
+
+.log-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.log-table th {
+  background: rgba(0,0,0,0.15);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+.log-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.log-table tr:last-child td { border-bottom: none; }
+.log-table tr:nth-child(even) td { background: rgba(255,255,255,0.08); }
+.log-table img { max-width: 250px; border-radius: 8px; }
+.log-table a { display: inline-block; }
+.log-table img { vertical-align: top; }
+/* Responsive */
+@media (max-width: 768px) {
+  .plant-hero { flex-direction: column; text-align: center; }
+  .plant-hero img { width: 80%; max-width: 400px; }
+}
+
+/* Added for new generic pot pages */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 2rem 0;
+}
+.photo-thumb {
+  display: block;
+  border: 4px solid #f1e5bc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.photo-thumb:hover { transform: scale(1.05); }
+.photo-thumb img { width: 100%; height: auto; display: block; }
+.photo-caption {
+  text-align: center;
+  padding: 8px;
+  background: #f1e5bc;
+  font-size: 0.9rem;
+  color: #5d4037;
+}
+.no-photos { font-style: italic; opacity: 0.6; }
+
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin: 2rem 0; }
+.photo-thumb { display: block; border: 4px solid #f1e5bc; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.2s; }
+.photo-thumb:hover { transform: scale(1.05); }
+.photo-thumb img { width: 100%; height: auto; display: block; }
+.photo-caption { text-align: center; padding: 8px; background: #f1e5bc; font-size: 0.9rem; color: #5d4037; }
+.no-photos { font-style: italic; opacity: 0.6; text-align: center; }
