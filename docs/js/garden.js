@@ -87,7 +87,7 @@ async function renderPhotosForPot(potId) {
   }
 
   const html = myImages.map(src => {
-    const full = `images/${src}`;
+    const full = `assets/images/pots/${src}`;
     const date = src.match(/_(\d{8})_/) || src.match(/_(\d{8})\./);
     const prettyDate = date ? new Date(date[1].replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' }) : 'Some day';
     return `
