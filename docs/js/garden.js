@@ -43,8 +43,8 @@ if (myImages?.[0]) {
 // Species badge
 const species = pot.species || '';
 const variety = pot.variety ? ` '${pot.variety}'` : '';
+  
 document.getElementById('species-badge').textContent = species ? `${species}${variety}` : 'Mystery Plant 🌿';
-
 document.getElementById('species-full').textContent = pot.species || 'Mystery plant 🌿';
 document.getElementById('variety').textContent = pot.variety || '—';
 document.getElementById('planted-date').textContent = pot.planted || 'Unknown';
