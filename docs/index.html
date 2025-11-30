@@ -43,6 +43,7 @@
   fetch('js/garden.js').then(r => r.text()).then(text => {
     eval(text); // loads the functions into this page
   });
+</script>
 <script>
     async function buildIndex() {
       const data = await loadGardenData();
