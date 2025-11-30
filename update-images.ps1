@@ -23,7 +23,7 @@ $files=Get-ChildItem "docs\assets\images\pots" -File |
       Where-Object{$_.Name -match '^pot\d{2}_' } |
       Sort-Object Name -Descending
 
-$list = $files | ForEach-Object {" `$($_.Name)`","}
+$list = $files | ForEach-Object {" `"$($_.Name)`","}
 "window.GARDEN_IMAGE_LIST=["|Set-Content "docs\js\image-list.js" -Encoding utf8
 $list|Add-Content "docs\js\image-list.js" -Encoding utf8
 "];"|Add-Content "docs\js\image-list.js" -Encoding utf8
