@@ -45,6 +45,39 @@
 
       // Build pot grid
       const grid = document.getElementById('pot-grid');
+// Build the pot grid – hide truly empty pots, show placeholder for "future" ones
+const potEntries = Object.entries(data.pots)
+  .sort(([a], [b]) => a.localeCompare(b)); // keeps pot01 → pot23 order
+
+const html = potEntries.map(([id, p]) => {
+  const hasContent = p.name && p.name.trim() && p.name !== "Empty" && p.name !== "Empty / Flex";
+  
+  if (!hasContent && !p.notes?.includes("future")) {
+    return ''; // completely hide pots with no name and no future plan
+  }
+
+  const isFuture = p.notes?.includes("future") || p.name.toLowerCase().includes("empty");
+  
+  return `
+    <div class="pot-card ${isFuture ? 'coming-soon' : ''}">
+      <a href="pot.html?id=${id}">
+        ${isFuture ? `
+          <div style="padding:2rem; text-align:center; color:#777;">
+            <div style="font-size:4rem; opacity:0.3;">🌱</div>
+            <div style="font-size:1.3rem; margin-top:1rem;">${p.name || 'Coming Soon'}</div>
+            <div style="font-size:0.9rem; margin-top:0.5rem; opacity:0.7;">
+              ${p.notes?.match(/future[:\s]*(.*)/i)?.[1] || 'Plant baby arriving soon!'}
+            </div>
+          </div>
+        ` : `
+          <div class="pot-name">${p.name || id}</div>
+          ${p.notes ? `<div class="pot-note">${p.notes}</div>` : ''}
+          <div style="margin-top:0.5rem; opacity:0.5; font-size:0.8rem;">${id}</div>
+        `}
+      </a>
+    </div>`;
+}).join('');
+     /* 
       const html = Object.keys(data.pots).sort().map(id => {
         const p = data.pots[id];
         return `
@@ -56,6 +89,8 @@
             </a>
           </div>`;
       }).join('');
+
+      */
       grid.innerHTML = html || '<p>No pots yet… time to adopt some plant babies!</p>';
 
       // Render the master activity log (reuse the function we already have)
