@@ -1,84 +1,82 @@
-/* Kelly's Villages Garden – Vibrant Florida Edition */
+/* Kelly's Villages Garden – Final "I love this" version */
 body {
   margin: 0;
   font-family: Georgia, serif;
-  background: linear-gradient(to bottom, #a8e6cf, #dcedc1); /* mint → lime-cream */
-  color: #1b5e20;
+  background: linear-gradient(to bottom, #e0f7fa, #c8e6c9);
+  color: #1b4332;
   min-height: 100vh;
 }
 
 h1 {
   text-align: center;
-  color: #1b4332;
+  color: #0d4f3a;
   font-size: 3rem;
   margin: 2rem 0 0.5rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* Pot tiles – bright, colorful, NO WHITE */
+/* Pot tiles – rich colors, no white! */
 .pot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 2rem;
   padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .pot-card {
-  background: #fff8e1;          /* very pale yellow – warm but not beige */
-  border: 4px solid #4caf50;    /* bright grass green */
-  border-radius: 18px;
+  background: #fffde7;           /* warm sunlight yellow */
+  border: 5px solid #43a047;     /* vibrant grass green */
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: all 0.35s ease;
+  position: relative;
 }
 
 .pot-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: #388e3c;
-  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+  transform: translateY(-12px) scale(1.03);
+  border-color: #2e7d32;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
-.pot-card a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  padding: 1.4rem;
-  text-align: center;
+/* Leaf hover is BACK! */
+.pot-card:hover::after {
+  content: "🌿";
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 2.2rem;
+  opacity: 0.7;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 .pot-name {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #1b5e20;
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
 }
 
 .pot-note {
   font-style: italic;
   color: #2e7d32;
+  font-size: 0.95rem;
 }
 
-/* Recent Adventures – fresh green cards */
+/* Recent Adventures – fresh & lively */
 #master-log .master-entry {
   background: #e8f5e9;
-  border-left: 8px solid #4caf50;
-  padding: 1.4rem;
+  border-left: 8px solid #43a047;
+  padding: 1.5rem;
   margin: 1.5rem auto;
   max-width: 900px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.master-date   { font-weight: bold; color: #1b5e20; }
-.master-action { font-size: 1.15rem; color: #2e7d32; }
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  color: #1b5e20;
-  font-style: italic;
-  background: rgba(255,255,255,0.4);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
