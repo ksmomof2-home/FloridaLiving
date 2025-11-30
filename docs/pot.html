@@ -3,18 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>Loading leafy friend…</title>
-<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
+<body>
 
-  <body>
+  <!-- BEAUTIFUL NEW HEADER -->
   <div class="pot-header">
     <a href="index.html" class="back-btn">← Garden Home</a>
-    
-    <div class="hero-photo" id="hero-photo">
-      <!-- newest photo injected by JS -->
-    </div>
-    
+    <div class="hero-photo" id="hero-photo"></div>
     <div class="pot-title-card">
       <h1 id="pot-name">Loading…</h1>
       <div class="species-badge" id="species-badge"></div>
@@ -22,41 +19,32 @@
     </div>
   </div>
 
-<div class="plant-card">
-  <div class="card-grid">
-    <div><strong>Species</strong><br><span id="species-full"></span></div>
-    <div><strong>Variety</strong><br><span id="variety"></span></div>
-    <div><strong>Planted</strong><br><span id="planted-date"></span></div>
-    <div><strong>Light</strong><br><span id="light-needs">☀️</span></div>
-    <div><strong>Water</strong><br><span id="water-needs">💧</span></div>
-    <div><strong>Common Pests</strong><br><span id="pests">☀️</span></div>
-    <div><strong>Common Diseases</strong><br><span id="diseases">💧</span></div>
-    <div><strong>Notes</strong><br><span id="personality"></span></div>
+  <!-- PLANT CARD (8 boxes) -->
+  <div class="plant-card">
+    <div class="card-grid">
+      <div><strong>Species</strong><br><span id="species-full"></span></div>
+      <div><strong>Variety</strong><br><span id="variety"></span></div>
+      <div><strong>Planted</strong><br><span id="planted-date"></span></div>
+      <div><strong>Light</strong><br><span id="light-needs">☀️</span></div>
+      <div><strong>Water</strong><br><span id="water-needs">💧</span></div>
+      <div><strong>Common Pests</strong><br><span id="pests">—</span></div>
+      <div><strong>Common Diseases</strong><br><span id="diseases">—</span></div>
+      <div><strong>Notes</strong><br><span id="personality"></span></div>
+    </div>
   </div>
-</div>
-    
+
+  <!-- PHOTO DIARY -->
   <div class="container">
     <h2>📸 Photo Diary</h2>
     <div id="photo-gallery" class="gallery"></div>
 
+    <!-- GARDEN LOG -->
     <h2>✍️ Garden Log</h2>
     <div id="pot-log" class="log"></div>
   </div>
-    <!--
-<body>
-  <a href="index.html">← Garden Home</a> | <a href="index.html#recent">Recent Activity</a>
-  <h1>Loading…</h1>
-  <p id="pot-subtitle" class="subtitle"></p>
--->
-  <div id="pot-log" class="log"></div>
 
-  <h2>📸 Photo Diary of Shenanigans</h2>
-  <div id="photo-gallery" class="gallery">Summoning snapshots…</div>
-
-  <h2>📸 Photo Diary</h2>
-  <div id="photo-gallery" class="gallery"></div>
-  
+  <!-- SCRIPTS -->
   <script src="js/garden.js"></script>
-  <script src="js/image-list.js?v=20251126"></script>
+  <script src="js/image-list.js"></script>
 </body>
 </html>
