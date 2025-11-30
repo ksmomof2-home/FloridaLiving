@@ -74,3 +74,65 @@ h1 { text-align:center; color:#0d4f3a; font-size:3rem; margin:2rem 0 .5rem; text
 
 /* Recent Adventures */
 #master-log .master-entry { background:#e8f5e9; border-left:8px solid #43a047; padding:1.5rem; margin:1.5rem auto; max-width:900px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.12); }
+
+/* POT PAGE – Gorgeous header */
+.pot-header {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.hero-photo {
+  height: 400px;
+  background: #333 center/cover no-repeat;
+  position: relative;
+}
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 30%);
+}
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 10;
+  transition: 0.3s;
+}
+.back-btn:hover { background: #43a047; }
+
+.pot-title-card {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,248,209,0.97);
+  padding: 1.5rem 3rem;
+  border-radius: 20px;
+  border: 6px solid #43a047;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  min-width: 400px;
+}
+.pot-title-card h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  color: #1b5e20;
+}
+.species-badge {
+  font-style: italic;
+  color: #2e7d32;
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+.quick-facts {
+  color: #1b4332;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.container { padding: 6rem 2rem 2rem; max-width: 1200px; margin: 0 auto; }
