@@ -1,23 +1,21 @@
-/* Kelly's Villages Garden – Florida Sunshine Edition */
+/* Kelly's Villages Garden – Vibrant Florida Edition */
 body {
   margin: 0;
   font-family: Georgia, serif;
-  background: #f5f9f0 url('https://images.unsplash.com/photo-1587502536575-6a8fef067f5e?auto=format&fit=crop&q=80&w=2000') no-repeat center top fixed;
-  background-size: cover;
-  color: #2d5016;
+  background: linear-gradient(to bottom, #a8e6cf, #dcedc1); /* mint → lime-cream */
+  color: #1b5e20;
   min-height: 100vh;
 }
 
-/* Header */
 h1 {
   text-align: center;
-  color: #1e3a1e;
-  font-size: 2.8rem;
+  color: #1b4332;
+  font-size: 3rem;
   margin: 2rem 0 0.5rem;
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Pot tiles – goodbye white! */
+/* Pot tiles – bright, colorful, NO WHITE */
 .pot-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -28,70 +26,59 @@ h1 {
 }
 
 .pot-card {
-  background: rgba(255,248,230,0.92);        /* warm buttery parchment */
-  border: 3px solid #8fbc8f;                 /* sage green */
-  border-radius: 16px;
+  background: #fff8e1;          /* very pale yellow – warm but not beige */
+  border: 4px solid #4caf50;    /* bright grass green */
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
   transition: all 0.3s ease;
-  position: relative;
 }
 
 .pot-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.25);
-  border-color: #5d8b5d;
+  transform: translateY(-10px) scale(1.02);
+  border-color: #388e3c;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
 }
 
 .pot-card a {
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 1.2rem;
+  padding: 1.4rem;
   text-align: center;
 }
 
 .pot-name {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #2e5c2e;
+  color: #1b5e20;
   margin: 0.5rem 0;
 }
 
 .pot-note {
   font-style: italic;
-  color: #5a7d5a;
-  opacity: 0.9;
+  color: #2e7d32;
 }
 
-/* Tiny leaf flourish on hover */
-.pot-card:hover::after {
-  content: "🌿";
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 1.8rem;
-  opacity: 0.6;
-}
-
-/* Recent Adventures – cozy parchment cards */
+/* Recent Adventures – fresh green cards */
 #master-log .master-entry {
-  background: rgba(255,250,220,0.94);
-  border-left: 6px solid #8fbc8f;
-  padding: 1.2rem;
-  margin: 1.2rem auto;
+  background: #e8f5e9;
+  border-left: 8px solid #4caf50;
+  padding: 1.4rem;
+  margin: 1.5rem auto;
   max-width: 900px;
-  border-radius: 0 12px 12px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.master-date { font-weight: bold; color: #2e5c2e; }
-.master-action { font-size: 1.15rem; margin: 0.4rem 0; }
+.master-date   { font-weight: bold; color: #1b5e20; }
+.master-action { font-size: 1.15rem; color: #2e7d32; }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 2rem;
-  color: #5a7d5a;
+  color: #1b5e20;
   font-style: italic;
+  background: rgba(255,255,255,0.4);
 }
