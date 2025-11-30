@@ -36,6 +36,13 @@
   <!-- REPLACE WITH THESE (correct paths) -->
 <script src="js/garden.js"></script>
 <script src="js/image-list.js?v=20251126"></script>
+<script src="js/image-list.js"></script>
+<script>
+  // This makes loadGardenData available on index.html
+  let loadGardenData;
+  fetch('js/garden.js').then(r => r.text()).then(text => {
+    eval(text); // loads the functions into this page
+  });
 <script>
     async function buildIndex() {
       const data = await loadGardenData();
