@@ -124,6 +124,26 @@ h1 { text-align:center; color:#0d4f3a; font-size:3rem; margin:2rem 0 .5rem; text
   font-size: 2.8rem;
   color: #1b5e20;
 }
+
+.plant-card {
+  background: rgba(255,248,209,0.97);
+  border: 6px solid #43a047;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.card-grid {
+  display: grid;
+ végap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+.card-grid div { background: #f8fff8; padding: 1rem; border-radius: 12px; }
+.card-grid strong { color: #1b5e20; }
+
 .species-badge {
   font-style: italic;
   color: #2e7d32;
