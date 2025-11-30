@@ -45,12 +45,14 @@ const species = pot.species || '';
 const variety = pot.variety ? ` '${pot.variety}'` : '';
 document.getElementById('species-badge').textContent = species ? `${species}${variety}` : 'Mystery Plant 🌿';
 
-// Quick facts
-const facts = [];
-if (pot.light) facts.push(`☀️ ${pot.light}`);
-if (pot.water) facts.push(`💧 ${pot.water}`);
-if (pot.planted) facts.push(`Planted ${pot.planted}`);
-document.getElementById('quick-facts').innerHTML = facts.length ? facts.join(' • ') : 'No care notes yet';
+document.getElementById('species-full').textContent = pot.species || 'Mystery plant 🌿';
+document.getElementById('variety').textContent = pot.variety || '—';
+document.getElementById('planted-date').textContent = pot.planted || 'Unknown';
+document.getElementById('light-needs').innerHTML = pot.light ? `☀️ ${pot.light}` : '—';
+document.getElementById('water-needs').innerHTML = pot.water ? `💧 ${pot.water}` : '—';
+document.getElementById('common-pests').innerHTML = pot.light ? `☀️ ${pot.pests}` : '—';
+document.getElementById('common-diseases').innerHTML = pot.water ? `💧 ${pot.diseases}` : '—';
+document.getElementById('personality').textContent = pot.notes || 'Quietly judging you';
   
   // Optional cute subtitle
   const subtitle = document.getElementById('pot-subtitle');
