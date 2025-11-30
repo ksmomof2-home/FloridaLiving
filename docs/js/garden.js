@@ -32,6 +32,26 @@ async function renderPotPage() {
   document.title = `${pot.name} – Garden Log`;
   document.querySelector('h1').innerHTML = `${pot.name} <small>(${potId})</small>`;
 
+// Hero photo (newest one)
+const myImages = window.GARDEN_IMAGE_LIST
+  ?.filter(f => f.startsWith(`pot${potId.replace('pot','').padStart(2,'0')}_`))
+  .sort().reverse();
+if (myImages?.[0]) {
+  document.getElementById('hero-photo').style.backgroundImage = `url(assets/images/pots/${myImages[0]})`;
+}
+
+// Species badge
+const species = pot.species || '';
+const variety = pot.variety ? ` '${pot.variety}'` : '';
+document.getElementById('species-badge').textContent = species ? `${species}${variety}` : 'Mystery Plant 🌿';
+
+// Quick facts
+const facts = [];
+if (pot.light) facts.push(`☀️ ${pot.light}`);
+if (pot.water) facts.push(`💧 ${pot.water}`);
+if (pot.planted) facts.push(`Planted ${pot.planted}`);
+document.getElementById('quick-facts').innerHTML = facts.length ? facts.join(' • ') : 'No care notes yet';
+  
   // Optional cute subtitle
   const subtitle = document.getElementById('pot-subtitle');
   if (subtitle) subtitle.textContent = pot.notes || `${pot.type || 'mysterious plant'} vibes`;
