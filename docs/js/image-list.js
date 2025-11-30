@@ -1,8 +1,8 @@
 window.GARDEN_IMAGE_LIST=[
-$(pot24_20251126.jpg)",
-$(pot23_20251126.jpg.Name)",
-$(pot23_20251122.jpg.Name)",
-$(pot22_20251126.jpg.Name)",
+ $(pot24_20251126.jpg)",
+ $(pot23_20251126.jpg.Name)",
+ $(pot23_20251122.jpg.Name)",
+ $(pot22_20251126.jpg.Name)",
 $(pot22_20251122.jpg.Name)",
 $(pot21_20251126.jpg.Name)",
 $(pot21_20251122.jpg.Name)",
