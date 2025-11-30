@@ -144,6 +144,16 @@ h1 { text-align:center; color:#0d4f3a; font-size:3rem; margin:2rem 0 .5rem; text
 .card-grid div { background: #f8fff8; padding: 1rem; border-radius: 12px; }
 .card-grid strong { color: #1b5e20; }
 
+.log-entry { 
+  background: #e8f5e9; 
+  border-left: 6px solid #43a047; 
+  padding: 1rem 1.5rem; 
+  margin: 1rem 0; 
+  border-radius: 0 12px 12px 0;
+}
+.log-details { margin: 0.5rem 0; font-size: 1rem; }
+.log-note { margin-top: 0.8rem; color: #2e7d32; font-style: italic; }
+
 .species-badge {
   font-style: italic;
   color: #2e7d32;
