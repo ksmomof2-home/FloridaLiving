@@ -46,26 +46,44 @@
       // Build pot grid
       const grid = document.getElementById('pot-grid');
 // Build the pot grid – hide truly empty pots, show placeholder for "future" ones
-const potEntries = Object.entries(data.pots)
+
   .sort(([a], [b]) => a.localeCompare(b)); // keeps pot01 → pot23 order
+
+// Build the pot grid with newest-photo thumbnails
+const potEntries = Object.entries(data.pots)
+  .sort(([a], [b]) => a.localeCompare(b));
 
 const html = potEntries.map(([id, p]) => {
   const hasContent = p.name && p.name.trim() && p.name !== "Empty" && p.name !== "Empty / Flex";
-  
-  if (!hasContent && !p.notes?.includes("future")) {
-    return ''; // completely hide pots with no name and no future plan
-  }
-
   const isFuture = p.notes?.includes("future") || p.name.toLowerCase().includes("empty");
   
+  if (!hasContent && !isFuture) return ''; // hide truly empty pots
+
+  // Find newest photo for this pot
+  const myImages = window.GARDEN_IMAGE_LIST
+    ?.filter(f => f.startsWith(`pot${id.replace('pot','').padStart(2,'0')}_`))
+    .sort()
+    .reverse(); // newest first
+  
+  const latestPhoto = myImages?.[0] ? `assets/images/pots/${myImages[0]}` : null;
+
   return `
     <div class="pot-card ${isFuture ? 'coming-soon' : ''}">
       <a href="pot.html?id=${id}">
+        ${latestPhoto ? `
+          <div class="pot-thumb">
+            <img src="${latestPhoto}" alt="${p.name || id}" loading="lazy">
+          </div>
+        ` : isFuture ? `
+          <div style="height:160px; display:flex; align-items:center; justify-content:center;">
+            <div style="font-size:5rem; opacity:0.2;">🌱</div>
+          </div>
+        ` : ''}
+        
         ${isFuture ? `
-          <div style="padding:2rem; text-align:center; color:#777;">
-            <div style="font-size:4rem; opacity:0.3;">🌱</div>
-            <div style="font-size:1.3rem; margin-top:1rem;">${p.name || 'Coming Soon'}</div>
-            <div style="font-size:0.9rem; margin-top:0.5rem; opacity:0.7;">
+          <div style="padding:1rem; text-align:center; color:#777;">
+            <div style="font-size:1.3rem;">${p.name || 'Coming Soon'}</div>
+            <div style="font-size:0.9rem; opacity:0.7; margin-top:0.5rem;">
               ${p.notes?.match(/future[:\s]*(.*)/i)?.[1] || 'Plant baby arriving soon!'}
             </div>
           </div>
@@ -77,20 +95,6 @@ const html = potEntries.map(([id, p]) => {
       </a>
     </div>`;
 }).join('');
-     /* 
-      const html = Object.keys(data.pots).sort().map(id => {
-        const p = data.pots[id];
-        return `
-          <div class="pot-card">
-            <a href="pot.html?id=${id}">
-              <div class="pot-name">${p.name || id}</div>
-              ${p.notes ? `<div class="pot-note">${p.notes}</div>` : ''}
-              <div style="margin-top:0.5rem; opacity:0.5;">${id}</div>
-            </a>
-          </div>`;
-      }).join('');
-
-      */
       grid.innerHTML = html || '<p>No pots yet… time to adopt some plant babies!</p>';
 
       // Render the master activity log (reuse the function we already have)
