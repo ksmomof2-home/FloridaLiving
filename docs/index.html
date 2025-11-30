@@ -47,8 +47,6 @@
       const grid = document.getElementById('pot-grid');
 // Build the pot grid – hide truly empty pots, show placeholder for "future" ones
 
-  .sort(([a], [b]) => a.localeCompare(b)); // keeps pot01 → pot23 order
-
 // Build the pot grid with newest-photo thumbnails
 const potEntries = Object.entries(data.pots)
   .sort(([a], [b]) => a.localeCompare(b));
