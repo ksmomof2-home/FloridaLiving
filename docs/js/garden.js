@@ -143,7 +143,8 @@ async function renderMasterLog(dataParam = null) {
   try {
     let data = dataParam || await loadGardenData();
     const container = document.getElementById('master-log');
-    const entries = (data.log || []).slice().reverse(); // Newest first, darling
+    //const entries = (data.log || []).slice().reverse(); // Newest first, darling
+    const entries = (data.log || []).slice(); // Newest first, darling
 
     const html = entries.map(e => {
       let potList = '';
