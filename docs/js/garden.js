@@ -73,17 +73,8 @@ document.getElementById('personality').textContent = pot.notes || 'Quietly judgi
     return;
   }
 
-  const html = entries.map(e => `
-    <div class="log-entry">
-      <div class="log-date">${formatDate(e.date)}</div>
-      <div class="log-action">
-        ${e.action === 'fertilized' ? '🍽️' : e.action === 'watered' ? '💧' : e.action === 'repotted' ? '🪴' : '✨'} 
-        ${e.action}
-      </div>
-      ${e.details ? `<div class="log-details">${e.details}</div>` : ''}
-      ${e.note ? `<div class="log-note">✍️ ${e.note}</div>` : ''}
-    </div>
-  `).join('');
+${e.details ? `<div class="log-details">✨ ${e.details}</div>` : ''}
+${e.note ? `<div class="log-note">🌱 <em>${e.note}</em></div>` : ''}
 
   logDiv.innerHTML = html;
   renderPhotosForPot(potId);
