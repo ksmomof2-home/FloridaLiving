@@ -66,17 +66,6 @@
 2025-11-30 08:41:20 Pulling...
 2025-11-30 08:41:20 Stashing...
 >>>>>>> Stashed changes
-<<<<<<< Updated upstream
-2025-11-30 13:19:12 Updating 2d237e4..0aa5140
-2025-11-30 13:19:12 Fast-forward
-2025-11-30 13:19:12  docs/js/image-list.js | 83 +++++++++++++++++++++++++--------------------------
-2025-11-30 13:19:12  1 file changed, 41 insertions(+), 42 deletions(-)
-2025-11-30 13:19:12 Generated 41 photos
-2025-11-30 13:19:13 [main 0de570f] update images 41
-2025-11-30 13:19:13  1 file changed, 42 insertions(+), 41 deletions(-)
-2025-11-30 13:19:14 DONE
-=======
 2025-11-30 13:19:11 === STARTED ===
 2025-11-30 13:19:11 Pulling...
 2025-11-30 13:19:11 Stashing...
->>>>>>> Stashed changes
