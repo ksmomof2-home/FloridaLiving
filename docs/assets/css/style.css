@@ -37,6 +37,12 @@ h1 { text-align:center; color:#0d4f3a; font-size:3rem; margin:2rem 0 .5rem; text
   border-color: #43a047 !important;
 }
 
+.whimsy { font-style: italic; color: #6b46c1; margin-top: 8px; }
+.log-entry { margin: 1.5rem 0; padding-bottom: 1rem; border-bottom: 2px dotted #c8b3e0; }
+.log-whimsy { font-weight: bold; color: #9c27b0; }
+.log-note { color: #555; margin-top: 4px; }
+.pot-card { background: rgba(255,255,255,0.8); border-radius: 15px; padding: 1rem; margin: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
 /* Tiny newest-photo thumbnail on index tiles */
 .pot-thumb {
   width: 100%;
