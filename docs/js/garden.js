@@ -178,8 +178,7 @@ async function renderMasterLog(dataParam = null) {
 
   try {
     let data = dataParam || await loadGardenData();
-    updateQuickStatsAndFilters(data);
-    const container = document.getElementById('master-log');
+   const container = document.getElementById('master-log');
     //const entries = (data.log || []).slice().reverse(); // Newest first, darling
    // const entries = (data.log || []).slice(); // Newest first, darling
     const entries = (data.log || []).slice().sort((a,b) => new Date(b.date) - new Date(a.date));
@@ -203,6 +202,7 @@ const html = entries.map(e => {
 }).join('');
 
     container.innerHTML = html || "<p>All quiet in the garden today… the pots are plotting something whimsical. 😏</p>";
+    updateQuickStatsAndFilters(data);   // ← this one!
   } catch (error) {
     console.error('Chronicle rendering oopsie:', error);
     document.getElementById('master-log').innerHTML = '<p>The adventure log is shy today. Refresh for stories!</p>';
