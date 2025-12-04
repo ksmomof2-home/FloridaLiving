@@ -154,21 +154,21 @@
     }
   },
   "log": [
-    {
-      "date": "2025-12-03",
-      "action": "fertilized",
-      "details": "Miracle Gro",
-      "pots": ["pot01","pot02","pot03","pot05","pot07","pot08","pot09","pot10","pot11","pot13","pot14","pot15"],
-      "note": "Standard feeding for actively growing pots",
-      "whimsy": "Miracle Gro walked in like a rockstar and every leaf started head-banging. The glow is real."
-    },
-    {
-      "date": "2025-12-03",
-      "action": "planted French Marigold seeds",
-      "pots": ["pot12","pot15","pot17","pot19","pot23"],
-      "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
-      "whimsy": "Sprinkled tiny orange confetti into five pots and whispered 'grow, my pretties' like a benevolent witch."
-    },
+   {
+  "date": "2025-12-03",
+  "action": "fertilized",
+  "details": "Miracle Gro",
+  "pots": ["pot01","pot02","pot03","pot05","pot07","pot08","pot09","pot10","pot11","pot13","pot14","pot15"],
+  "note": "Standard feeding for actively growing pots",
+  "whimsy": "Miracle Gro walked in like a rockstar and every leaf started head-banging."
+},
+{
+  "date": "2025-12-03",
+  "action": "planted French Marigold seeds",
+  "pots": ["pot12","pot15","pot17","pot19","pot23"],
+  "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
+  "whimsy": "Sprinkled tiny orange confetti into five pots and whispered 'grow, my pretties' like a benevolent witch."
+}
     {
     "date": "2025-12-01",
     "action": "installed tomato supports",
