@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-29",
+  "lastUpdated": "2025-12-03",
   "pots": {
     "pot01": {
       "name": "Pineapple Pair",
@@ -8,7 +8,8 @@
       "planted": "2025-06-01-ish basil added 2025-11-22",
       "light": "Full sun",
       "water": "Moderate – let top 2\" dry between",
-      "notes": "Two crowns rooting in big pot 1. Also holding three basil cuttings for now, for gifts if they root"
+      "notes": "Two crowns rooting in big pot 1. Also holding three basil cuttings for now, for gifts if they root",
+      "whimsy": "The Pineapple Twins opened a basil boarding house. Three Italian exchange students currently practicing dramatic sighs and rooting for tenure."
     },
     "pot02": {
       "name": "Rosemary Cutting Nursery",
@@ -17,7 +18,8 @@
       "planted": "2025-11-22",
       "light": "Full sun",
       "water": "Let dry between waterings",
-      "notes": "Former 1a. These will become gifts if they root. Used rooting hormone powder when planted"
+      "notes": "Former 1a. These will become gifts if they root. Used rooting hormone powder when planted",
+      "whimsy": "Elite finishing school for baby rosemary clones. Each student dusted with rooting-hormone fairy dust and dreaming of Christmas glory."
     },
     "pot03": {
       "name": "Celebrity Tomatoes",
@@ -26,12 +28,14 @@
       "planted": "2025-11-26",
       "light": "Full sun all day",
       "water": "Deep, consistent",
-      "notes": "Two plants ~1 ft tall, aluminum foil collars, 3\" pine bark mulch. Currently winning at life."
+      "notes": "Two plants ~1 ft tall, aluminum foil collars, 3\" pine bark mulch. Currently winning at life.",
+      "whimsy": "Twin red-carpet divas wearing tinfoil chokers and pine-bark ballgowns. Already demanding their own reality show."
     },
     "pot04": {
       "name": "Empty / Flex",
       "species": "",
-      "notes": "Former 2a – no pot here"
+      "notes": "Former 2a – no pot here",
+      "whimsy": "A polite void gently humming 'surprise me' in B-flat."
     },
     "pot05": {
       "name": "Passionflower Vine",
@@ -40,12 +44,8 @@
       "planted": "2024-10-01",
       "light": "Full sun to part shade",
       "water": "Moderate",
-      "notes": "Big pot 3 – final location"
-    },
-    "pot06": {
-      "name": "Empty / Flex",
-      "species": "",
-      "notes": "Former 3a – no pot"
+      "notes": "Big pot 3 – final location",
+      "whimsy": "Five-star butterfly maternity ward & caterpillar spa. Tiny orange midwives expected any moment."
     },
     "pot07": {
       "name": "Lime Tree",
@@ -54,7 +54,8 @@
       "planted": "",
       "light": "Full sun",
       "water": "Regular, deep",
-      "notes": "From Gary Kurz, received in May 2025"
+      "notes": "From Gary Kurz, received in May 2025",
+      "whimsy": "Gary Kurz’s citrus heirloom, currently practicing its margarita monologue in a sultry baritone."
     },
     "pot08": {
       "name": "Mint",
@@ -63,7 +64,8 @@
       "planted": "2024-10-01",
       "light": "Full sun to part shade",
       "water": "Keep moist",
-      "notes": "Small pot 4a – contained and happy"
+      "notes": "Small pot 4a – contained and happy",
+      "whimsy": "Serving life in solitary confinement for repeated border violations. Still plotting a mojito-based coup."
     },
     "pot09": {
       "name": "Avocado Tree",
@@ -72,7 +74,8 @@
       "planted": "",
       "light": "Full sun",
       "water": "Deep, infrequent",
-      "notes": "From Gary Kurz, received in May 2025"
+      "notes": "From Gary Kurz, received in May 2025",
+      "whimsy": "Gary’s second gift. Torn between destiny as guacamole royalty or 40-foot shade monarch."
     },
     "pot10": {
       "name": "Parsley",
@@ -81,7 +84,8 @@
       "planted": "",
       "light": "Full sun to part shade",
       "water": "Consistent moisture",
-      "notes": "Intend to move to pot 7. From Gary Kurz, received in May 2025"
+      "notes": "Intend to move to pot 7. From Gary Kurz, received in May 2025",
+      "whimsy": "Parsley is packed and ready to relocate the moment pot07 stops hogging the good dirt."
     },
     "pot11": {
       "name": "Rosemary (temporary)",
@@ -90,7 +94,8 @@
       "planted": "",
       "light": "Full sun",
       "water": "Dry between waterings",
-      "notes": "Big pot 6 – will move to Pos 12 once drip line is fixed"
+      "notes": "Big pot 6 – will move to Pos 12 once drip line is fixed",
+      "whimsy": "Rosemary is couch-surfing until pot23 finishes its drip-line trauma counseling."
     },
     "pot12": {
       "name": "French Marigolds",
@@ -99,12 +104,14 @@
       "planted": "2025-11-22",
       "light": "Full sun",
       "water": "Moderate",
-      "notes": "Small pot 6a – companion planting"
+      "notes": "Small pot 6a – companion planting",
+      "whimsy": "Tiny French bouncers hired to keep the riff-raff away from the tomatoes."
     },
     "pot13": {
       "name": "Junk Pot – Future Parsley + Swamp Milkweed",
       "species": "Avocado sprout + scallions + pineapple head",
-      "notes": "Big pot 7 – needs emptying and replanting"
+      "notes": "Big pot 7 – needs emptying and replanting",
+      "whimsy": "The garden’s chaotic junk drawer: emo avocado teen, onion ghosts, and a pineapple wearing indoor sunglasses."
     },
     "pot14": {
       "name": "Basil",
@@ -113,7 +120,8 @@
       "planted": "",
       "light": "Full sun",
       "water": "Keep moist",
-      "notes": "Small pot 7a – will move to big pot 11"
+      "notes": "Small pot 7a – will move to big pot 11",
+      "whimsy": "Basil is waiting for its glow-up into the big leagues. Currently practicing pesto poses."
     },
     "pot15": {
       "name": "Dill + Marigold seeds",
@@ -121,11 +129,8 @@
       "planted": "2025-11-22",
       "light": "Full sun",
       "water": "Moderate",
-      "notes": "Big pot 8 – will add bronze fennel later"
-    },
-    "pot16": {
-      "name": "Empty",
-      "notes": "Former 8a – no pot"
+      "notes": "Big pot 8 – will add bronze fennel later",
+      "whimsy": "Seed kindergarten in session. Bronze fennel already RSVP’d fashionably late."
     },
     "pot17": {
       "name": "Cilantro + Marigold seeds",
@@ -133,85 +138,80 @@
       "planted": "2025-11-22",
       "light": "Full sun",
       "water": "Keep moist",
-      "notes": "Big pot 9 – will add jalapeño later"
-    },
-    "pot18": {
-      "name": "Empty",
-      "notes": "Former 9a"
-    },
-    "pot19": {
-      "name": "Empty – future Poblano",
-      "notes": "Big pot 10"
-    },
-    "pot20": {
-      "name": "Empty",
-      "notes": "Former 10a"
-    },
-    "pot21": {
-      "name": "Empty – future Basil",
-      "notes": "Big pot 11 – will receive basil from 7a"
+      "notes": "Big pot 9 – will add jalapeño later",
+      "whimsy": "Cilantro’s short, melodramatic life has begun. Jalapeño is circling the party with spicy intent."
     },
     "pot22": {
       "name": "Wandering Jew",
       "species": "Tradescantia zebrina or fluminensis",
-      "notes": "Small pot 11a – permanent"
+      "notes": "Small pot 11a – permanent",
+      "whimsy": "The bohemian aunt who leaves purple glitter trails and refuses to sit still."
     },
     "pot23": {
       "name": "Empty – future Rosemary + Italian Oregano",
-      "notes": "Big pot 12 – waiting on drip line fix"
+      "notes": "Big pot 12 – waiting on drip line fix",
+      "whimsy": "In intensive therapy after drip-line betrayal. Emotionally unavailable until further notice."
     }
   },
-"log": [
+  "log": [
+    {
+      "date": "2025-12-03",
+      "action": "fertilized",
+      "details": "Miracle Gro",
+      "pots": ["pot01","pot02","pot03","pot05","pot07","pot08","pot09","pot10","pot11","pot13","pot14","pot15"],
+      "note": "Standard feeding for actively growing pots",
+      "whimsy": "Miracle Gro walked in like a rockstar and every leaf started head-banging. The glow is real."
+    },
+    {
+      "date": "2025-12-03",
+      "action": "planted French Marigold seeds",
+      "pots": ["pot12","pot15","pot17","pot19","pot23"],
+      "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
+      "whimsy": "Sprinkled tiny orange confetti into five pots and whispered 'grow, my pretties' like a benevolent witch."
+    },
+    {
+    "date": "2025-12-01",
+    "action": "installed tomato supports",
+    "pots": ["pot02"]
+    }
     {
       "date": "2025-11-26",
       "action": "fertilized",
       "details": "½-strength liquid seaweed + fish emulsion",
       "pots": ["pot01","pot02","pot03","pot04","pot06","pot07","pot08","pot09","pot10","pot11","pot12","pot14","pot15","pot16","pot17"],
-      "note": "Skipped the three succulent royals because they’re on a diet"
+      "note": "Skipped the three succulent royals because they’re on a diet",
+      "whimsy": "Served ocean smoothies to everyone except the succulent royals who flipped their crowns and declared calories beneath them."
     },
-    {"date": "2025-11-24",
+    {
+      "date": "2025-11-24",
       "action": "rooted",
       "details": "took cuttings from basil, parsley, and rosemary, planted rosemary (pot02) and basil (pot01), also put all three in water (vase) in kitchen",
-      "pots": ["pot01", "pot02", "pot10", "pot11", "pot14"],
-      "notes": "The cuttings that were added to pots 01 and 02 were dipped in rooting hormone"
+      "pots": ["pot01","pot02","pot10","pot11","pot14"],
+      "note": "The cuttings that were added to pots 01 and 02 were dipped in rooting hormone",
+      "whimsy": "Performed vegetative cloning under a waxing moon. The rosemary is already bragging about its future as a Christmas gift."
     },
-      {
+    {
       "date": "2025-11-22",
       "action": "picture",
       "details": "took close up of leaves to research damage",
-      "pots": "pot07",
-      "note": ""
+      "pots": ["pot07"],
+      "note": "Lime tree leaf inspection",
+      "whimsy": "Papparazzi’d the lime tree’s leaves because even celebrities get blemishes."
     },
     {
       "date": "2025-11-20",
       "action": "watered",
       "details": "deep watering after 10 dry days",
       "pots": "all",
-      "note": "Everyone got a drink, even the drama queens"
+      "note": "Everyone got a drink, even the drama queens",
+      "whimsy": "After ten parched days the garden threw a collective sigh of relief so loud the neighbors thought it was raining."
     },
     {
       "date": "2025-11-15",
       "action": "repotted",
       "pots": ["pot02"],
-      "note": "Tomato Tower graduated to the 7-gallon palace"
-    },
-  {
-    "date": "2025-11-15",
-    "action": "installed tomato supports",
-    "pots": ["pot02"]
-  }
-  },
-    { 
-      "date" : "2025-12-03",
-      "action": "planted French Marigold seeds",
-      "pots": "[pot12], [pot15], [pot17], [pot19], [pot23]"
-    },
-   {
-      "date": "2025-12-03",
-      "action": "fertilized",
-      "details": "Miracle Gro",
-      "pots": ["pot01","pot02","pot03","pot05","pot07","pot08","pot09","pot10","pot11","pot13","pot14","pot15"]
+      "note": "Tomato Tower graduated to the 7-gallon palace",
+      "whimsy": "The tomatoes threw a housewarming party the moment they moved into their new mansion. Invites were edible."
     }
-]
-  
+  ]
 }
