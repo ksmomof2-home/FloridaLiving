@@ -1,4 +1,4 @@
-async function loadGardenData() {
+async function loadGardenData() { 
   const resp = await fetch('garden-data.json?' + Date.now()); // cache-bust
   return await resp.json();
 }
