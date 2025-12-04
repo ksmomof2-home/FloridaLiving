@@ -162,6 +162,20 @@
   "note": "Standard feeding for actively growing pots",
   "whimsy": "Miracle Gro walked in like a rockstar and every leaf started head-banging."
 },
+        {
+  "date": "2025-11-22",
+  "action": "planted Cilantro seeds",
+  "pots": ["pot15"],
+  "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
+  "whimsy": "Sowed cilantro’s annual one-hit-wonder tour: 30 days of glory, one dramatic bolt to seed, and an encore of coriander."
+},
+    {
+  "date": "2025-11-22",
+  "action": "planted French Marigold seeds",
+  "pots": ["pot15","pot17"],
+  "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
+  "whimsy": "Sowed a handful of miniature suns into five pots. Expect a riot of color and zero tolerance for nematodes."
+},
 {
   "date": "2025-12-03",
   "action": "planted French Marigold seeds",
@@ -170,7 +184,7 @@
   "whimsy": "Sprinkled tiny orange confetti into five pots and whispered 'grow, my pretties' like a benevolent witch."
 },
     {
-    "date": "2025-12-01",
+    "date": "2025-12-02",
     "action": "installed tomato supports",
     "pots": ["pot02"]
     },
