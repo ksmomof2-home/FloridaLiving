@@ -4,8 +4,15 @@ async function loadGardenData() {
 }
 
 function formatDate(iso) {
-  const d = new Date(iso);
-  return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+  // Accept "2025-12-03" or full ISO, and be forgiving
+  const d = new Date(iso + (iso.includes('T') ? '' : 'T00:00:00'));
+  if (isNaN(d)) return 'Some mysterious day';
+  return d.toLocaleDateString(undefined, { 
+    weekday: 'short', 
+    month: 'short', 
+    day: 'numeric', 
+    year: 'numeric' 
+  });
 }
 
 // Auto-detect which pot we're looking at from the URL
