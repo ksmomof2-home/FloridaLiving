@@ -75,13 +75,13 @@ if (pot.whimsy) {
   if (subtitle) subtitle.textContent = pot.notes || `${pot.type || 'mysterious plant'} vibes`;
 
   // Build the log
-  const entries = data.log
+   const entries = data.log
     .filter(entry => {
       if (entry.pots === "all") return true;
       if (Array.isArray(entry.pots)) return entry.pots.includes(potId);
       return false;
     })
-    .reverse();
+    .sort((a, b) => new Date(b.date) - new Date(a.date));   // ← newest first, bullet-proof
 
   const logDiv = document.getElementById('pot-log');
   if (entries.length === 0) {
