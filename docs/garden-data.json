@@ -226,6 +226,13 @@
       "pots": ["pot02"],
       "note": "Tomato Tower graduated to the 7-gallon palace",
       "whimsy": "The tomatoes threw a housewarming party the moment they moved into their new mansion. Invites were edible."
+    },
+    {
+      "date": "2025-12-01",
+      "action": "seeds",
+      "pots": ["pot23"],
+      "note": "Saved 5 sections of Yukon Gold Potatoes each with an eye",
+      "whimsy": "Performed emergency eye surgery on five Yukon Golds. They’re now sprouting like they’ve got big plans for world domination, one tuber at a time."
     }
   ]
 }
