@@ -43,7 +43,6 @@ if (myImages?.[0]) {
 // Species badge
 const species = pot.species || '';
 const variety = pot.variety ? ` '${pot.variety}'` : '';
-  
 document.getElementById('species-badge').textContent = species ? `${species}${variety}` : 'Mystery Plant 🌿';
 document.getElementById('species-full').textContent = pot.species || 'Mystery plant 🌿';
 document.getElementById('variety').textContent = pot.variety || '—';
@@ -52,7 +51,17 @@ document.getElementById('light-needs').innerHTML = pot.light ? `☀️ ${pot.lig
 document.getElementById('water-needs').innerHTML = pot.water ? `💧 ${pot.water}` : '—';
 document.getElementById('pests').textContent   = pot.pests   || 'None known yet';
 document.getElementById('diseases').textContent = pot.diseases || 'None known yet';
-document.getElementById('personality').textContent = pot.notes || 'Quietly judging you';
+
+// Serious notes
+document.getElementById('personality').textContent = pot.notes || 'Perfectly ordinary plant behavior';
+
+// ✨ WHIMSY REVEAL ✨
+if (pot.whimsy) {
+  document.getElementById('whimsy-text').textContent = pot.whimsy;
+  document.getElementById('whimsy-container').style.display = 'block';
+} else {
+  document.getElementById('whimsy-container').style.display = 'none';
+}
   
   // Optional cute subtitle
   const subtitle = document.getElementById('pot-subtitle');
@@ -73,12 +82,13 @@ document.getElementById('personality').textContent = pot.notes || 'Quietly judgi
     return;
   }
 
-  const html = entries.map(e => `
+const html = entries.map(e => `
   <div class="log-entry">
     <div class="log-date">📅 ${formatDate(e.date)}</div>
     <div class="log-action">✨ <strong>${e.action}</strong></div>
     ${e.details ? `<div class="log-details">• ${e.details}</div>` : ''}
     ${e.note ? `<div class="log-note">🌱 <em>${e.note}</em></div>` : ''}
+    ${e.whimsy ? `<div style="margin-top: 0.5rem; padding: 0.6rem; background: rgba(142, 68, 173, 0.1); border-radius: 6px; font-style: italic; color: #8e44ad;">✨ ${e.whimsy}</div>` : ''}
   </div>
 `).join('');
 
@@ -165,22 +175,23 @@ async function renderMasterLog(dataParam = null) {
     //const entries = (data.log || []).slice().reverse(); // Newest first, darling
     const entries = (data.log || []).slice(); // Newest first, darling
 
-    const html = entries.map(e => {
-      let potList = '';
-      if (e.pots === "all") potList = '<em>everybody!</em> 🌍';
-      else if (Array.isArray(e.pots)) {
-        const names = e.pots.map(id => data.pots[id]?.name || id).slice(0, 6);
-        potList = names.length > 5 ? names.join(', ') + ' …' : names.join(', ');
-      } else potList = e.pots || 'mystery pots';
+const html = entries.map(e => {
+  let potList = '';
+  if (e.pots === "all") potList = '<em>everybody!</em> 🌍';
+  else if (Array.isArray(e.pots)) {
+    const names = e.pots.map(id => data.pots[id]?.name || id).slice(0, 6);
+    potList = names.length > 5 ? names.join(', ') + ' …' : names.join(', ');
+  } else potList = e.pots || 'mystery pots';
 
-      return `
-        <div class="master-entry">
-          <div class="master-date">${formatDate(e.date)}</div>
-          <div class="master-action"><strong>${e.action.toUpperCase()}</strong> — ${potList}</div>
-          ${e.details ? `<div class="master-details">${e.details}</div>` : ''}
-          ${e.note ? `<div class="master-note">✦ ${e.note}</div>` : ''}
-        </div>`;
-    }).join('');
+  return `
+    <div class="master-entry">
+      <div class="master-date">${formatDate(e.date)}</div>
+      <div class="master-action"><strong>${e.action.toUpperCase()}</strong> — ${potList}</div>
+      ${e.details ? `<div class="master-details">${e.details}</div>` : ''}
+      ${e.note ? `<div class="master-note">✦ ${e.note}</div>` : ''}
+      ${e.whimsy ? `<div style="margin-top: 0.5rem; padding: 0.6rem; background: rgba(142, 68, 173, 0.1); border-radius: 6px; font-style: italic; color: #8e44ad;">✨ ${e.whimsy}</div>` : ''}
+    </div>`;
+}).join('');
 
     container.innerHTML = html || "<p>All quiet in the garden today… the pots are plotting something whimsical. 😏</p>";
   } catch (error) {
