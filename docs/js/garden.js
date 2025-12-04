@@ -208,6 +208,66 @@ const html = entries.map(e => {
   }
 }
 
+// ── Quick Stats + Filter + Seed Tracker ─────────────────────────────────────
+let fullLogData = [];  // will hold the full log once loaded
+
+async function updateQuickStatsAndFilters(data) {
+  fullLogData = data.log || [];
+
+  // 1. Quick stats
+  const lastFert = fullLogData.filter(e => e.action.toLowerCase().includes('fertilize')).sort((a,b) => new Date(b.date) - new Date(a.date))[0];
+  const lastWater = fullLogData.filter(e => e.action.toLowerCase().includes('water')).sort((a,b) => new Date(b.date) - new Date(a.date))[0];
+  const seedEntries = fullLogData.filter(e => e.action.toLowerCase().includes('seed') || e.action.toLowerCase().includes('plant'));
+
+  const statsHTML = `
+    Last fertilized: <strong>${lastFert ? formatDate(lastFert.date) : 'never yet'}</strong> • 
+    Last watered: <strong>${lastWater ? formatDate(lastWater.date) : 'never yet'}</strong> • 
+    Seed pots: <strong>${seedEntries.length}</strong> (newest ${seedEntries[0] ? daysAgo(seedEntries[0].date) : '?'})
+  `;
+  document.getElementById('quick-stats').innerHTML = statsHTML;
+
+  // 2. Seed watch table (for the Seeds button)
+  const seedRows = seedEntries.map(e => {
+    const pots = Array.isArray(e.pots) ? e.pots.map(id => data.pots[id]?.name || id).join(', ') : e.pots || 'unknown';
+    return `<tr><td>${formatDate(e.date)}</td><td>${pots}</td><td>${daysAgo(e.date)}</td><td style="font-style:italic; color:#6b46c1;">${e.whimsy || ''}</td></tr>`;
+  }).join('');
+
+  document.getElementById('seed-table').innerHTML = `
+    <table style="width:100%; border-collapse:collapse;">
+      <thead><tr style="background:#ffcc80;">
+        <th style="padding:0.5rem; text-align:left;">Planted</th>
+        <th style="padding:0.5rem; text-align:left;">Pots</th>
+        <th style="padding:0.5rem; text-align:left;">Age</th>
+        <th style="padding:0.5rem; text-align:left;">Whimsy</th>
+      </tr></thead>
+      <tbody>${seedRows || '<tr><td colspan="4">No seeds yet!</td></tr>'}</tbody>
+    </table>`;
+}
+
+// Helper: how many days ago
+function daysAgo(dateStr) {
+  const diff = Math.floor((new Date() - new Date(dateStr)) / 86400000);
+  return diff === 0 ? 'today' : diff === 1 ? 'yesterday' : `${diff} days ago`;
+}
+
+// Filter function for the buttons
+function filterLog(type) {
+  document.querySelectorAll('#master-log .master-entry').forEach(el => el.style.display = 'block');
+  document.getElementById('seed-watch').style.display = 'none';
+
+  if (type === 'all') return;
+  if (type === 'seeds') {
+    document.getElementById('seed-watch').style.display = 'block';
+    document.querySelectorAll('#master-log .master-entry').forEach(el => el.style.display = 'none');
+    return;
+  }
+
+  document.querySelectorAll('#master-log .master-entry').forEach(el => {
+    const text = el.textContent.toLowerCase();
+    if (!text.includes(type)) el.style.display = 'none';
+  });
+}
+
 // ──────────────────────────────────────────────────────────────
 // Smart loader — runs the right thing on the right page (yours is already perfect here!)
 // ──────────────────────────────────────────────────────────────
