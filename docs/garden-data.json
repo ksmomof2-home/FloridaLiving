@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-03",
+  "lastUpdated": "2025-12-04",
   "pots": {
     "pot01": {
       "name": "Pineapple Pair",
@@ -9,7 +9,9 @@
       "light": "Full sun",
       "water": "Moderate – let top 2\" dry between",
       "notes": "Two crowns rooting in big pot 1. Also holding three basil cuttings for now, for gifts if they root",
-      "whimsy": "The Pineapple Twins opened a basil boarding house. Three Italian exchange students currently practicing dramatic sighs and rooting for tenure."
+      "whimsy": "The Pineapple Twins opened a basil boarding house. Three Italian exchange students currently practicing dramatic sighs and rooting for tenure.",
+      "plantingWindow": "Year-round (best Mar–Jun)",
+      "plantingComments": "Pineapples laugh at cold and adore your east-wall heat trap. Tops root anytime, but spring gives the fastest show-offs."
     },
     "pot02": {
       "name": "Rosemary Cutting Nursery",
@@ -19,7 +21,9 @@
       "light": "Full sun",
       "water": "Let dry between waterings",
       "notes": "Former 1a. These will become gifts if they root. Used rooting hormone powder when planted",
-      "whimsy": "Elite finishing school for baby rosemary clones. Each student dusted with rooting-hormone fairy dust and dreaming of Christmas glory."
+      "whimsy": "Elite finishing school for baby rosemary clones. Each student dusted with rooting-hormone fairy dust and dreaming of Christmas glory.",
+      "plantingWindow": "Year-round (best Oct–Mar)",
+      "plantingComments": "Rosemary cuttings root any time in Florida, but cool-season babies grow up stronger and less leggy. Arp is cold-hardy — perfect for your wall."
     },
     "pot03": {
       "name": "Celebrity Tomatoes",
@@ -29,13 +33,17 @@
       "light": "Full sun all day",
       "water": "Deep, consistent",
       "notes": "Two plants ~1 ft tall, aluminum foil collars, 3\" pine bark mulch. Currently winning at life.",
-      "whimsy": "Twin red-carpet divas wearing tinfoil chokers and pine-bark ballgowns. Already demanding their own reality show."
+      "whimsy": "Twin red-carpet divas wearing tinfoil chokers and pine-bark ballgowns. Already demanding their own reality show.",
+      "plantingWindow": "Jan–Mar or Jul–Aug",
+      "plantingComments": "November planting is brave and perfect for your east wall! Celebrity is disease-resistant and loves Florida — expect fruit by Valentine’s if we avoid January freezes."
     },
     "pot04": {
       "name": "Empty / Flex",
       "species": "",
       "notes": "Former 2a – no pot here",
-      "whimsy": "A polite void gently humming 'surprise me' in B-flat."
+      "whimsy": "A polite void gently humming 'surprise me' in B-flat.",
+      "plantingWindow": "Anytime you dare",
+      "plantingComments": "The universe is waiting with bated breath. Suggested occupants: more basil, a jalapeño, or a dramatic cilantro comeback."
     },
     "pot05": {
       "name": "Passionflower Vine",
@@ -45,7 +53,9 @@
       "light": "Full sun to part shade",
       "water": "Moderate",
       "notes": "Big pot 3 – final location",
-      "whimsy": "Five-star butterfly maternity ward & caterpillar spa. Tiny orange midwives expected any moment."
+      "whimsy": "Five-star butterfly maternity ward & caterpillar spa. Tiny orange midwives expected any moment.",
+      "plantingWindow": "Year-round (best Feb–May)",
+      "plantingComments": "Native maypop (incarnata) is bulletproof here. Edulis prefers spring planting but your wall gives both royal treatment."
     },
     "pot07": {
       "name": "Lime Tree",
@@ -55,7 +65,9 @@
       "light": "Full sun",
       "water": "Regular, deep",
       "notes": "From Gary Kurz, received in May 2025",
-      "whimsy": "Gary Kurz’s citrus heirloom, currently practicing its margarita monologue in a sultry baritone."
+      "whimsy": "Gary Kurz’s citrus heirloom, currently practicing its margarita monologue in a sultry baritone.",
+      "plantingWindow": "Year-round in pots (best Feb–Apr)",
+      "plantingComments": "Bearss limes love your microclimate. Protect below 28°F, but they fruit year-round once happy."
     },
     "pot08": {
       "name": "Mint",
@@ -65,7 +77,9 @@
       "light": "Full sun to part shade",
       "water": "Keep moist",
       "notes": "Small pot 4a – contained and happy",
-      "whimsy": "Serving life in solitary confinement for repeated border violations. Still plotting a mojito-based coup."
+      "whimsy": "Serving life in solitary confinement for repeated border violations. Still plotting a mojito-based coup.",
+      "plantingWindow": "Year-round (contain immediately)",
+      "plantingComments": "Mint grows 365 days a year here. Your containment strategy is wise and necessary."
     },
     "pot09": {
       "name": "Avocado Tree",
@@ -75,7 +89,9 @@
       "light": "Full sun",
       "water": "Deep, infrequent",
       "notes": "From Gary Kurz, received in May 2025",
-      "whimsy": "Gary’s second gift. Torn between destiny as guacamole royalty or 40-foot shade monarch."
+      "whimsy": "Gary’s second gift. Torn between destiny as guacamole royalty or 40-foot shade monarch.",
+      "plantingWindow": "Year-round in pots (best Mar–Jun)",
+      "plantingComments": "Your wall is perfect — morning sun, afternoon shade, reflected heat. Protect young trees below 30°F."
     },
     "pot10": {
       "name": "Parsley",
@@ -85,7 +101,9 @@
       "light": "Full sun to part shade",
       "water": "Consistent moisture",
       "notes": "Intend to move to pot 7. From Gary Kurz, received in May 2025",
-      "whimsy": "Parsley is packed and ready to relocate the moment pot07 stops hogging the good dirt."
+      "whimsy": "Parsley is packed and ready to relocate the moment pot07 stops hogging the good dirt.",
+      "plantingWindow": "Oct–Apr",
+      "plantingComments": "Cool-season superstar. Your east wall extends its season beautifully — it’ll last until May!"
     },
     "pot11": {
       "name": "Rosemary (temporary)",
@@ -95,7 +113,9 @@
       "light": "Full sun",
       "water": "Dry between waterings",
       "notes": "Big pot 6 – will move to Pos 12 once drip line is fixed",
-      "whimsy": "Rosemary is couch-surfing until pot23 finishes its drip-line trauma counseling."
+      "whimsy": "Rosemary is couch-surfing until pot23 finishes its drip-line trauma counseling.",
+      "plantingWindow": "Year-round (best Oct–Mar)",
+      "plantingComments": "Arp rosemary is nearly immortal here. Cuttings root fast any month."
     },
     "pot12": {
       "name": "French Marigolds",
@@ -105,13 +125,17 @@
       "light": "Full sun",
       "water": "Moderate",
       "notes": "Small pot 6a – companion planting",
-      "whimsy": "Tiny French bouncers hired to keep the riff-raff away from the tomatoes."
+      "whimsy": "Tiny French bouncers hired to keep the riff-raff away from the tomatoes.",
+      "plantingWindow": "Year-round",
+      "plantingComments": "The cheerful pest-confusing bouncers of Florida gardening. Plant anytime for instant smiles and nematode protection."
     },
     "pot13": {
       "name": "Junk Pot – Future Parsley + Swamp Milkweed",
       "species": "Avocado sprout + scallions + pineapple head",
       "notes": "Big pot 7 – needs emptying and replanting",
-      "whimsy": "The garden’s chaotic junk drawer: emo avocado teen, onion ghosts, and a pineapple wearing indoor sunglasses."
+      "whimsy": "The garden’s chaotic junk drawer: emo avocado teen, onion ghosts, and a pineapple wearing indoor sunglasses.",
+      "plantingWindow": "Whenever you evict the current tenants",
+      "plantingComments": "Future home of parsley (Oct–Apr) and swamp milkweed (Mar–Jun). Current residents are on borrowed time."
     },
     "pot14": {
       "name": "Basil",
@@ -121,7 +145,9 @@
       "light": "Full sun",
       "water": "Keep moist",
       "notes": "Small pot 7a – will move to big pot 11 once the seedlings are bigger.",
-      "whimsy": "Basil is waiting for its glow-up into the big leagues. Currently practicing pesto poses."
+      "whimsy": "Basil is waiting for its glow-up into the big leagues. Currently practicing pesto poses.",
+      "plantingWindow": "Feb–May or Sep–Nov",
+      "plantingComments": "Your east wall is basil heaven — slightly cooler afternoons mean less bolting drama."
     },
     "pot15": {
       "name": "Dill + Marigold seeds",
@@ -130,7 +156,9 @@
       "light": "Full sun",
       "water": "Moderate",
       "notes": "Big pot 8 – will add bronze fennel later",
-      "whimsy": "Seed kindergarten in session. Bronze fennel already RSVP’d fashionably late."
+      "whimsy": "Seed kindergarten in session. Bronze fennel already RSVP’d fashionably late.",
+      "plantingWindow": "Oct–Feb (perfect timing!)",
+      "plantingComments": "November dill planting = Florida jackpot. Your wall will give you tall, happy plants before spring heat meltdown."
     },
     "pot17": {
       "name": "Cilantro + Marigold seeds",
@@ -139,54 +167,60 @@
       "light": "Full sun",
       "water": "Keep moist",
       "notes": "Big pot 9 – will add jalapeño later",
-      "whimsy": "Cilantro’s short, melodramatic life has begun. Jalapeño is circling the party with spicy intent."
+      "whimsy": "Cilantro’s short, melodramatic life has begun. Jalapeño is circling the party with spicy intent.",
+      "plantingWindow": "Oct–Feb (you nailed it!)",
+      "plantingComments": "Peak cilantro season! Succession sow every 2–3 weeks until February for endless drama-free leaves."
     },
     "pot22": {
       "name": "Wandering Jew",
       "species": "Tradescantia zebrina or fluminensis",
       "notes": "Small pot 11a – permanent",
-      "whimsy": "The bohemian aunt who leaves purple glitter trails and refuses to sit still."
+      "whimsy": "The bohemian aunt who leaves purple glitter trails and refuses to sit still.",
+      "plantingWindow": "Year-round",
+      "plantingComments": "Indestructible. Cuttings root in water or soil any day of the year."
     },
     "pot23": {
       "name": "Empty – future Rosemary + Italian Oregano",
       "notes": "Big pot 12 – waiting on drip line fix",
-      "whimsy": "In intensive therapy after drip-line betrayal. Emotionally unavailable until further notice."
+      "whimsy": "In intensive therapy after drip-line betrayal. Emotionally unavailable until further notice.",
+      "plantingWindow": "Year-round (best Oct–Apr)",
+      "plantingComments": "Perfect future home for Mediterranean herbs. Your wall is their dream climate."
     }
   },
   "log": [
-   {
-  "date": "2025-12-03",
-  "action": "fertilized",
-  "details": "Miracle Gro",
-  "pots": ["pot01","pot02","pot03","pot05","pot07","pot08","pot09","pot10","pot11","pot13","pot14","pot15"],
-  "note": "Standard feeding for actively growing pots",
-  "whimsy": "Miracle Gro walked in like a rockstar and every leaf started head-banging."
-},
-        {
-  "date": "2025-11-22",
-  "action": "planted Cilantro seeds",
-  "pots": ["pot15"],
-  "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
-  "whimsy": "Sowed cilantro’s annual one-hit-wonder tour: 30 days of glory, one dramatic bolt to seed, and an encore of coriander."
-},
     {
-  "date": "2025-11-22",
-  "action": "planted French Marigold seeds",
-  "pots": ["pot15","pot17"],
-  "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
-  "whimsy": "Sowed a handful of miniature suns into five pots. Expect a riot of color and zero tolerance for nematodes."
-},
-{
-  "date": "2025-12-03",
-  "action": "planted French Marigold seeds",
-  "pots": ["pot12","pot15","pot17","pot19","pot23"],
-  "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
-  "whimsy": "Sprinkled tiny orange confetti into five pots and whispered 'grow, my pretties' like a benevolent witch."
-},
+      "date": "2025-12-03",
+      "action": "fertilized",
+      "details": "Miracle Gro",
+      "pots": ["pot01","pot02","pot03","pot05","pot07","pot08","pot09","pot10","pot11","pot13","pot14","pot15"],
+      "note": "Standard feeding for actively growing pots",
+      "whimsy": "Miracle Gro walked in like a rockstar and every leaf started head-banging."
+    },
     {
-    "date": "2025-12-02",
-    "action": "installed tomato supports",
-    "pots": ["pot02"]
+      "date": "2025-11-22",
+      "action": "planted Cilantro seeds",
+      "pots": ["pot15"],
+      "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
+      "whimsy": "Sowed cilantro’s annual one-hit-wonder tour: 30 days of glory, one dramatic bolt to seed, and an encore of coriander."
+    },
+    {
+      "date": "2025-11-22",
+      "action": "planted French Marigold seeds",
+      "pots": ["pot15","pot17"],
+      "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
+      "whimsy": "Sowed a handful of miniature suns into five pots. Expect a riot of color and zero tolerance for nematodes."
+    },
+    {
+      "date": "2025-12-03",
+      "action": "planted French Marigold seeds",
+      "pots": ["pot12","pot15","pot17","pot19","pot23"],
+      "note": "Direct sown 5-8 seeds per pot, ¼\" deep",
+      "whimsy": "Sprinkled tiny orange confetti into five pots and whispered 'grow, my pretties' like a benevolent witch."
+    },
+    {
+      "date": "2025-12-02",
+      "action": "installed tomato supports",
+      "pots": ["pot02"]
     },
     {
       "date": "2025-11-26",
