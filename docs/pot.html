@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Loading leafy friend…</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
     </div>
   </div>
 
-  <!-- PLANT CARD (8 boxes) -->
+  <!-- PLANT CARD (now with planting magic!) -->
   <div class="plant-card">
     <div class="card-grid">
       <div><strong>Species</strong><br><span id="species-full"></span></div>
@@ -30,10 +30,20 @@
       <div><strong>Common Pests</strong><br><span id="pests">—</span></div>
       <div><strong>Common Diseases</strong><br><span id="diseases">—</span></div>
       <div><strong>Notes</strong><br><span id="personality"></span></div>
-      <div id="whimsy-container" style="margin-top: 0.8rem; padding: 0.8rem; background: rgba(155, 89, 182, 0.08); border-radius: 8px; display: none;">
-           <strong style="color: #8e44ad;">✨ Secret Personality</strong><br>
-           <span id="whimsy-text" style="font-style: italic; color: #6b46c1;"></span>
-          </div>
+      
+      <!-- ✨ NEW: BEST PLANTING TIME ✨ -->
+      <div style="grid-column: span 2; margin-top: 0.8rem; padding: 0.9rem; background: rgba(46, 125, 50, 0.12); border-left: 4px solid #4CAF50; border-radius: 0 8px 8px 0;">
+        <strong style="color: #2E7D32;">Best Planting Window (Central FL)</strong><br>
+        <span id="planting-window" style="font-size: 1.1em; font-weight: bold; color: #1B5E20;"></span>
+      </div>
+      <div style="grid-column: span 2; padding: 0.6rem; background: rgba(76, 175, 80, 0.08); border-radius: 8px;">
+        <span id="planting-comments" style="font-style: italic; color: #33691E;"></span>
+      </div>
+
+      <div id="whimsy-container" style="grid-column: span 2; margin-top: 0.8rem; padding: 0.8rem; background: rgba(155, 89, 182, 0.08); border-radius: 8px; display: none;">
+        <strong style="color: #8e44ad;">✨ Secret Personality</strong><br>
+        <span id="whimsy-text" style="font-style: italic; color: #6b46c1;"></span>
+      </div>
     </div>
   </div>
 
@@ -42,13 +52,11 @@
     <h2>📸 Photo Diary</h2>
     <div id="photo-gallery" class="gallery"></div>
 
-    <!-- GARDEN LOG -->
     <h2>✍️ Garden Log</h2>
     <div id="pot-log" class="log"></div>
   </div>
 
-  <!-- SCRIPTS -->
-  <script src="js/garden.js"></script>
+  <script src="js/garden.js?v=3"></script>
   <script src="js/image-list.js"></script>
 </body>
 </html>
