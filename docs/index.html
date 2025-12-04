@@ -31,28 +31,31 @@
   <strong>Quick Garden Pulse</strong><br>
   <span id="quick-stats">Loading the latest dirt…</span>
 </div>
-
-<!-- Filter buttons -->
-<div style="text-align:center; margin:1.5rem 0;">
-  <strong>Show log:</strong>
-  <button onclick="filterLog('all')"     style="margin:0 0.3rem; padding:0.4rem 0.8rem;">All</button>
-  <button onclick="filterLog('fertilized')" style="margin:0 0.3rem; padding:0.4rem 0.8rem;">Fertilized</button>
-  <button onclick="filterLog('watered')"    style="margin:0 0.3rem; padding:0.4rem 0.8rem;">Watered</button>
-  <button onclick="filterLog('planted')"    style="margin:0 0.3rem; padding:0.4rem 0.8rem;">Planted</button>
-  <button onclick="filterLog('seeds')"      style="margin:0 0.3rem; padding:0.4rem 0.8rem; background:#fff3e0;">Seeds</button>
-</div>
-
-<!-- Seed Watch table (only shows when you click “Seeds”) -->
-<div id="seed-watch" style="display:none; margin:2rem 0; padding:1.5rem; background:#fff8e1; border-radius:12px;">
-  <h3 style="margin-top:0;">Seed Babies Tracker</h3>
-  <div id="seed-table"></div>
-</div>
   
   <p style="text-align:center; font-size:1.2rem;">20 pots, one JSON to rule them all, zero copy-paste suffering</p>
 
   <h2 style="text-align:center; margin-top:3rem;">My Leafy Children</h2>
   <div id="pot-grid" class="pot-grid">Loading your darlings…</div>
 
+<!-- Filter buttons – now right above the log -->
+<div style="text-align:center; margin:2.5rem 0 1.5rem;">
+  <strong style="font-size:1.1rem;">Show log:</strong>
+  <button onclick="filterLog('all')"        style="margin:0 0.4rem; padding:0.5rem 1rem; background:#c8e6c9; font-weight:bold; border-radius:8px;">All</button>
+  <button onclick="filterLog('fertilized')" style="margin:0 0.4rem; padding:0.5rem 1rem; border-radius:8px;">Fertilized</button>
+  <button onclick="filterLog('watered')"    style="margin:0 0.4rem; padding:0.5rem 1rem; border-radius:8px;">Watered</button>
+  <button onclick="filterLog('planted')"    style="margin:0 0.4rem; padding:0.5rem 1rem; border-radius:8px;">Planted</button>
+  <button onclick="filterLog('seeds')"      style="margin:0 0.4rem; padding:0.5rem 1rem; background:#fff3e0; border-radius:8px;">Seeds</button>
+</div>
+
+<!-- Seed Watch table (still hidden until Seeds is clicked) -->
+<div id="seed-watch" style="display:none; margin:2rem auto; max-width:900px; padding:1.5rem; background:#fff8e1; border-radius:12px;">
+  <h3 style="margin-top:0; text-align:center;">Seed Babies Tracker</h3>
+  <div id="seed-table"></div>
+</div>
+
+<h2 style="text-align:center; margin-top:4rem;">Recent Garden Adventures</h2>
+<div id="master-log"></div>
+  
   <h2 style="text-align:center; margin-top:4rem;">📜 Recent Garden Adventures</h2>
   <div id="master-log"></div>
 
