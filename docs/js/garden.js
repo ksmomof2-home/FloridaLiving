@@ -62,13 +62,26 @@ document.getElementById('diseases').textContent = pot.diseases || 'None known ye
 // Serious notes
 document.getElementById('personality').textContent = pot.notes || 'Perfectly ordinary plant behavior';
 
-// ✨ WHIMSY REVEAL ✨
-if (pot.whimsy) {
-  document.getElementById('whimsy-text').textContent = pot.whimsy;
-  document.getElementById('whimsy-container').style.display = 'block';
-} else {
-  document.getElementById('whimsy-container').style.display = 'none';
-}
+// ... [everything above stays exactly the same until after the whimsy block]
+
+  // ✨ WHIMSY REVEAL ✨
+  if (pot.whimsy) {
+    document.getElementById('whimsy-text').textContent = pot.whimsy;
+    document.getElementById('whimsy-container').style.display = 'block';
+  } else {
+    document.getElementById('whimsy-container').style.display = 'none';
+  }
+
+  // ✨ NEW: PLANTING WINDOW MAGIC ✨
+  if (pot.plantingWindow) {
+    document.getElementById('planting-window').textContent = pot.plantingWindow;
+    document.getElementById('planting-comments').textContent = pot.plantingComments || "This plant doesn't follow rules anyway 🌿";
+  } else {
+    document.getElementById('planting-window').textContent = "Anytime the moon is in herb phase";
+    document.getElementById('planting-comments').textContent = "Your east wall forgives all timing sins.";
+  }
+
+// ... [rest of the file unchanged]
   
   // Optional cute subtitle
   const subtitle = document.getElementById('pot-subtitle');
