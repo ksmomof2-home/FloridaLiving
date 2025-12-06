@@ -1,15 +1,118 @@
-.loading {
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 4rem;
+:root {
+    --water: #a0d8ef;
+    --deep: #2e85a0;
+    --bubble: rgba(255,255,255,0.4);
+    --sand: #d9b88a;
+    --night: #1a1a1a;
+    --text: #333;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, var(--water), #e0f7fa);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Amatic SC', cursive;
     color: var(--deep);
+    margin: 0;
 }
 
-.citizens {
-    margin-top: 0.8rem;
-    padding-left: 1.5rem;
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 7rem 1rem 5rem;
+    background: url('https://images.unsplash.com/photo-1580560805457-9f2cd0c0c884?auto=format&fit=crop&q=80') center/cover no-repeat;
+    color: white;
+    overflow: hidden;
 }
 
-.citizens li {
-    margin: 0.5rem 0;
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
 }
+
+.bubbles {
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="15" cy="85" r="7" fill="%23fff" opacity="0.4"/><circle cx="45" cy="35" r="11" fill="%23fff" opacity="0.3"/><circle cx="75" cy="60" r="9" fill="%23fff" opacity="0.5"/><circle cx="30" cy="10" r="6" fill="%23fff" opacity="0.4"/></svg>') repeat;
+    animation: float 22s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-100vh); }
+}
+
+h1 {
+    font-size: 5.5rem;
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.7);
+}
+
+.tagline {
+    font-size: 1.9rem;
+    margin-top: -1rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+.fancy-nav {
+    text-align: center;
+    padding: 1.2rem;
+    background: var(--deep);
+    margin-bottom: 2rem;
+}
+
+.fancy-nav a {
+    color: white;
+    margin: 0 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.fancy-nav a::after {
+    content: '✦';
+    margin-left: 8px;
+    opacity: 0.7;
+}
+
+.tank-card {
+    max-width: 1100px;
+    margin: 3rem auto;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.tank-header.living  { background: linear-gradient(135deg, #8b6f47, #b89f73); }
+.tank-header.office  { background: linear-gradient(135deg, #1a1a1a, #444); }
+
+.tank-header {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.tank-header h2 {
+    font-size: 3.4rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    opacity: 0.95;
+}
+
+.tank-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 2.5
