@@ -1,0 +1,47 @@
+{
+  "tanks": [
+    {
+      "id": "living-room",
+      "name": "The Living-Room Realm",
+      "subtitle": "29 gallons of mellow river-rock daydreaming",
+      "size": "29 gallons",
+      "substrate": "2–3″ pea gravel (river-rock tans/browns/oranges)",
+      "filtration": "Two Fluval canisters + one wall-mounted spare filter",
+      "heating": "None — the room is always cozy",
+      "decor": "",
+      "photo": "img/living-room-tank.jpg",
+      "backgroundClass": "living",
+      "inhabitants": [
+        { "count": "3",     "name": "Yoyo Loaches",          "emoji": "🐡", "note": "the giggling cleanup crew" },
+        { "count": "5–6",   "name": "Orange Swordtails",     "emoji": "🐠", "note": "including 2 elegant females" },
+        { "count": "2",     "name": "Bronze Corydoras",      "emoji": "🐟", "note": "tiny armored vacuum cleaners" },
+        { "count": "lots",  "name": "Nerite Snails",         "emoji": "🐚", "note": "" },
+        { "count": "sometimes", "name": "Amano Shrimp",      "emoji": "🦐", "note": "visiting janitors" }
+      ]
+    },
+    {
+      "id": "office",
+      "name": "The Office Oasis",
+      "subtitle": "20 gallons of midnight-black magic",
+      "size": "20 gallons",
+      "substrate": "2″ special black plant-fertilizing gravel",
+      "filtration": "One Fluval filter",
+      "heating": "Heater keeping it tropical",
+      "decor": "Little house + bridge ornament",
+      "photo": "img/office-tank.jpg",
+      "backgroundClass": "office",
+      "inhabitants": [
+        { "count": "13",    "name": "Assassin Snails",       "emoji": "🐌", "note": "silent pest-snail assassins" },
+        { "count": "a handful", "name": "Guppies",           "emoji": "🐡", "note": "fancy rainbows" },
+        { "count": "a couple",  "name": "Zebra Danios",      "emoji": "🐟", "note": "zippy striped rockets" },
+        { "count": "1–2",   "name": "Neon Tetras",           "emoji": "🌈", "note": "tiny glowing embers" },
+        { "count": "1–2",   "name": "Amano Shrimp",          "emoji": "🦐", "note": "" }
+      ]
+    }
+  ],
+  "plants": [
+    { "name": "Anubias",        "description": "Indestructible leaf shields even snails respect",       "photo": "img/anubias.jpg" },
+    { "name": "Water Sprite",   "description": "Feathery clouds of oxygen and hiding spots",          "photo": "img/water-sprite.jpg" },
+    { "name": "Moneywort",      "description": "Long emerald stems reaching for the surface light",    "photo": "img/moneywort.jpg" }
+  ]
+}
