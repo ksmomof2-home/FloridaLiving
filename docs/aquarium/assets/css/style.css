@@ -1,0 +1,15 @@
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 4rem;
+    color: var(--deep);
+}
+
+.citizens {
+    margin-top: 0.8rem;
+    padding-left: 1.5rem;
+}
+
+.citizens li {
+    margin: 0.5rem 0;
+}
