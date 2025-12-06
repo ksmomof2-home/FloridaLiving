@@ -9,7 +9,7 @@
       "filtration": "Two Fluval canisters + one wall-mounted spare filter",
       "heating": "None — the room is always cozy",
       "decor": "",
-      "photo": "images/living-room-tank.jpg",
+      "photo": "assets/images/living-room-tank.jpg",
       "backgroundClass": "living",
       "inhabitants": [
         { "count": "3",     "name": "Yoyo Loaches",          "emoji": "🐡", "note": "the giggling cleanup crew" },
@@ -28,7 +28,7 @@
       "filtration": "One Fluval filter",
       "heating": "Heater keeping it tropical",
       "decor": "Little house + bridge ornament",
-      "photo": "images/office-tank.jpg",
+      "photo": "assets/images/office-tank.jpg",
       "backgroundClass": "office",
       "inhabitants": [
         { "count": "13",    "name": "Assassin Snails",       "emoji": "🐌", "note": "silent pest-snail assassins" },
