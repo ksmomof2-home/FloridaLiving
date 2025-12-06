@@ -9,7 +9,7 @@
       "filtration": "Two Fluval canisters + one wall-mounted spare filter",
       "heating": "None — the room is always cozy",
       "decor": "",
-      "photo": "img/living-room-tank.jpg",
+      "photo": "images/living-room-tank.jpg",
       "backgroundClass": "living",
       "inhabitants": [
         { "count": "3",     "name": "Yoyo Loaches",          "emoji": "🐡", "note": "the giggling cleanup crew" },
@@ -28,7 +28,7 @@
       "filtration": "One Fluval filter",
       "heating": "Heater keeping it tropical",
       "decor": "Little house + bridge ornament",
-      "photo": "img/office-tank.jpg",
+      "photo": "images/office-tank.jpg",
       "backgroundClass": "office",
       "inhabitants": [
         { "count": "13",    "name": "Assassin Snails",       "emoji": "🐌", "note": "silent pest-snail assassins" },
@@ -40,8 +40,8 @@
     }
   ],
   "plants": [
-    { "name": "Anubias",        "description": "Indestructible leaf shields even snails respect",       "photo": "img/anubias.jpg" },
-    { "name": "Water Sprite",   "description": "Feathery clouds of oxygen and hiding spots",          "photo": "img/water-sprite.jpg" },
-    { "name": "Moneywort",      "description": "Long emerald stems reaching for the surface light",    "photo": "img/moneywort.jpg" }
+    { "name": "Anubias",        "description": "Indestructible leaf shields even snails respect",       "photo": "assets/images/anubias.jpg" },
+    { "name": "Water Sprite",   "description": "Feathery clouds of oxygen and hiding spots",          "photo": "assets/images/water-sprite.jpg" },
+    { "name": "Moneywort",      "description": "Long emerald stems reaching for the surface light",    "photo": "assets/images/moneywort.jpg" }
   ]
 }
