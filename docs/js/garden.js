@@ -72,6 +72,17 @@ document.getElementById('personality').textContent = pot.notes || 'Perfectly ord
     document.getElementById('whimsy-container').style.display = 'none';
   }
 
+    // ✨ NEW: Harvest Timeline (golden box for edible plants) ✨
+  const harvestSection = document.getElementById('harvest-section');
+  const harvestInfo    = document.getElementById('harvest-info');
+  
+  if (pot.harvestInfo && harvestSection && harvestInfo) {
+    harvestInfo.textContent = pot.harvestInfo;
+    harvestSection.style.display = 'block';
+  } else if (harvestSection) {
+    harvestSection.style.display = 'none';
+  }
+
   // ✨ NEW: PLANTING WINDOW MAGIC ✨
   if (pot.plantingWindow) {
     document.getElementById('planting-window').textContent = pot.plantingWindow;
