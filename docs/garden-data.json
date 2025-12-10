@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-06",
+  "lastUpdated": "2025-12-10",
   "pots": {
     "pot01": {
       "name": "Pineapple Pair",
@@ -189,14 +189,38 @@
       "plantingComments": "Indestructible. Cuttings root in water or soil any day of the year."
     },
     "pot23": {
-      "name": "Empty – future Rosemary + Italian Oregano",
-      "notes": "Big pot 12 – waiting on drip line fix",
+      "name": "Potato Palace (Yukon Gold Division) [future Rosemary + Italian Oregano]",
+      "notes": "Big pot 12 – waiting on drip line fix, planted cilantro, marigolds, and chives along with seed potatoes)",
       "whimsy": "In intensive therapy after drip-line betrayal. Emotionally unavailable until further notice.",
       "plantingWindow": "Year-round (best Oct–Apr)",
       "plantingComments": "Perfect future home for Mediterranean herbs. Your wall is their dream climate."
     }
   },
   "log": [
+    {
+      "date": "2025-12-10",
+      "action": "pruned lime tree",
+      "pots": ["pot07"],
+      "details": "Removed all curling leaves due to leaf miners",
+      "note": "Clean cut to encourage healthy regrowth; monitor for reinfestation",
+      "whimsy": "Wielded the shears like Excalibur against the leaf-miner marauders. The lime tree now sports a buzzcut and a vendetta—regrowth incoming with attitude!"
+    },
+    {
+      "date": "2025-12-10",
+      "action": "planted",
+      "pots": ["pot23"],
+      "details": "5 seed potatoes + French marigold, chive, and cilantro seeds (backup squad in case tubers throw a tantrum)",
+      "note": "Planted in pot23 (to be swapped to pot11 location eventually); hilled soil lightly for potato protection",
+      "whimsy": "Buried the spud squad in their shady-end stronghold, with a sassy seed entourage whispering 'we've got your back'—the great tuber gamble begins! 🥔🌱"
+    },
+    {
+      "date": "2025-12-10",
+      "action": "fertilized",
+      "pots": ["all"],
+      "details": "Miracle Gro across every pot in the lineup",
+      "note": "Full-spectrum boost for winter warriors; diluted per instructions to avoid drama",
+      "whimsy": "Miracle Gro made a grand encore tour, sprinkling stardust on every leaf—your garden's now auditioning for a nutrient-fueled Broadway revival!"
+    },
     {
       "date": "2025-12-03",
       "action": "fertilized",
