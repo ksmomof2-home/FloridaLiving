@@ -92,32 +92,37 @@
 <script>
   const windowImages = window.allImages || window.GARDEN_IMAGE_LIST || [];
 
-  // Helper: turn "pot23_20251210_153909.jpg" → Date object
-  function extractDateFromFilename(filename) {
-    const match = filename.match(/_(\d{8})_|\D(\d{8})\D/); // catches both 20251210 and 2025-12-10 styles
-    if (!match) return null;
-    const datestr = match[1] || match[2];
-    const year = parseInt(datestr.substring(0,4));
-    const month = parseInt(datestr.substring(4,6)) - 1;
-    const day = parseInt(datestr.substring(6,8));
-    return new Date(year, month, day);
+  // Extract date from your real filenames: pot23_20251210_153909.jpg  →  Date object
+  function extractDate(filename) {
+    const match = filename.match(/_(\d{8})/);           // catches pot23_20251210
+    if (match) {
+      const y = match[1].substr(0,4);
+      const m = match[1].substr(4,2);
+      const d = match[1].substr(6,2);
+      return new Date(y, m-1, d);   // month is 0-based
+    }
+    return null;
   }
 
+  let gardenData = null;
+
   function renderGallery(weeksBack = 8) {
+    if (!gardenData) return;   // safety
+
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
 
-    const sortedPots = Object.keys(data.pots || {})
+    const pots = Object.keys(gardenData.pots)
       .filter(k => /^pot\d+$/.test(k))
-      .sort((a, b) => parseInt(a.slice(3)) - parseInt(b.slice(3)));
+      .sort((a,b) => +a.slice(3) - +b.slice(3));
 
     const today = new Date();
-    const cutoffDate = weeksBack === 999 
-      ? new Date(0) // “All Time” = beginning of time
+    const cutoff = weeksBack === 999 
+      ? new Date(0) 
       : new Date(today.getTime() - weeksBack * 7 * 24 * 60 * 60 * 1000);
 
-    sortedPots.forEach(potId => {
-      const pot = data.pots[potId];
+    pots.forEach(potId => {
+      const pot = gardenData.pots[potId];
       if (pot.hidden) return;
 
       const card = document.createElement('div');
@@ -125,72 +130,63 @@
 
       const header = document.createElement('div');
       header.className = 'pot-header';
-      header.textContent = potId.toUpperCase().replace('POT', 'Pot ');
+      header.textContent = potId.toUpperCase().replace('POT','Pot ');
       card.appendChild(header);
 
-      // All images for this pot, newest → oldest
-      const potImagesWithDates = windowImages
-        .filter(img => img.startsWith(potId + '_') || img.startsWith(potId + '.') || img === potId + '.jpg')
-        .map(img => ({ file: img, date: extractDateFromFilename(img) }))
-        .filter(o => o.date !== null)
-        .sort((a, b) => b.date - a.date); // newest first
+      // All dated images for this pot, newest → oldest
+      const images = windowImages
+        .filter(f => f.startsWith(potId + '_') || f.startsWith(potId + '.') || f === potId + '.jpg')
+        .map(f => ({file: f, date: extractDate(f)}))
+        .filter(o => o.date)
+        .sort((a,b) => b.date - a.date);
 
-      let newest = null;
-      let oldestSuitable = null;
+      const newest = images[0];
+      let older = null;
 
-      if (potImagesWithDates.length > 0) {
-        newest = potImagesWithDates[0]; // always show the most recent
-
-        // Find the oldest photo that is STILL OLDER than our cutoff
-        for (let i = potImagesWithDates.length - 1; i >= 0; i--) {
-          if (potImagesWithDates[i].date <= cutoffDate) {
-            oldestSuitable = potImagesWithDates[i];
+      if (images.length > 1) {
+        // find the oldest photo that is still BEFORE the cutoff date
+        for (let i = images.length-1; i > 0; i--) {   // skip the newest
+          if (images[i].date <= cutoff) {
+            older = images[i];
             break;
           }
         }
-        // If nothing that old → fall back to the very oldest we have
-        if (!oldestSuitable && potImagesWithDates.length > 1) {
-          oldestSuitable = potImagesWithDates[potImagesWithDates.length - 1];
-        }
+        // fallback: if nothing that old, use the very oldest we have
+        if (!older) older = images[images.length-1];
       }
 
-      const photos = document.createElement('div');
-      photos.className = 'photos';
+      const photosDiv = document.createElement('div');
+      photosDiv.className = 'photos';
 
       if (!newest) {
-        photos.innerHTML = '<div class="empty">No portraits yet…</div>';
+        photosDiv.innerHTML = '<div class="empty">No portraits yet…</div>';
       } else {
-        // Newest photo
-        const img1 = document.createElement('img');
-        img1.src = 'assets/images/pots/' + newest.file;
-        img1.alt = potId + ' now';
-        img1.loading = 'lazy';
+        // "Now"
+        const nowImg = document.createElement('img');
+        nowImg.src = 'assets/images/pots/' + newest.file;
+        nowImg.alt = potId; nowImg.loading = 'lazy';
+        const nowWrap = document.createElement('div');
+        nowWrap.style.cssText = 'display:inline-block;margin:0 8px;';
+        nowWrap.appendChild(nowImg);
+        nowWrap.insertAdjacentHTML('beforeend','<div style="text-align:center;font-size:0.8rem;color:#654;margin-top:4px;font-style:italic;">Now</div>');
+        photosDiv.appendChild(nowWrap);
 
-        const wrap1 = document.createElement('div');
-        wrap1.style.display = 'inline-block';
-        wrap1.appendChild(img1);
-        wrap1.insertAdjacentHTML('beforeend', '<div style="text-align:center;font-size:0.8rem;color:#654;margin-top:4px;font-style:italic;">Now</div>');
-        photos.appendChild(wrap1);
-
-        // Older photo (if we found one)
-        if (oldestSuitable && oldestSuitable.file !== newest.file) {
-          const img2 = document.createElement('img');
-          img2.src = 'assets/images/pots/' + oldestSuitable.file;
-          img2.alt = potId + ' then';
-          img2.loading = 'lazy';
-
-          const wrap2 = document.createElement('div');
-          wrap2.style.display = 'inline-block';
-          wrap2.appendChild(img2);
-          const daysAgo = Math.round((today - oldestSuitable.date) / (1000*60*60*24));
-          wrap2.insertAdjacentHTML('beforeend', `<div style="text-align:center;font-size:0.8rem;color:#654;margin-top:4px;font-style:italic;">${daysAgo} days ago</div>`);
-          photos.appendChild(wrap2);
+        // "Then"
+        if (older && older.file !== newest.file) {
+          const thenImg = document.createElement('img');
+          thenImg.src = 'assets/images/pots/' + older.file;
+          thenImg.alt = potId; thenImg.loading = 'lazy';
+          const days = Math.round((today - older.date) / 86400000);
+          const thenWrap = document.createElement('div');
+          thenWrap.style.cssText = 'display:inline-block;margin:0 8px;';
+          thenWrap.appendChild(thenImg);
+          thenWrap.insertAdjacentHTML('beforeend',`<div style="text-align:center;font-size:0.8rem;color:#654;margin-top:4px;font-style:italic;">${days} days ago</div>`);
+          photosDiv.appendChild(thenWrap);
         }
       }
 
-      card.appendChild(photos);
+      card.appendChild(photosDiv);
 
-      // Whimsy
       const whimsy = pot.whimsy || (pot.currentContents?.whimsy);
       if (whimsy) {
         const w = document.createElement('div');
@@ -203,17 +199,19 @@
     });
   }
 
-  let data; // will hold garden-data.json
-
+  // Load data once, then wire up the dropdown
   fetch('garden-data.json')
     .then(r => r.json())
     .then(json => {
-      data = json;
+      gardenData = json;
+
       const select = document.getElementById('timeJump');
-      select.addEventListener('change', (e) => {
+      select.addEventListener('change', e => {
         renderGallery(parseInt(e.target.value));
       });
-      renderGallery(8); // default = 8 weeks
+
+      // initial render with default (8 weeks)
+      renderGallery(8);
     });
 </script>
 </body>
