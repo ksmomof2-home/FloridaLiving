@@ -216,7 +216,7 @@
     {
       "date": "2025-12-10",
       "action": "fertilized",
-      "pots": ["all"],
+      "pots": "all",
       "details": "Miracle Gro across every pot in the lineup",
       "note": "Full-spectrum boost for winter warriors; diluted per instructions to avoid drama",
       "whimsy": "Miracle Gro made a grand encore tour, sprinkling stardust on every leaf—your garden's now auditioning for a nutrient-fueled Broadway revival!"
