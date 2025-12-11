@@ -64,6 +64,19 @@
   <h1>♛ The Royal Portrait Gery ♛</h1>
   <p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
 
+<div style="text-align:center; margin:2rem 0;">
+  <label for="timeJump" style="font-size:1.2rem; color:#4a7043; font-weight:bold;">
+    Show change over:
+  </label>
+  <select id="timeJump" style="padding:8px 12px; font-size:1.1rem; border-radius:8px; border:2px solid #a8d5ba;">
+    <option value="4">Last 4 weeks</option>
+    <option value="8" selected>Last 8 weeks</option>
+    <option value="12">Last 12 weeks</option>
+    <option value="26">Last 6 months</option>
+    <option value="52">Last year</option>
+    <option value="999">All Time (very first photo)</option>
+  </select>
+</div>
   <div id="gallery" class="gallery-grid">
     <!-- Magic happens here -->
   </div>
@@ -74,102 +87,131 @@
 
 <script src="js/image-list.js"></script>
 <script>
-  // DEBUG MODE TOGGLE — click this button once if images still hide!
-  const debugBtn = document.createElement('button');
-  debugBtn.textContent = 'Toggle Debug Mode (shows raw image list)';
-  debugBtn.style.position = 'fixed';
-  debugBtn.style.top = '10px';
-  debugBtn.style.right = '10px';
-  debugBtn.style.zIndex = '9999';
-  debugBtn.style.padding = '10px';
-  debugBtn.style.background = '#9370db';
-  debugBtn.style.color = 'white';
-  debugBtn.style.border = 'none';
-  debugBtn.style.borderRadius = '8px';
-  debugBtn.style.cursor = 'pointer';
-  debugBtn.onclick = () => {
-    const pre = document.getElementById('debug-dump');
-    if (pre) pre.remove();
-    else {
-      const pre = document.createElement('pre');
-      pre.id = 'debug-dump';
-      pre.textContent = JSON.stringify(window.GARDEN_IMAGE_LIST, null, 2);
-      pre.style.cssText = 'position:fixed;top:60px;right:10px;max-height:80vh;width:340px;overflow:auto;background:#111;color:#0f0;padding:15px;border-radius:10px;z-index:9999;font-size:12px;';
-      document.body.appendChild(pre);
-    }
-  };
-  document.body.appendChild(debugBtn);
+  const windowImages = window.allImages || window.GARDEN_IMAGE_LIST || [];
 
-  function initializeGallery() {
-    if (typeof window.GARDEN_IMAGE_LIST === 'undefined' || !Array.isArray(window.GARDEN_IMAGE_LIST)) {
-      setTimeout(initializeGallery, 100);
-      return;
-    }
+  // Helper: turn "pot23_20251210_153909.jpg" → Date object
+  function extractDateFromFilename(filename) {
+    const match = filename.match(/_(\d{8})_|\D(\d{8})\D/); // catches both 20251210 and 2025-12-10 styles
+    if (!match) return null;
+    const datestr = match[1] || match[2];
+    const year = parseInt(datestr.substring(0,4));
+    const month = parseInt(datestr.substring(4,6)) - 1;
+    const day = parseInt(datestr.substring(6,8));
+    return new Date(year, month, day);
+  }
 
-    fetch('garden-data.json')
-      .then(r => r.json())
-      .then(data => {
-        const gallery = document.getElementById('gallery');
-        gallery.innerHTML = '';
+  function renderGallery(weeksBack = 8) {
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = '';
 
-        const sortedPots = Object.keys(data.pots || {})
-          .filter(id => id.startsWith('pot'))
-          .sort((a, b) => parseInt(a.slice(3), 10) - parseInt(b.slice(3), 10));
+    const sortedPots = Object.keys(data.pots || {})
+      .filter(k => /^pot\d+$/.test(k))
+      .sort((a, b) => parseInt(a.slice(3)) - parseInt(b.slice(3)));
 
-        sortedPots.forEach(potId => {
-          const pot = data.pots[potId];
-          if (!pot || pot.hidden) return;
+    const today = new Date();
+    const cutoffDate = weeksBack === 999 
+      ? new Date(0) // “All Time” = beginning of time
+      : new Date(today.getTime() - weeksBack * 7 * 24 * 60 * 60 * 1000);
 
-          const card = document.createElement('div');
-          card.className = 'pot-card';
+    sortedPots.forEach(potId => {
+      const pot = data.pots[potId];
+      if (pot.hidden) return;
 
-          const header = document.createElement('div');
-          header.className = 'pot-header';
-          header.textContent = potId.toUpperCase().replace('POT', 'Pot ');
-          card.appendChild(header);
+      const card = document.createElement('div');
+      card.className = 'pot-card';
 
-          // THE FIX: look for potId followed by underscore (or end-of-string for rare cases)
-          const potImages = window.GARDEN_IMAGE_LIST
-            .filter(img => img.startsWith(potId + '_') || img.startsWith(potId + '.') || img === potId + '.jpg') // covers pot23_… and hypothetical pot23.jpg
-            .sort((a, b) => b.localeCompare(a)) // newest first
-            .slice(0, 2);
+      const header = document.createElement('div');
+      header.className = 'pot-header';
+      header.textContent = potId.toUpperCase().replace('POT', 'Pot ');
+      card.appendChild(header);
 
-          const photosDiv = document.createElement('div');
-          photosDiv.className = 'photos';
+      // All images for this pot, newest → oldest
+      const potImagesWithDates = windowImages
+        .filter(img => img.startsWith(potId + '_') || img.startsWith(potId + '.') || img === potId + '.jpg')
+        .map(img => ({ file: img, date: extractDateFromFilename(img) }))
+        .filter(o => o.date !== null)
+        .sort((a, b) => b.date - a.date); // newest first
 
-          if (potImages.length === 0) {
-            photosDiv.innerHTML = '<div class="empty">No portraits yet…</div>';
-          } else {
-            potImages.forEach(imgPath => {
-              const img = document.createElement('img');
-              img.src = 'assets/images/pots/' + imgPath;
-              img.alt = potId;
-              img.loading = 'lazy';
-              photosDiv.appendChild(img);
-            });
+      let newest = null;
+      let oldestSuitable = null;
+
+      if (potImagesWithDates.length > 0) {
+        newest = potImagesWithDates[0]; // always show the most recent
+
+        // Find the oldest photo that is STILL OLDER than our cutoff
+        for (let i = potImagesWithDates.length - 1; i >= 0; i--) {
+          if (potImagesWithDates[i].date <= cutoffDate) {
+            oldestSuitable = potImagesWithDates[i];
+            break;
           }
-          card.appendChild(photosDiv);
+        }
+        // If nothing that old → fall back to the very oldest we have
+        if (!oldestSuitable && potImagesWithDates.length > 1) {
+          oldestSuitable = potImagesWithDates[potImagesWithDates.length - 1];
+        }
+      }
 
-          const whimsyText = pot.whimsy || (pot.currentContents && pot.currentContents.whimsy);
-          if (whimsyText) {
-            const w = document.createElement('div');
-            w.className = 'whimsy';
-            w.innerHTML = `✨ ${whimsyText} ✨`;
-            card.appendChild(w);
-          }
+      const photos = document.createElement('div');
+      photos.className = 'photos';
 
-          gallery.appendChild(card);
-        });
+      if (!newest) {
+        photos.innerHTML = '<div class="empty">No portraits yet…</div>';
+      } else {
+        // Newest photo
+        const img1 = document.createElement('img');
+        img1.src = 'assets/images/pots/' + newest.file;
+        img1.alt = potId + ' now';
+        img1.loading = 'lazy';
 
-        console.log(`Gallery blooming with ${sortedPots.length} pots!`);
+        const wrap1 = document.createElement('div');
+        wrap1.style.display = 'inline-block';
+        wrap1.appendChild(img1);
+        wrap1.insertAdjacentHTML('beforeend', '<div style="text-align:center;font-size:0.8rem;color:#654;margin-top:4px;font-style:italic;">Now</div>');
+        photos.appendChild(wrap1);
+
+        // Older photo (if we found one)
+        if (oldestSuitable && oldestSuitable.file !== newest.file) {
+          const img2 = document.createElement('img');
+          img2.src = 'assets/images/pots/' + oldestSuitable.file;
+          img2.alt = potId + ' then';
+          img2.loading = 'lazy';
+
+          const wrap2 = document.createElement('div');
+          wrap2.style.display = 'inline-block';
+          wrap2.appendChild(img2);
+          const daysAgo = Math.round((today - oldestSuitable.date) / (1000*60*60*24));
+          wrap2.insertAdjacentHTML('beforeend', `<div style="text-align:center;font-size:0.8rem;color:#654;margin-top:4px;font-style:italic;">${daysAgo} days ago</div>`);
+          photos.appendChild(wrap2);
+        }
+      }
+
+      card.appendChild(photos);
+
+      // Whimsy
+      const whimsy = pot.whimsy || (pot.currentContents?.whimsy);
+      if (whimsy) {
+        const w = document.createElement('div');
+        w.className = 'whimsy';
+        w.innerHTML = `✨ ${whimsy} ✨`;
+        card.appendChild(w);
+      }
+
+      gallery.appendChild(card);
+    });
+  }
+
+  let data; // will hold garden-data.json
+
+  fetch('garden-data.json')
+    .then(r => r.json())
+    .then(json => {
+      data = json;
+      const select = document.getElementById('timeJump');
+      select.addEventListener('change', (e) => {
+        renderGallery(parseInt(e.target.value));
       });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeGallery);
-  } else {
-    initializeGallery();
-  }
+      renderGallery(8); // default = 8 weeks
+    });
 </script>
 </body>
 </html>
