@@ -88,130 +88,118 @@
     <p>May your scroll be gentle and your butterflies plentiful 🌿✨</p>
   </footer>
 
+<p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
+
+<!-- TIME JUMP SELECTOR -->
+<div style="text-align:center; margin:2.5rem 0;">
+  <label for="timeJump" style="font-size:1.3rem; color:#4a7043; font-weight:bold; margin-right:12px;">
+    Show change over:
+  </label>
+  <select id="timeJump" style="padding:10px 16px; font-size:1.2rem; border-radius:12px; border:3px solid #a8d5ba; background:white;">
+    <option value="4">Last 4 weeks</option>
+    <option value="8" selected>Last 8 weeks</option>
+    <option value="12">Last 12 weeks</option>
+    <option value="26">Last 6 months</option>
+    <option value="52">Last year</option>
+    <option value="999">All Time (very first photo)</option>
+  </select>
+</div>
+
+<div id="gallery" class="gallery-grid"></div>
+
 <script src="js/image-list.js"></script>
 <script>
-  const windowImages = window.allImages || window.GARDEN_IMAGE_LIST || [];
+  const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
 
-  // Extract date from your real filenames: pot23_20251210_153909.jpg  →  Date object
-  function extractDate(filename) {
-    const match = filename.match(/_(\d{8})/);           // catches pot23_20251210
-    if (match) {
-      const y = match[1].substr(0,4);
-      const m = match[1].substr(4,2);
-      const d = match[1].substr(6,2);
-      return new Date(y, m-1, d);   // month is 0-based
-    }
-    return null;
+  // Extract YYYYMMDD from your real filenames: pot23_20251210_153909.jpg
+  function getDateFromFile(f) {
+    const m = f.match(/_(\d{8})/);
+    if (!m) return null;
+    const y = +m[1].substr(0,4);
+    const mo = +m[1].substr(4,2) - 1;
+    const d = +m[1].substr(6,2);
+    return new Date(y, mo, d);
   }
 
-  let gardenData = null;
+  let data = null;
 
-  function renderGallery(weeksBack = 8) {
-    if (!gardenData) return;   // safety
-
+  function render(weeks = 8) {
+    if (!data) return;
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
 
-    const pots = Object.keys(gardenData.pots)
+    const potIds = Object.keys(data.pots)
       .filter(k => /^pot\d+$/.test(k))
       .sort((a,b) => +a.slice(3) - +b.slice(3));
 
     const today = new Date();
-    const cutoff = weeksBack === 999 
-      ? new Date(0) 
-      : new Date(today.getTime() - weeksBack * 7 * 24 * 60 * 60 * 1000);
+    const cutoff = weeks === 999 ? new Date(0) : new Date(today.getTime() - weeks*7*24*60*60*1000);
 
-    pots.forEach(potId => {
-      const pot = gardenData.pots[potId];
+    potIds.forEach(id => {
+      const pot = data.pots[id];
       if (pot.hidden) return;
 
       const card = document.createElement('div');
       card.className = 'pot-card';
 
-      const header = document.createElement('div');
-      header.className = 'pot-header';
-      header.textContent = potId.toUpperCase().replace('POT','Pot ');
-      card.appendChild(header);
+      card.innerHTML = `<div class="pot-header">${id.toUpperCase().replace('POT','Pot ')}</div>`;
 
-      // All dated images for this pot, newest → oldest
-      const images = windowImages
-        .filter(f => f.startsWith(potId + '_') || f.startsWith(potId + '.') || f === potId + '.jpg')
-        .map(f => ({file: f, date: extractDate(f)}))
-        .filter(o => o.date)
-        .sort((a,b) => b.date - a.date);
+      const photos = document.createElement('div');
+      photos.className = 'photos';
 
-      const newest = images[0];
-      let older = null;
+      const potImages = images
+        .filter(f => f.startsWith(id + '_') || f.startsWith(id + '.') || f === id + '.jpg')
+        .map(f => ({f, d: getDateFromFile(f)}))
+        .filter(o => o.d)
+        .sort((a,b) => b.d - a.d); // newest first
 
-      if (images.length > 1) {
-        // find the oldest photo that is still BEFORE the cutoff date
-        for (let i = images.length-1; i > 0; i--) {   // skip the newest
-          if (images[i].date <= cutoff) {
-            older = images[i];
-            break;
-          }
-        }
-        // fallback: if nothing that old, use the very oldest we have
-        if (!older) older = images[images.length-1];
-      }
-
-      const photosDiv = document.createElement('div');
-      photosDiv.className = 'photos';
-
-      if (!newest) {
-        photosDiv.innerHTML = '<div class="empty">No portraits yet…</div>';
+      if (potImages.length === 0) {
+        photos.innerHTML = '<div class="empty">No portraits yet…</div>';
       } else {
-        // "Now"
-        const nowImg = document.createElement('img');
-        nowImg.src = 'assets/images/pots/' + newest.file;
-        nowImg.alt = potId; nowImg.loading = 'lazy';
-        const nowWrap = document.createElement('div');
-        nowWrap.style.cssText = 'display:inline-block;margin:0 8px;';
-        nowWrap.appendChild(nowImg);
-        nowWrap.insertAdjacentHTML('beforeend','<div style="text-align:center;font-size:0.8rem;color:#654;margin-top:4px;font-style:italic;">Now</div>');
-        photosDiv.appendChild(nowWrap);
+        const newest = potImages[0];
 
-        // "Then"
-        if (older && older.file !== newest.file) {
-          const thenImg = document.createElement('img');
-          thenImg.src = 'assets/images/pots/' + older.file;
-          thenImg.alt = potId; thenImg.loading = 'lazy';
-          const days = Math.round((today - older.date) / 86400000);
-          const thenWrap = document.createElement('div');
-          thenWrap.style.cssText = 'display:inline-block;margin:0 8px;';
-          thenWrap.appendChild(thenImg);
-          thenWrap.insertAdjacentHTML('beforeend',`<div style="text-align:center;font-size:0.8rem;color:#654;margin-top:4px;font-style:italic;">${days} days ago</div>`);
-          photosDiv.appendChild(thenWrap);
+        // newest photo
+        photos.insertAdjacentHTML('beforeend', `
+          <div style="display:inline-block; margin:0 12px;">
+            <img src="assets/images/pots/${newest.f}" loading="lazy" style="border-radius:8px;">
+            <div style="text-align:center; font-size:0.8rem; color:#654; margin-top:4px; font-style:italic;">Now</div>
+          </div>`);
+
+        // find oldest suitable "then" photo
+        let then = null;
+        for (let i = potImages.length-1; i > 0; i--) {
+          if (potImages[i].d <= cutoff) { then = potImages[i]; break; }
+        }
+        if (!then) then = potImages[potImages.length-1]; // fallback to absolute oldest
+
+        if (then && then.f !== newest.f) {
+          const days = Math.round((today - then.d) / 86400000);
+          photos.insertAdjacentHTML('beforeend', `
+            <div style="display:inline-block; margin:0 12px;">
+              <img src="assets/images/pots/${then.f}" loading="lazy" style="border-radius:8px;">
+              <div style="text-align:center; font-size:0.8rem; color:#654; margin-top:4px; font-style:italic;">${days} days ago</div>
+            </div>`);
         }
       }
 
-      card.appendChild(photosDiv);
+      card.appendChild(photos);
 
-      const whimsy = pot.whimsy || (pot.currentContents?.whimsy);
-      if (whimsy) {
-        const w = document.createElement('div');
-        w.className = 'whimsy';
-        w.innerHTML = `✨ ${whimsy} ✨`;
-        card.appendChild(w);
-      }
+      const w = pot.whimsy || (pot.currentContents?.whimsy);
+      if (w) card.insertAdjacentHTML('beforeend', `<div class="whimsy">✨ ${w} ✨</div>`);
 
       gallery.appendChild(card);
     });
   }
 
-  // Load data once, then wire up the dropdown
+  // Load data once, then go
   fetch('garden-data.json')
     .then(r => r.json())
     .then(json => {
-      gardenData = json;
-
-      const select = document.getElementById('timeJump');
-      select.addEventListener('change', e => {
-        renderGallery(parseInt(e.target.value));
+      data = json;
+      document.getElementById('timeJump').addEventListener('change', e => {
+        render(+e.target.value);
       });
-
-      // initial render with default (8 weeks)
-      renderGallery(8);
+      render(8); // initial load
     });
 </script>
 </body>
