@@ -105,4 +105,38 @@
 
             // Find the latest 1–2 photos
             const potImages = window.allImages
-              .filter(img =>
+              .filter(img => img.startsWith(`pots/${potId}/`) || img.endsWith('.jpg') || img.endsWith('.jpeg') || img.endsWith('.png'))
+              .sort((a,b) => b.localeCompare(a)) // newest first (assuming YYYY-MM-DD in filename)
+              .slice(0, 2);
+
+            const photosDiv = document.createElement('div');
+            photosDiv.className = 'photos';
+
+            if (potImages.length === 0) {
+              photosDiv.innerHTML = '<div class="empty">No portraits yet… this pot is camera-shy</div>';
+            } else {
+              potImages.forEach(imgPath => {
+                const img = document.createElement('img');
+                img.src = 'assets/images/' + imgPath;
+                img.alt = `${potId} latest photo`;
+                img.loading = 'lazy';
+                photosDiv.appendChild(img);
+              });
+            }
+            card.appendChild(photosDiv);
+
+            // Optional whimsy at the bottom
+            if (pot.whimsy || pot.currentContents?.whimsy) && (() => {
+              const w = document.createElement('div');
+              w.className = 'whimsy';
+              w.innerHTML = `✨ ${pot.whimsy || pot.currentContents?.whimsy} ✨`;
+              card.appendChild(w);
+            })();
+
+            gallery.appendChild(card);
+          });
+        });
+    });
+  </script>
+</body>
+</html>
