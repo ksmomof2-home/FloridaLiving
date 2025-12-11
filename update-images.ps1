@@ -30,12 +30,14 @@ $list|Add-Content "docs\js\image-list.js" -Encoding utf8
 
 $photoCount=$files.Count
 Log "Generated $photoCount photos"
+Log "DONE"
 
 git add "docs\js\image-list.js"
+git add "update-images.log"
+
 if (!(git diff --cached --quiet)) {
   git commit -m "update images $photoCount"|ForEach-Object{Log $_}
   git push | ForEach-Object{Log $_}}
 
-Log "DONE"
 Write-Host "`nDONE!$photocount photos. Press any key..."
 $null=$Host.UI.RAWUI.ReadKey("NoEcho,IncludeKeyDown")
