@@ -107,6 +107,25 @@
 
 <div id="gallery" class="gallery-grid"></div>
 
+<p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
+
+<!-- TIME JUMP SELECTOR -->
+<div style="text-align:center; margin:2.5rem 0;">
+  <label for="timeJump" style="font-size:1.3rem; color:#4a7043; font-weight:bold; margin-right:12px;">
+    Show change over:
+  </label>
+  <select id="timeJump" style="padding:10px 16px; font-size:1.2rem; border-radius:12px; border:3px solid #a8d5ba; background:white;">
+    <option value="4">Last 4 weeks</option>
+    <option value="8" selected>Last 8 weeks</option>
+    <option value="12">Last 12 weeks</option>
+    <option value="26">Last 6 months</option>
+    <option value="52">Last year</option>
+    <option value="999">All Time (very first photo)</option>
+  </select>
+</div>
+
+<div id="gallery" class="gallery-grid"></div>
+
 <script src="js/image-list.js"></script>
 <script>
   const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
