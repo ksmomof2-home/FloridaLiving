@@ -61,10 +61,10 @@
 </head>
 <body>
 
-  <h1>♛ The Royal Portrait Gallery ♛</h1>
+  <h1>♛ The Royal Portrait Gery ♛</h1>
   <p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
 
-  <div id="gallery" class="gallery-grid">
+  <div id="gery" class="gery-grid">
     <!-- Magic happens here -->
   </div>
 
@@ -93,7 +93,7 @@
     else {
       const pre = document.createElement('pre');
       pre.id = 'debug-dump';
-      pre.textContent = JSON.stringify(window.allImages, null, 2);
+      pre.textContent = JSON.stringify(window.GARDEN_IMAGE_LIST, null, 2);
       pre.style.cssText = 'position:fixed;top:60px;right:10px;max-height:80vh;width:340px;overflow:auto;background:#111;color:#0f0;padding:15px;border-radius:10px;z-index:9999;font-size:12px;';
       document.body.appendChild(pre);
     }
@@ -101,7 +101,7 @@
   document.body.appendChild(debugBtn);
 
   function initializeGallery() {
-    if (typeof window.allImages === 'undefined' || !Array.isArray(window.allImages)) {
+    if (typeof window.GARDEN_IMAGE_LIST === 'undefined' || !Array.isArray(window.GARDEN_IMAGE_LIST)) {
       setTimeout(initializeGallery, 100);
       return;
     }
@@ -129,7 +129,7 @@
           card.appendChild(header);
 
           // THE FIX: look for potId followed by underscore (or end-of-string for rare cases)
-          const potImages = window.allImages
+          const potImages = window.GARDEN_IMAGE_LIST
             .filter(img => img.startsWith(potId + '_') || img.startsWith(potId + '.') || img === potId + '.jpg') // covers pot23_… and hypothetical pot23.jpg
             .sort((a, b) => b.localeCompare(a)) // newest first
             .slice(0, 2);
