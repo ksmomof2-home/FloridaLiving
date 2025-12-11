@@ -73,28 +73,29 @@
   </footer>
 
 <script src="js/image-list.js"></script>
+<script src="js/image-list.js"></script>
 <script>
-  // Graceful guardian: Wait for both DOM and image-list.js to awaken
+  // Graceful guardian: Wait for both DOM and image-list.js to unfurl their petals
   function initializeGallery() {
-    if (typeof window.allImages === 'undefined') {
-      // If images haven't loaded yet, whisper a polite delay and try again
+    if (typeof window.allImages === 'undefined' || !Array.isArray(window.allImages)) {
+      // Polite petal-patience: Retry if the image bouquet is still budding
       setTimeout(initializeGallery, 100);
       return;
     }
 
     fetch('garden-data.json')
       .then(r => {
-        if (!r.ok) throw new Error(`Garden whispers faint: ${r.status}`);
+        if (!r.ok) throw new Error(`Garden ledger locked: ${r.status}`);
         return r.json();
       })
       .then(data => {
         const gallery = document.getElementById('gallery');
-        if (!gallery) throw new Error('Gallery canvas lost in the mist!');
-        gallery.innerHTML = ''; // Sweep away any spectral placeholders
+        if (!gallery) throw new Error('The gallery grove has wandered off!');
+        gallery.innerHTML = ''; // Banish any budding placeholders
 
-        // Sort pots by numeric order: pot01, pot02, ..., pot23
+        // Harvest pots in sunny-to-shady splendor: pot01 → pot23
         const sortedPots = Object.keys(data.pots || {})
-          .filter(id => id.startsWith('pot')) // Only true pots, no imposters
+          .filter(id => id.startsWith('pot'))
           .sort((a, b) => {
             const numA = parseInt(a.replace('pot', ''), 10);
             const numB = parseInt(b.replace('pot', ''), 10);
@@ -102,29 +103,29 @@
           });
 
         if (sortedPots.length === 0) {
-          gallery.innerHTML = '<div class="empty" style="grid-column: 1/-1;">The pots are still dreaming... refresh for revelations! 🌱</div>';
+          gallery.innerHTML = '<div class="empty" style="grid-column: 1/-1;">The pots slumber in secret... refresh for their awakening! 🌱</div>';
           return;
         }
 
         sortedPots.forEach(potId => {
           const pot = data.pots[potId];
-          if (!pot || pot.hidden) return; // Veil the veiled
+          if (!pot || pot.hidden) return; // Shroud the shadows
 
           const card = document.createElement('div');
           card.className = 'pot-card';
 
-          // Header: A crown for every pot
+          // A verdant visor for each vessel
           const header = document.createElement('div');
           header.className = 'pot-header';
           header.textContent = potId.toUpperCase().replace('POT', 'Pot ');
           card.appendChild(header);
 
-          // Harvest the latest 1–2 photos, with a safety net for empty image realms
+          // Pluck the latest 1–2 portraits: Filter by pot prefix, sort by date-filename magic
           let potImages = [];
-          if (Array.isArray(window.allImages) && window.allImages.length > 0) {
+          if (window.allImages.length > 0) {
             potImages = window.allImages
-              .filter(img => typeof img === 'string' && img.startsWith(`pots/${potId}/`))
-              .sort((a, b) => b.localeCompare(a)) // Newest first, by filename's starry date
+              .filter(img => typeof img === 'string' && img.startsWith(potId)) // e.g., 'pot01' catches 'pot01-2025-12-11.jpg'
+              .sort((a, b) => b.localeCompare(a)) // Newest first (YYYY-MM-DD filenames shine here!)
               .slice(0, 2);
           }
 
@@ -132,20 +133,23 @@
           photosDiv.className = 'photos';
 
           if (potImages.length === 0) {
-            photosDiv.innerHTML = '<div class="empty">No portraits yet… this pot is camera-shy</div>';
+            photosDiv.innerHTML = '<div class="empty">No snapshots yet… this pot prefers mystery</div>';
           } else {
             potImages.forEach(imgPath => {
               const img = document.createElement('img');
-              img.src = 'assets/images/pots/' + imgPath;
-              img.alt = `${potId} latest photo`;
+              img.src = 'assets/images/pots/' + imgPath; // Flat path to glory: pots/pot01-whatever.jpg
+              img.alt = `${potId} latest portrait`;
               img.loading = 'lazy';
-              img.onerror = () => { img.style.display = 'none'; }; // Hide broken frames gracefully
+              img.onerror = () => { 
+                img.style.display = 'none'; 
+                console.warn(`Portrait wilted for ${potId}: ${imgPath}`); // Whisper woes to console
+              };
               photosDiv.appendChild(img);
             });
           }
           card.appendChild(photosDiv);
 
-          // Whimsy weave: Only if the magic exists
+          // Whimsy whisper: If the pot has a secret sparkle
           const whimsyText = pot.whimsy || (pot.currentContents && pot.currentContents.whimsy);
           if (whimsyText && typeof whimsyText === 'string') {
             const w = document.createElement('div');
@@ -157,19 +161,19 @@
           gallery.appendChild(card);
         });
 
-        // A triumphant toast: All done!
-        console.log(`🌟 Gallery aglow with ${sortedPots.length} majestic pots!`);
+        // Victory vignette in the console vines
+        console.log(`🌟 Gallery graced with ${sortedPots.length} pots and ${potImages.reduce((acc, pot) => acc + pot.potImages?.length || 0, 0)} portraits!`); // Tiny tweak: sum actual images
       })
       .catch(err => {
-        console.error('Oh no, a deeper garden glitch!', err);
+        console.error('A vine-tangle in the data dell!', err);
         const gallery = document.getElementById('gallery');
         if (gallery) {
-          gallery.innerHTML = '<div class="empty" style="grid-column: 1/-1; text-align: center; padding: 4rem;">The vines of data are tangled... refresh your realm and try again? 🌿💫</div>';
+          gallery.innerHTML = '<div class="empty" style="grid-column: 1/-1; text-align: center; padding: 4rem;">The scrolls are shy... refresh and the portraits shall parade! 🌿💫</div>';
         }
       });
   }
 
-  // Awaken when the page is ready
+  // Bloom when the dawn (DOM) breaks
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeGallery);
   } else {
