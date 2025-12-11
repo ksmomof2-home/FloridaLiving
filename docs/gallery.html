@@ -136,7 +136,7 @@
           } else {
             potImages.forEach(imgPath => {
               const img = document.createElement('img');
-              img.src = 'assets/images/' + imgPath;
+              img.src = 'assets/images/pots/' + imgPath;
               img.alt = `${potId} latest photo`;
               img.loading = 'lazy';
               img.onerror = () => { img.style.display = 'none'; }; // Hide broken frames gracefully
