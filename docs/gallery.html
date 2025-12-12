@@ -62,35 +62,9 @@
 <body>
 
   <h1>♛ The Royal Portrait Gery ♛</h1>
-  <p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
-
-<div style="text-align:center; margin:2rem 0;">
-  <label for="timeJump" style="font-size:1.2rem; color:#4a7043; font-weight:bold;">
-    Show change over:
-  </label>
-  <select id="timeJump" style="padding:8px 12px; font-size:1.1rem; border-radius:8px; border:2px solid #a8d5ba;">
-    <option value="1">Last 1 weeks</option>
-    <option value="2">Last 2 weeks</option>
-    <option value="3">Last 3 weeks</option>
-    <option value="4">Last 4 weeks</option>
-    <option value="8" selected>Last 8 weeks</option>
-    <option value="12">Last 12 weeks</option>
-    <option value="26">Last 6 months</option>
-    <option value="52">Last year</option>
-    <option value="999">All Time (very first photo)</option>
-  </select>
-</div>
-  <div id="gallery" class="gallery-grid">
-    <!-- Magic happens here -->
-  </div>
-
-  <footer>
-    <p>May your scroll be gentle and your butterflies plentiful 🌿✨</p>
-  </footer>
-
 <p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
 
-<!-- SINGLE TIME-JUMP SELECTOR (only one on the whole page) -->
+<!-- SINGLE TIME-JUMP SELECTOR -->
 <div style="text-align:center; margin:3rem 0 2rem;">
   <label for="timeJump" style="font-size:1.4rem; color:#4a7043; font-weight:bold; margin-right:16px;">
     Show change over:
@@ -146,7 +120,7 @@
 
       const potImgs = images
         .filter(f => f.startsWith(id + '_') || f.startsWith(id + '.') || f === id + '.jpg')
-        .map(f => ({f, d: getDate(f)} )
+        .map(f => ({f, d: getDate(f)}))
         .filter(o => o.d)
         .sort((a,b) => b.d - a.d);
 
@@ -155,14 +129,12 @@
       } else {
         const newest = potImgs[0];
 
-        // Now
         photos.insertAdjacentHTML('beforeend', `
           <div style="display:inline-block;margin:0 10px;">
             <img src="assets/images/pots/${newest.f}" loading="lazy" style="border-radius:10px;max-height:280px;">
             <div style="text-align:center;font-size:0.85rem;color:#654;margin-top:6px;font-style:italic;">Now</div>
           </div>`);
 
-        // Then (oldest photo that meets the chosen timeframe)
         let then = null;
         for (let i = potImgs.length-1; i > 0; i--) {
           if (potImgs[i].d <= cutoff) { then = potImgs[i]; break; }
@@ -188,13 +160,12 @@
     });
   }
 
-  // Load once, then make the dropdown live
   fetch('garden-data.json')
     .then(r => r.json())
     .then(json => {
       data = json;
       document.getElementById('timeJump').addEventListener('change', e => render(+e.target.value));
-      render(4); // start with your preferred default
+      render(4); // start at 4 weeks
     });
 </script>
 </body>
