@@ -62,18 +62,19 @@
 <body>
 
   <h1>♛ The Royal Portrait Gery ♛</h1>
-<p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
 
-<!-- SINGLE TIME-JUMP SELECTOR -->
+  <p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
+
+<!-- TIME JUMP SELECTOR -->
 <div style="text-align:center; margin:3rem 0 2rem;">
   <label for="timeJump" style="font-size:1.4rem; color:#4a7043; font-weight:bold; margin-right:16px;">
     Show change over:
   </label>
   <select id="timeJump" style="padding:12px 20px; font-size:1.3rem; border-radius:12px; border:3px solid #a8d5ba; background:white;">
-    <option value="1">1 week</option>
+    <option value="1" selected>1 week</option>
     <option value="2">2 weeks</option>
     <option value="3">3 weeks</option>
-    <option value="4" selected>4 weeks</option>
+    <option value="4">4 weeks</option>
     <option value="6">6 weeks</option>
     <option value="8">8 weeks</option>
     <option value="12">12 weeks</option>
@@ -94,14 +95,17 @@
     return m ? new Date(+m[1].slice(0,4), +m[1].slice(4,6)-1, +m[1].slice(6,8)) : null;
   }
 
-  let data = null;
+  let gardenData = null;
 
-  function render(weeksBack = 4) {
-    if (!data) return;
-    const g = document.getElementById('gallery');
-    g.innerHTML = '';
+  function renderGallery(weeksBack) {
+    if (!gardenData) return;
 
-    const potIds = Object.keys(data.pots)
+    console.log(`Gallery re-rendering → showing change over ${weeksBack === 999 ? 'All Time' : weeksBack + ' week(s)'} `);
+
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = ''; // clear
+
+    const potIds = Object.keys(gardenData.pots)
       .filter(k => /^pot\d+$/.test(k))
       .sort((a,b) => +a.slice(3) - +b.slice(3));
 
@@ -109,7 +113,7 @@
     const cutoff = weeksBack === 999 ? new Date(0) : new Date(today.getTime() - weeksBack*7*24*60*60*1000);
 
     potIds.forEach(id => {
-      if (data.pots[id].hidden) return;
+      if (gardenData.pots[id].hidden) return;
 
       const card = document.createElement('div');
       card.className = 'pot-card';
@@ -129,12 +133,14 @@
       } else {
         const newest = potImgs[0];
 
+        // Now
         photos.insertAdjacentHTML('beforeend', `
-          <div style="display:inline-block;margin:0 10px;">
+          <div style="display:inline-block;margin:0 12px;">
             <img src="assets/images/pots/${newest.f}" loading="lazy" style="border-radius:10px;max-height:280px;">
             <div style="text-align:center;font-size:0.85rem;color:#654;margin-top:6px;font-style:italic;">Now</div>
           </div>`);
 
+        // Then
         let then = null;
         for (let i = potImgs.length-1; i > 0; i--) {
           if (potImgs[i].d <= cutoff) { then = potImgs[i]; break; }
@@ -144,7 +150,7 @@
         if (then && then.f !== newest.f) {
           const days = Math.round((today - then.d) / 86400000);
           photos.insertAdjacentHTML('beforeend', `
-            <div style="display:inline-block;margin:0 10px;">
+            <div style="display:inline-block;margin:0 12px;">
               <img src="assets/images/pots/${then.f}" loading="lazy" style="border-radius:10px;max-height:280px;">
               <div style="text-align:center;font-size:0.85rem;color:#654;margin-top:6px;font-style:italic;">${days} days ago</div>
             </div>`);
@@ -153,19 +159,28 @@
 
       card.appendChild(photos);
 
-      const whimsy = data.pots[id].whimsy || (data.pots[id].currentContents?.whimsy);
+      const whimsy = gardenData.pots[id].whimsy || (gardenData.pots[id].currentContents?.whimsy);
       if (whimsy) card.insertAdjacentHTML('beforeend', `<div class="whimsy">✨ ${whimsy} ✨</div>`);
 
-      g.appendChild(card);
+      gallery.appendChild(card);
     });
   }
 
+  // Load data once
   fetch('garden-data.json')
     .then(r => r.json())
     .then(json => {
-      data = json;
-      document.getElementById('timeJump').addEventListener('change', e => render(+e.target.value));
-      render(4); // start at 4 weeks
+      gardenData = json;
+
+      // Re-create the event listener fresh every time (prevents duplicates)
+      const select = document.getElementById('timeJump');
+      select.onchange = (e) => {
+        const val = +e.target.value;
+        renderGallery(val);
+      };
+
+      // Initial render with 1 week
+      renderGallery(1);
     });
 </script>
 </body>
