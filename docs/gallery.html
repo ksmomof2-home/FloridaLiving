@@ -90,21 +90,21 @@
 
 <p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
 
-<!-- TIME JUMP SELECTOR -->
-<div style="text-align:center; margin:2.5rem 0;">
-  <label for="timeJump" style="font-size:1.3rem; color:#4a7043; font-weight:bold; margin-right:12px;">
+<!-- SINGLE TIME-JUMP SELECTOR (only one on the whole page) -->
+<div style="text-align:center; margin:3rem 0 2rem;">
+  <label for="timeJump" style="font-size:1.4rem; color:#4a7043; font-weight:bold; margin-right:16px;">
     Show change over:
   </label>
-  <select id="timeJump" style="padding:10px 16px; font-size:1.2rem; border-radius:12px; border:3px solid #a8d5ba; background:white;">
-    <option value="1">Last 1 weeks</option>
-    <option value="2">Last 2 weeks</option>
-    <option value="3">Last 3 weeks</option>
-    <option value="4" selected>Last 4 weeks</option>
-    <option value="6">Last 6 weeks</option>
-    <option value="8">Last 8 weeks</option>
-    <option value="12">Last 12 weeks</option>
-    <option value="26">Last 6 months</option>
-    <option value="52">Last year</option>
+  <select id="timeJump" style="padding:12px 20px; font-size:1.3rem; border-radius:12px; border:3px solid #a8d5ba; background:white;">
+    <option value="1">1 week</option>
+    <option value="2">2 weeks</option>
+    <option value="3">3 weeks</option>
+    <option value="4" selected>4 weeks</option>
+    <option value="6">6 weeks</option>
+    <option value="8">8 weeks</option>
+    <option value="12">12 weeks</option>
+    <option value="26">6 months</option>
+    <option value="52">1 year</option>
     <option value="999">All Time (very first photo)</option>
   </select>
 </div>
@@ -115,95 +115,86 @@
 <script>
   const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
 
-  // Extract YYYYMMDD from your real filenames: pot23_20251210_153909.jpg
-  function getDateFromFile(f) {
+  function getDate(f) {
     const m = f.match(/_(\d{8})/);
-    if (!m) return null;
-    const y = +m[1].substr(0,4);
-    const mo = +m[1].substr(4,2) - 1;
-    const d = +m[1].substr(6,2);
-    return new Date(y, mo, d);
+    return m ? new Date(+m[1].slice(0,4), +m[1].slice(4,6)-1, +m[1].slice(6,8)) : null;
   }
 
   let data = null;
 
-  function render(weeks = 8) {
+  function render(weeksBack = 4) {
     if (!data) return;
-    const gallery = document.getElementById('gallery');
-    gallery.innerHTML = '';
+    const g = document.getElementById('gallery');
+    g.innerHTML = '';
 
     const potIds = Object.keys(data.pots)
       .filter(k => /^pot\d+$/.test(k))
       .sort((a,b) => +a.slice(3) - +b.slice(3));
 
     const today = new Date();
-    const cutoff = weeks === 999 ? new Date(0) : new Date(today.getTime() - weeks*7*24*60*60*1000);
+    const cutoff = weeksBack === 999 ? new Date(0) : new Date(today.getTime() - weeksBack*7*24*60*60*1000);
 
     potIds.forEach(id => {
-      const pot = data.pots[id];
-      if (pot.hidden) return;
+      if (data.pots[id].hidden) return;
 
       const card = document.createElement('div');
       card.className = 'pot-card';
-
       card.innerHTML = `<div class="pot-header">${id.toUpperCase().replace('POT','Pot ')}</div>`;
 
       const photos = document.createElement('div');
       photos.className = 'photos';
 
-      const potImages = images
+      const potImgs = images
         .filter(f => f.startsWith(id + '_') || f.startsWith(id + '.') || f === id + '.jpg')
-        .map(f => ({f, d: getDateFromFile(f)}))
+        .map(f => ({f, d: getDate(f)} )
         .filter(o => o.d)
-        .sort((a,b) => b.d - a.d); // newest first
+        .sort((a,b) => b.d - a.d);
 
-      if (potImages.length === 0) {
+      if (potImgs.length === 0) {
         photos.innerHTML = '<div class="empty">No portraits yet…</div>';
       } else {
-        const newest = potImages[0];
+        const newest = potImgs[0];
 
-        // newest photo
+        // Now
         photos.insertAdjacentHTML('beforeend', `
-          <div style="display:inline-block; margin:0 12px;">
-            <img src="assets/images/pots/${newest.f}" loading="lazy" style="border-radius:8px;">
-            <div style="text-align:center; font-size:0.8rem; color:#654; margin-top:4px; font-style:italic;">Now</div>
+          <div style="display:inline-block;margin:0 10px;">
+            <img src="assets/images/pots/${newest.f}" loading="lazy" style="border-radius:10px;max-height:280px;">
+            <div style="text-align:center;font-size:0.85rem;color:#654;margin-top:6px;font-style:italic;">Now</div>
           </div>`);
 
-        // find oldest suitable "then" photo
+        // Then (oldest photo that meets the chosen timeframe)
         let then = null;
-        for (let i = potImages.length-1; i > 0; i--) {
-          if (potImages[i].d <= cutoff) { then = potImages[i]; break; }
+        for (let i = potImgs.length-1; i > 0; i--) {
+          if (potImgs[i].d <= cutoff) { then = potImgs[i]; break; }
         }
-        if (!then) then = potImages[potImages.length-1]; // fallback to absolute oldest
+        if (!then && potImgs.length > 1) then = potImgs[potImgs.length-1];
 
         if (then && then.f !== newest.f) {
           const days = Math.round((today - then.d) / 86400000);
           photos.insertAdjacentHTML('beforeend', `
-            <div style="display:inline-block; margin:0 12px;">
-              <img src="assets/images/pots/${then.f}" loading="lazy" style="border-radius:8px;">
-              <div style="text-align:center; font-size:0.8rem; color:#654; margin-top:4px; font-style:italic;">${days} days ago</div>
+            <div style="display:inline-block;margin:0 10px;">
+              <img src="assets/images/pots/${then.f}" loading="lazy" style="border-radius:10px;max-height:280px;">
+              <div style="text-align:center;font-size:0.85rem;color:#654;margin-top:6px;font-style:italic;">${days} days ago</div>
             </div>`);
         }
       }
 
       card.appendChild(photos);
 
-      const w = pot.whimsy || (pot.currentContents?.whimsy);
-      if (w) card.insertAdjacentHTML('beforeend', `<div class="whimsy">✨ ${w} ✨</div>`);
+      const whimsy = data.pots[id].whimsy || (data.pots[id].currentContents?.whimsy);
+      if (whimsy) card.insertAdjacentHTML('beforeend', `<div class="whimsy">✨ ${whimsy} ✨</div>`);
 
-      gallery.appendChild(card);
+      g.appendChild(card);
     });
   }
 
-  // Load data once, then go
+  // Load once, then make the dropdown live
   fetch('garden-data.json')
     .then(r => r.json())
     .then(json => {
       data = json;
-      document.getElementById('timeJump').addEventListener('change', e => {
-        render(+e.target.value);
-      });
-      render(8); // initial load
+      document.getElementById('timeJump').addEventListener('change', e => render(+e.target.value));
+      render(4); // start with your preferred default
     });
 </script>
 </body>
