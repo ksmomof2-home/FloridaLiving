@@ -102,8 +102,8 @@
     if (!data) return;
 
     console.clear();
-    console.log("%c🌟 ROYAL TIME JUMP DECREED! 🌟", "color: #9370db; font-size: 22px; font-weight: bold; background: #f5f0ff; padding: 10px;");
-    console.log(`The empire gazes back ${weeksBack === 999 ? 'through ALL TIME' : weeksBack + ' weeks'}!`);
+    console.log("%c🌟 ROYAL TIME JUMP DECREED! 🌟", "color: #9370db; font-size: 22px; font-weight: bold; padding: 10px; background: #f5f0ff;");
+    console.log(`The empire gazes back ${weeksBack === 999 ? 'through ALL TIME — unleashing the ancients!' : weeksBack + ' weeks'}`);
 
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
@@ -133,63 +133,37 @@
         .sort((a,b) => b.date - a.date); // newest first
 
       if (potImgs.length === 0) {
-        photos.innerHTML = '<div class="empty">This pot whispers secrets to the wind...</div>';
+        photos.innerHTML = '<div class="empty">This pot is camera-shy...</div>';
       } else {
         const newest = potImgs[0];
 
-        // The eternal "Now"
+        // Always "Now"
         photos.insertAdjacentHTML('beforeend', `
           <div style="display:inline-block; margin:15px; text-align:center;">
             <img src="assets/images/pots/${newest.file}" loading="lazy" style="max-height:280px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.2);">
             <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
           </div>`);
 
-        // "Then" — fixed loop + special love for long/All Time
-        // "Then" — smarter than ever, with royal preference for the ancients
-       // "Then" — pure, undivided attention for true history
+        // "Then" — clean and true
         let then = null;
         if (potImgs.length > 1) {
           if (weeksBack === 999 || weeksBack >= 26) {
-            then = potImgs[potImgs.length - 1]; // Absolute oldest for All Time and grand gazes
+            then = potImgs[potImgs.length - 1]; // Absolute oldest for epic tales
           } else {
-            // For shorter realms, the oldest <= cutoff
-            for (let i = potImgs.length - 1; i >= 1; i--) { // Skip newest if needed
+            for (let i = potImgs.length - 1; i >= 1; i--) {
               if (potImgs[i].date <= cutoff) {
                 then = potImgs[i];
                 break;
               }
             }
-            if (!then) then = potImgs[potImgs.length - 1]; // Fallback to oldest
+            if (!then) then = potImgs[potImgs.length - 1];
           }
         }
 
-        // Royal spotlight ONLY for the true pot09
-        if (id === 'pot09') {
-          if (then) {
-            const daysAgo = Math.round((today - then.date) / 86400000);
-            console.log(`%c🦋 POT09 AVOCADO SAGA UNFOLDS: Now "${newest.file}" | Then "${then.file}" (${daysAgo} days ago — from sprout to sovereign!)`, "color: #228b22; font-size: 16px; font-weight: bold;");
-          } else {
-            console.log(`%c🦋 POT09 awaits more history — only one portrait so far: "${newest.file}"`, "color: #228b22;");
-          }
-        }
-
-        if (then && then.file !== newest.file) {
-          const daysAgo = Math.round((today - then.date) / 86400000);
-          photos.insertAdjacentHTML('beforeend', `
-            <div style="display:inline-block; margin:15px; text-align:center;">
-              <img src="assets/images/pots/${then.file}" loading="lazy" style="max-height:280px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.2);">
-              <div style="margin-top:8px; font-style:italic; color:#a33; font-weight:bold;">${daysAgo} days ago</div>
-            </div>`);
-        }
-        // Extra pot09 spotlight
+        // Single, glorious pot09 spotlight
         if (id === 'pot09' && then) {
           const daysAgo = Math.round((today - then.date) / 86400000);
-          console.log(`%c🦋 POT09 TRANSFORMATION: Now "${newest.file}" | Then "${then.file}" (${daysAgo} days ago — behold the growth!)`, "color: #228b22; font-size: 16px; font-weight: bold;");
-        }
-
-        // pot09 royal spotlight in the console!
-        if (id === 'pot09' && then) {
-          console.log(`%c👑 POT09 AVOCADO EPIC: Now "${newest.file}" | Then "${then.file}" (${Math.round((today - then.date) / 86400000)} days ago)`, "color: #228b22; font-weight: bold;");
+          console.log(`%c🦋 POT09 AVOCADO EPIC REVEALED: Now "${newest.file}" | Then "${then.file}" (${daysAgo} days ago — from humble sprout to mighty tree!)`, "color: #228b22; font-size: 18px; font-weight: bold;");
         }
 
         if (then && then.file !== newest.file) {
