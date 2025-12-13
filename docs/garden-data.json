@@ -198,6 +198,14 @@
   },
   "log": [
     {
+      "date": "2025-12-12",
+      "action": "applied annual pesticide",
+      "pots": ["pot03", "pot07", "pot09"],
+      "details": "Bio Advanced Fruit, Citrus, and Vegetable Insect Control",
+      "note": "Removed mulch and aluminum foil, used 1.5 Ounces per Gallon, Put new Aluminum Foil in (except lime tree, still need to do that), and replaced mulch",
+      "whimsy": ""
+    },
+    {
       "date": "2025-12-10",
       "action": "pruned lime tree",
       "pots": ["pot07"],
