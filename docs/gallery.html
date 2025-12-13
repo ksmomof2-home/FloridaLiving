@@ -145,20 +145,28 @@
           </div>`);
 
         // "Then" — fixed loop + special love for long/All Time
+        // "Then" — smarter than ever, with royal preference for the ancients
         let then = null;
         if (potImgs.length > 1) {
-          if (weeksBack >= 12 || weeksBack === 999) {
-            then = potImgs[potImgs.length - 1]; // absolute oldest for epic sagas
+          if (weeksBack === 999 || weeksBack >= 26) {
+            then = potImgs[potImgs.length - 1]; // THE OLDEST — for All Time and long gazes back
+            console.log(`%c👑 POT09 ANCIENT PORTRAIT UNVEILED: ${then.file} from ${then.date.toDateString()}!`, "color: gold; font-weight: bold;");
           } else {
-            // Search from oldest up, find first <= cutoff
-            for (let i = potImgs.length - 1; i >= 1; i--) { // start from oldest, skip newest if needed
+            // For shorter jumps, find the oldest <= cutoff
+            for (let i = potImgs.length - 1; i >= 1; i--) {
               if (potImgs[i].date <= cutoff) {
                 then = potImgs[i];
                 break;
               }
             }
-            if (!then) then = potImgs[potImgs.length - 1]; // fallback
+            if (!then) then = potImgs[potImgs.length - 1]; // fallback to oldest anyway
           }
+        }
+
+        // Extra pot09 spotlight
+        if (id === 'pot09' && then) {
+          const daysAgo = Math.round((today - then.date) / 86400000);
+          console.log(`%c🦋 POT09 TRANSFORMATION: Now "${newest.file}" | Then "${then.file}" (${daysAgo} days ago — behold the growth!)`, "color: #228b22; font-size: 16px; font-weight: bold;");
         }
 
         // pot09 royal spotlight in the console!
