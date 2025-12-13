@@ -93,12 +93,7 @@
     const m = f.match(/_(\d{8})/);
     if (!m) return null;
     const s = m[1];
-    const y = +s.slice(0,4);
-    const mo = +s.slice(4,6) - 1;
-    const d = +s.slice(6,8);
-    const date = new Date(y, mo, d);
-    if (isNaN(date.getTime())) return null;
-    return date;
+    return new Date(+s.slice(0,4), +s.slice(4,6)-1, +s.slice(6,8));
   }
 
   let data = null;
@@ -107,10 +102,8 @@
     if (!data) return;
 
     console.clear();
-    console.log("%c🌟 TIME JUMP ENGAGED! 🌟", "color: #9370db; font-size: 20px; font-weight: bold;");
-    console.log(`Realm timeframe: ${weeksBack === 999 ? 'ALL TIME (unleashing the ancients!)' : weeksBack + ' weeks'}`);
-    console.log(`Seeking "Then" photos from on or before: ${weeksBack === 999 ? 'the dawn of the garden' : new Date(Date.now() - weeksBack * 7 * 24 * 60 * 60 * 1000).toDateString()}`);
-    console.log(`pot09 special watch: ${images.filter(f => f.startsWith('pot09_')).length} portraits in the archives — the August relic awaits!`);
+    console.log("%c🌟 ROYAL TIME JUMP DECREED! 🌟", "color: #9370db; font-size: 22px; font-weight: bold; background: #f5f0ff; padding: 10px;");
+    console.log(`The empire gazes back ${weeksBack === 999 ? 'through ALL TIME' : weeksBack + ' weeks'}!`);
 
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
@@ -140,29 +133,37 @@
         .sort((a,b) => b.date - a.date); // newest first
 
       if (potImgs.length === 0) {
-        photos.innerHTML = '<div class="empty">This pot dreams in secret...</div>';
+        photos.innerHTML = '<div class="empty">This pot whispers secrets to the wind...</div>';
       } else {
         const newest = potImgs[0];
 
-        // Always the glorious "Now"
+        // The eternal "Now"
         photos.insertAdjacentHTML('beforeend', `
           <div style="display:inline-block; margin:15px; text-align:center;">
             <img src="assets/images/pots/${newest.file}" loading="lazy" style="max-height:280px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.2);">
             <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
           </div>`);
 
-        // "Then" — for All Time or long jumps, force the absolute oldest
+        // "Then" — fixed loop + special love for long/All Time
         let then = null;
-        if (weeksBack >= 26 || weeksBack === 999) {
-          then = potImgs[potImgs.length - 1]; // absolute oldest for epic drama
-        } else {
-          // Normal: oldest at or before cutoff
-          for (let i = potImgs.length - 1; i >= 0; i--) {
-            if (potImgs[i].date <= cutoff) {
-              then = potImgs[i];
-              break;
+        if (potImgs.length > 1) {
+          if (weeksBack >= 12 || weeksBack === 999) {
+            then = potImgs[potImgs.length - 1]; // absolute oldest for epic sagas
+          } else {
+            // Search from oldest up, find first <= cutoff
+            for (let i = potImgs.length - 1; i >= 1; i--) { // start from oldest, skip newest if needed
+              if (potImgs[i].date <= cutoff) {
+                then = potImgs[i];
+                break;
+              }
             }
+            if (!then) then = potImgs[potImgs.length - 1]; // fallback
           }
+        }
+
+        // pot09 royal spotlight in the console!
+        if (id === 'pot09' && then) {
+          console.log(`%c👑 POT09 AVOCADO EPIC: Now "${newest.file}" | Then "${then.file}" (${Math.round((today - then.date) / 86400000)} days ago)`, "color: #228b22; font-weight: bold;");
         }
 
         if (then && then.file !== newest.file) {
