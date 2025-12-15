@@ -166,6 +166,14 @@
           console.log(`%c🦋 POT09 AVOCADO EPIC REVEALED: Now "${newest.file}" | Then "${then.file}" (${daysAgo} days ago — from humble sprout to mighty tree!)`, "color: #228b22; font-size: 18px; font-weight: bold;");
         }
 
+        if (id === 'pot09') {
+  console.log("pot09 full archive (newest to oldest):");
+  potImgs.forEach((img, idx) => {
+    console.log(`${idx}: ${img.file} — ${img.date ? img.date.toDateString() : 'no date parsed'} (${img.date ? Math.round((today - img.date) / 86400000) : '?'} days ago)`);
+  });
+  console.log(`Chosen "Then": ${then ? then.file + ' (' + Math.round((today - then.date) / 86400000) + ' days ago)' : 'none'}`);
+}
+
         if (then && then.file !== newest.file) {
           const daysAgo = Math.round((today - then.date) / 86400000);
           photos.insertAdjacentHTML('beforeend', `
