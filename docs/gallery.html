@@ -146,20 +146,39 @@
 
         // "Then" — clean and true
 		// "Then" — wise and seasonal, like the Florida sun
+		// pot09 royal troubleshooting — the full truth revealed!
+		if (id === 'pot09') {
+		  console.log("%c👑 POT09 FULL ARCHIVE (newest to oldest):", "color: gold; font-weight: bold;");
+		  potImgs.forEach((img, idx) => {
+		    const daysAgo = img.date ? Math.round((today - img.date) / 86400000) : 'unknown';
+		    console.log(`${idx}: ${img.file} — ${img.date ? img.date.toDateString() : 'no date'} (${daysAgo} days ago)`);
+		  });
+		  console.log(`%cCutoff date for this timeframe: ${cutoff.toDateString()}`, "color: purple;");
+		  if (then) {
+		    const daysAgo = Math.round((today - then.date) / 86400000);
+		    console.log(`%cChosen "Then": ${then.file} (${daysAgo} days ago)`, "color: green; font-weight: bold;");
+		  } else {
+		    console.log("%cNo "Then" photo — nothing old enough (or fallback suppressed for short jump)", "color: orange;");
+		  }
+		}
+
+		// Existing "Then" logic (keep your current one, but add the logs above it)
 		let then = null;
 		if (potImgs.length > 1) {
-		  // Always try to find a photo old enough for the cutoff
-		  for (let i = potImgs.length - 1; i >= 1; i--) {  // skip newest
+		  for (let i = potImgs.length - 1; i >= 1; i--) {
 		    if (potImgs[i].date <= cutoff) {
 		      then = potImgs[i];
 		      break;
 		    }
 		  }
-
-		  // For short jumps: if nothing old enough, gracefully show ONLY "Now" (no fallback to ancients!)
-		  if (!then && weeksBack <= 4) {
-		    then = null;  // peace and subtlety
+		  // Your current fallback (adjust as needed to suppress ancients on short jumps)
+		  if (!then && weeksBack > 4) {  // only fallback to oldest for longer jumps
+		    then = potImgs[potImgs.length - 1];
 		  }
+		}
+
+		// ... rest of the photo insertion ...
+		
 
 		  // For longer gazes: if still nothing, summon the absolute oldest for epic contrast
 		  if (!then && weeksBack > 4) {
