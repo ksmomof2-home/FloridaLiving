@@ -67,8 +67,16 @@
   <div id="history" class="history-grid">
     <!-- Magical chronicles appear here -->
   </div>
+<div style="text-align:center; margin:1rem 0 3rem; font-size:1.1rem; color:#7a5;">
+  <a href="index.html" style="color:#4a7043; text-decoration:none;">Garden Home</a> 
+  → <a href="gallery.html" style="color:#4a7043; text-decoration:none;">Royal Portrait Gallery</a> 
+  → <strong id="crumbPot">Pot Chronicle</strong>
+</div>
 
-  <div class="back"><a href="gallery.html">← Return to the Royal Portrait Gallery</a></div>
+<script>
+// Auto-fill the current pot name in the breadcrumb
+document.getElementById('crumbPot').textContent = potId.toUpperCase().replace('POT','Pot ') + ' Chronicle';
+</script>
 
   <!-- Lightbox for full-size glory -->
   <div id="lightbox" onclick="this.style.display='none'">
