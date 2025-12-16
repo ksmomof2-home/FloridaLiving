@@ -119,10 +119,11 @@
       const today = new Date();
       today.setHours(0,0,0,0);
       const cutoff = weeksBack === 999 ? new Date('2000-01-01') : new Date(today.getTime() - weeksBack * 7 * 24 * 60 * 60 * 1000);
-
+       
       potIds.forEach(id => {
         if (data.pots[id].hidden) return;
-
+		if (id === 'pot09')
+		  console.log("cutoff: " + cutoff);
         const card = document.createElement('div');
         card.className = 'pot-card';
         card.innerHTML = `<div class="pot-header">Pot ${id.slice(3)}</div>`;
@@ -150,6 +151,8 @@
           let then = null;
           if (potImgs.length > 1) {
             for (let i = potImgs.length - 1; i >= 1; i--) {
+				if (id === 'pot09')
+				console.log(potImgs[i].date);
               if (potImgs[i].date <= cutoff) {
 				if (id === 'pot09') {
 					console.log("choosing pot less than cutoff: ");
