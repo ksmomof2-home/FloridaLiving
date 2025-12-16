@@ -154,27 +154,29 @@
   </div>`);
 
                   // "Then" — graceful and true to time's flow
+               // "Then" — now seeks the photo closest to the desired age (but still old enough)
         let then = null;
         if (potImgs.length > 1) {
-          // Search from second-newest backward — find the most recent photo old enough
-          for (let i = 1; i < potImgs.length; i++) {  // start at 1 (skip newest)
-            if (potImgs[i].date <= cutoff) {
-              then = potImgs[i];
-              break;
+          let bestDiff = Infinity;
+          for (let i = 1; i < potImgs.length; i++) { // skip newest
+            const photo = potImgs[i];
+            if (photo.date <= cutoff) {
+              const diff = cutoff.getTime() - photo.date.getTime(); // positive difference
+              if (diff < bestDiff) {
+                bestDiff = diff;
+                then = photo;
+              }
             }
           }
-
-          // For short jumps: if nothing old enough, serene "Now" only
-          if (!then && weeksBack <= 4) {
-            then = null;  // subtlety reigns
-          }
-
-          // For longer gazes: if still nothing, summon the absolute oldest for epic contrast
-          if (!then && weeksBack > 4) {
-            then = potImgs[potImgs.length - 1];
-          }
+          // If nothing old enough, fall back to absolute oldest for drama
+          if (!then) then = potImgs[potImgs.length - 1];
         }
 
+        // pot09 spotlight for testing joy
+        if (id === 'pot09' && then) {
+          const daysAgo = Math.round((today - then.date) / 86400000);
+          console.log(`%c🦋 POT09 TIME JUMP: Chosen "${then.file}" (${daysAgo} days ago) for ${weeksBack}-week decree`, "color: #228b22; font-weight: bold;");
+        }
         // pot09 royal insight
         if (id === 'pot09') {
           console.log("%c👑 POT09 TIME FLOW:", "color: gold; font-weight: bold;");
