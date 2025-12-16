@@ -59,6 +59,7 @@
       "plantingWindow": "Year-round (best Feb–May)",
       "plantingComments": "Native maypop (incarnata) is bulletproof here. Edulis prefers spring planting but your wall gives both royal treatment."
     },
+    "pot06": { "whimsy": "Dreaming of future milkweed majesty ✨" },
     "pot07": {
       "name": "Lime Tree",
       "species": "Citrus × aurantiifolia",
@@ -168,6 +169,7 @@
       "plantingComments": "November dill planting = Florida jackpot. Your wall will give you tall, happy plants before spring heat meltdown.",
       "harvestInfo": "Harvest dill leaves ~40–60 days from sowing; seeds ~90 days. Pick often to delay bolting."
     },
+    "pot16": { "whimsy": "Patiently awaiting its monarch moment 🦋" },
     "pot17": {
       "name": "Cilantro + Marigold seeds",
       "species": "Coriandrum sativum + Tagetes",
@@ -180,6 +182,8 @@
       "plantingComments": "Peak cilantro season! Succession sow every 2–3 weeks until February for endless drama-free leaves.",
       "harvestInfo": "Harvest cilantro leaves 30–50 days from sowing. Jalapeño (when added) ~70–90 days to first peppers."
     },
+    "pot18": { "whimsy": "The quiet flex — ready for anything!" },
+"pot20": { "whimsy": "A blank canvas for botanical surprises 🎨" }
     "pot22": {
       "name": "Wandering Jew",
       "species": "Tradescantia zebrina or fluminensis",
