@@ -148,40 +148,43 @@
               <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
             </div>`);
 
-          let then = null;
-          if (potImgs.length > 1) {
-            for (let i = potImgs.length - 1; i >= 1; i--) {
-				if (id === 'pot09')
-				console.log(potImgs[i].date);
-              if (potImgs[i].date <= cutoff) {
-				if (id === 'pot09') {
-					console.log("choosing pot less than cutoff: ");
-					console.log(potImgs[i].date);
-				}					
-                then = potImgs[i];
-                break;
-              }
-            }
-            if (!then && weeksBack > 4) {
-				if (id === 'pot09')
-					console.log("choosing last image");
-              then = potImgs[potImgs.length - 1];
+                  // "Then" — graceful and true to time's flow
+        let then = null;
+        if (potImgs.length > 1) {
+          // Search from second-newest backward — find the most recent photo old enough
+          for (let i = 1; i < potImgs.length; i++) {  // start at 1 (skip newest)
+            if (potImgs[i].date <= cutoff) {
+              then = potImgs[i];
+              break;
             }
           }
 
-          if (id === 'pot09') {
-            console.log("%c👑 POT09 ARCHIVE:", "color: gold; font-weight: bold;");
-            potImgs.forEach((img, idx) => {
-              const days = Math.round((today - img.date) / 86400000);
-              console.log(`${idx}: ${img.file} (${days} days ago)`);
-            });
-            if (then) {
-              const days = Math.round((today - then.date) / 86400000);
-              console.log(`%cChosen Then: ${then.file} (${days} days ago)`, "color: green; font-weight: bold;");
-            } else {
-              console.log("%cNo Then photo for this timeframe", "color: orange;");
-            }
+          // For short jumps: if nothing old enough, serene "Now" only
+          if (!then && weeksBack <= 4) {
+            then = null;  // subtlety reigns
           }
+
+          // For longer gazes: if still nothing, summon the absolute oldest for epic contrast
+          if (!then && weeksBack > 4) {
+            then = potImgs[potImgs.length - 1];
+          }
+        }
+
+        // pot09 royal insight
+        if (id === 'pot09') {
+          console.log("%c👑 POT09 TIME FLOW:", "color: gold; font-weight: bold;");
+          potImgs.forEach((img, idx) => {
+            const days = Math.round((today - img.date) / 86400000);
+            console.log(`${idx}: ${img.file} (${days} days ago)`);
+          });
+          console.log(`Cutoff: ${cutoff.toDateString()}`);
+          if (then) {
+            const days = Math.round((today - then.date) / 86400000);
+            console.log(`%cChosen Then: ${then.file} (${days} days ago)`, "color: green; font-weight: bold;");
+          } else {
+            console.log("%cOnly Now — subtle peace for short gaze", "color: orange;");
+          }
+        }
 
           if (then && then.file !== newest.file) {
             const daysAgo = Math.round((today - then.date) / 86400000);
