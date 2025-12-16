@@ -36,7 +36,7 @@
     .photos {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 1rem;
       padding: 1rem;
       justify-content: center;
       background: #fefcf9;
@@ -62,168 +62,144 @@
 <body>
 
   <h1>♛ The Royal Portrait Gallery ♛</h1>
+  <p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
 
-<p class="subtitle">Latest portraits of Their Majesties the Pots – in order from sunniest to shadiest</p>
+  <div style="text-align:center; margin:3rem 0 2rem;">
+    <label style="font-size:1.5rem; color:#4a7043; font-weight:bold; margin-right:16px;">
+      Show change over:
+    </label>
+    <select id="timeJump" style="padding:12px 20px; font-size:1.4rem; border-radius:12px; border:3px solid #a8d5ba; background:white;">
+      <option value="1" selected>1 week</option>
+      <option value="2">2 weeks</option>
+      <option value="3">3 weeks</option>
+      <option value="4">4 weeks</option>
+      <option value="6">6 weeks</option>
+      <option value="8">8 weeks</option>
+      <option value="12">12 weeks</option>
+      <option value="26">6 months</option>
+      <option value="52">1 year</option>
+      <option value="999">All Time (very first photo)</option>
+    </select>
+  </div>
 
-<div style="text-align:center; margin:3rem 0 2rem;">
-  <label style="font-size:1.5rem; color:#4a7043; font-weight:bold; margin-right:16px;">
-    Show change over:
-  </label>
-  <select id="timeJump" style="padding:12px 20px; font-size:1.4rem; border-radius:12px; border:3px solid #a8d5ba; background:white;">
-    <option value="1" selected>1 week</option>
-    <option value="2">2 weeks</option>
-    <option value="3">3 weeks</option>
-    <option value="4">4 weeks</option>
-    <option value="6">6 weeks</option>
-    <option value="8">8 weeks</option>
-    <option value="12">12 weeks</option>
-    <option value="26">6 months</option>
-    <option value="52">1 year</option>
-    <option value="999">All Time (very first photo)</option>
-  </select>
-</div>
+  <div id="gallery" class="gallery-grid">
+    <!-- The magic happens here -->
+  </div>
 
-<div id="gallery" class="gallery-grid"></div>
+  <footer>
+    <p>May your scroll be gentle and your butterflies plentiful 🌿✨</p>
+  </footer>
 
-<script src="js/image-list.js"></script>
-<script>
-  const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
+  <script src="js/image-list.js"></script>
+  <script>
+    const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
 
-  function parseDate(f) {
-    const m = f.match(/_(\d{8})/);
-    if (!m) return null;
-    const s = m[1];
-    return new Date(+s.slice(0,4), +s.slice(4,6)-1, +s.slice(6,8));
-  }
+    function parseDate(f) {
+      const m = f.match(/_(\d{8})/);
+      if (!m) return null;
+      const s = m[1];
+      return new Date(+s.slice(0,4), +s.slice(4,6)-1, +s.slice(6,8));
+    }
 
-  let data = null;
+    let data = null;
 
-  function renderGallery(weeksBack) {
-    if (!data) return;
+    function renderGallery(weeksBack) {
+      if (!data) return;
 
-    console.clear();
-    console.log("%c🌟 ROYAL TIME JUMP DECREED! 🌟", "color: #9370db; font-size: 22px; font-weight: bold; padding: 10px; background: #f5f0ff;");
-    console.log(`The empire gazes back ${weeksBack === 999 ? 'through ALL TIME — unleashing the ancients!' : weeksBack + ' weeks'}`);
+      console.clear();
+      console.log("%c🌟 TIME JUMP DECREED! 🌟", "color: #9370db; font-size: 20px; font-weight: bold;");
 
-    const gallery = document.getElementById('gallery');
-    gallery.innerHTML = '';
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = '';
 
-    const potIds = Object.keys(data.pots)
-      .filter(k => /^pot\d+$/.test(k))
-      .sort((a,b) => +a.slice(3) - +b.slice(3));
+      const potIds = Object.keys(data.pots)
+        .filter(k => /^pot\d+$/.test(k))
+        .sort((a,b) => +a.slice(3) - +b.slice(3));
 
-    const today = new Date();
-    today.setHours(0,0,0,0);
-    const cutoff = weeksBack === 999 ? new Date('2000-01-01') : new Date(today.getTime() - weeksBack * 7 * 24 * 60 * 60 * 1000);
+      const today = new Date();
+      today.setHours(0,0,0,0);
+      const cutoff = weeksBack === 999 ? new Date('2000-01-01') : new Date(today.getTime() - weeksBack * 7 * 24 * 60 * 60 * 1000);
 
-    potIds.forEach(id => {
-      if (data.pots[id].hidden) return;
+      potIds.forEach(id => {
+        if (data.pots[id].hidden) return;
 
-      const card = document.createElement('div');
-      card.className = 'pot-card';
-      card.innerHTML = `<div class="pot-header">Pot ${id.slice(3)}</div>`;
+        const card = document.createElement('div');
+        card.className = 'pot-card';
+        card.innerHTML = `<div class="pot-header">Pot ${id.slice(3)}</div>`;
 
-      const photos = document.createElement('div');
-      photos.className = 'photos';
+        const photos = document.createElement('div');
+        photos.className = 'photos';
 
-      const potImgs = images
-        .filter(f => f.startsWith(id + '_'))
-        .map(f => ({file: f, date: parseDate(f)}))
-        .filter(o => o.date)
-        .sort((a,b) => b.date - a.date); // newest first
+        const potImgs = images
+          .filter(f => f.startsWith(id + '_'))
+          .map(f => ({file: f, date: parseDate(f)}))
+          .filter(o => o.date)
+          .sort((a,b) => b.date - a.date);
 
-      if (potImgs.length === 0) {
-        photos.innerHTML = '<div class="empty">This pot is camera-shy...</div>';
-      } else {
-        const newest = potImgs[0];
+        if (potImgs.length === 0) {
+          photos.innerHTML = '<div class="empty">No portraits yet...</div>';
+        } else {
+          const newest = potImgs[0];
 
-        // Always "Now"
-        photos.insertAdjacentHTML('beforeend', `
-          <div style="display:inline-block; margin:15px; text-align:center;">
-            <img src="assets/images/pots/${newest.file}" loading="lazy" style="max-height:280px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.2);">
-            <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
-          </div>`);
+          photos.insertAdjacentHTML('beforeend', `
+            <div style="display:inline-block; margin:15px; text-align:center;">
+              <img src="assets/images/pots/${newest.file}" loading="lazy" style="max-height:280px; border-radius:12px;">
+              <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
+            </div>`);
 
-        // "Then" — clean and true
-		// "Then" — wise and seasonal, like the Florida sun
-		// pot09 royal troubleshooting — the full truth revealed!
-		if (id === 'pot09') {
-		  console.log("%c👑 POT09 FULL ARCHIVE (newest to oldest):", "color: gold; font-weight: bold;");
-		  potImgs.forEach((img, idx) => {
-		    const daysAgo = img.date ? Math.round((today - img.date) / 86400000) : 'unknown';
-		    console.log(`${idx}: ${img.file} — ${img.date ? img.date.toDateString() : 'no date'} (${daysAgo} days ago)`);
-		  });
-		  console.log(`%cCutoff date for this timeframe: ${cutoff.toDateString()}`, "color: purple;");
-		  if (then) {
-		    const daysAgo = Math.round((today - then.date) / 86400000);
-		    console.log(`%cChosen "Then": ${then.file} (${daysAgo} days ago)`, "color: green; font-weight: bold;");
-		  } else {
-		    console.log("%cNo "Then" photo — nothing old enough (or fallback suppressed for short jump)", "color: orange;");
-		  }
-		}
+          let then = null;
+          if (potImgs.length > 1) {
+            for (let i = potImgs.length - 1; i >= 1; i--) {
+              if (potImgs[i].date <= cutoff) {
+                then = potImgs[i];
+                break;
+              }
+            }
+            if (!then && weeksBack > 4) {
+              then = potImgs[potImgs.length - 1];
+            }
+          }
 
-		// Existing "Then" logic (keep your current one, but add the logs above it)
-		let then = null;
-		if (potImgs.length > 1) {
-		  for (let i = potImgs.length - 1; i >= 1; i--) {
-		    if (potImgs[i].date <= cutoff) {
-		      then = potImgs[i];
-		      break;
-		    }
-		  }
-		  // Your current fallback (adjust as needed to suppress ancients on short jumps)
-		  if (!then && weeksBack > 4) {  // only fallback to oldest for longer jumps
-		    then = potImgs[potImgs.length - 1];
-		  }
-		}
+          if (id === 'pot09') {
+            console.log("%c👑 POT09 ARCHIVE:", "color: gold; font-weight: bold;");
+            potImgs.forEach((img, idx) => {
+              const days = Math.round((today - img.date) / 86400000);
+              console.log(`${idx}: ${img.file} (${days} days ago)`);
+            });
+            if (then) {
+              const days = Math.round((today - then.date) / 86400000);
+              console.log(`%cChosen Then: ${then.file} (${days} days ago)`, "color: green; font-weight: bold;");
+            } else {
+              console.log("%cNo Then photo for this timeframe", "color: orange;");
+            }
+          }
 
-		// ... rest of the photo insertion ...
-		
+          if (then && then.file !== newest.file) {
+            const daysAgo = Math.round((today - then.date) / 86400000);
+            photos.insertAdjacentHTML('beforeend', `
+              <div style="display:inline-block; margin:15px; text-align:center;">
+                <img src="assets/images/pots/${then.file}" loading="lazy" style="max-height:280px; border-radius:12px;">
+                <div style="margin-top:8px; font-style:italic; color:#a33; font-weight:bold;">${daysAgo} days ago</div>
+              </div>`);
+          }
+        }
 
-		  // For longer gazes: if still nothing, summon the absolute oldest for epic contrast
-		  if (!then && weeksBack > 4) {
-		    then = potImgs[potImgs.length - 1];
-		  }
-		}
+        card.appendChild(photos);
 
-		// pot09 spotlight for your delight
-		if (id === 'pot09') {
-		  if (then) {
-		    const daysAgo = Math.round((today - then.date) / 86400000);
-		    console.log(`%c🦋 POT09 TRANSFORMATION: Now "${newest.file}" | Then "${then.file}" (${daysAgo} days ago)`, "color: #228b22; font-weight: bold;");
-		  } else {
-		    console.log(`%c🦋 POT09 whispers subtlety — only "Now" for this short gaze.`, "color: #228b22;");
-		  }
-		}
+        const whimsy = data.pots[id].whimsy || data.pots[id].currentContents?.whimsy;
+        if (whimsy) card.insertAdjacentHTML('beforeend', `<div class="whimsy">✨ ${whimsy} ✨</div>`);
 
-		if (then && then.file !== newest.file) {
-		  const daysAgo = Math.round((today - then.date) / 86400000);
-		  photos.insertAdjacentHTML('beforeend', `
-		    <div style="display:inline-block; margin:15px; text-align:center;">
-		      <img src="assets/images/pots/${then.file}" loading="lazy" style="max-height:280px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.2);">
-		      <div style="margin-top:8px; font-style:italic; color:#a33; font-weight:bold;">${daysAgo} days ago</div>
-		    </div>`);
-		}
-      }
+        gallery.appendChild(card);
+      });
+    }
 
-      card.appendChild(photos);
-
-      const whimsy = data.pots[id].whimsy || data.pots[id].currentContents?.whimsy;
-      if (whimsy) card.insertAdjacentHTML('beforeend', `<div class="whimsy">✨ ${whimsy} ✨</div>`);
-
-      gallery.appendChild(card);
-	  })
-    
-  }
-
-  fetch('garden-data.json')
-    .then(r => r.json())
-    .then(json => {
-      data = json;
-      document.getElementById('timeJump').onchange = e => renderGallery(+e.target.value);
-      renderGallery(1);
-    });
-	
-</script>
+    fetch('garden-data.json')
+      .then(r => r.json())
+      .then(json => {
+        data = json;
+        document.getElementById('timeJump').onchange = e => renderGallery(+e.target.value);
+        renderGallery(1);
+      });
+  </script>
 </body>
 </html>
