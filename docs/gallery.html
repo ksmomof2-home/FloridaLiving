@@ -145,43 +145,46 @@
           </div>`);
 
         // "Then" — clean and true
-        let then = null;
-        if (potImgs.length > 1) {
-          if (weeksBack === 999 || weeksBack >= 26) {
-            then = potImgs[potImgs.length - 1]; // Absolute oldest for epic tales
-          } else {
-            for (let i = potImgs.length - 1; i >= 1; i--) {
-              if (potImgs[i].date <= cutoff) {
-                then = potImgs[i];
-                break;
-              }
-            }
-            if (!then) then = potImgs[potImgs.length - 1];
-          }
-        }
+		// "Then" — wise and seasonal, like the Florida sun
+		let then = null;
+		if (potImgs.length > 1) {
+		  // Always try to find a photo old enough for the cutoff
+		  for (let i = potImgs.length - 1; i >= 1; i--) {  // skip newest
+		    if (potImgs[i].date <= cutoff) {
+		      then = potImgs[i];
+		      break;
+		    }
+		  }
 
-        // Single, glorious pot09 spotlight
-        if (id === 'pot09' && then) {
-          const daysAgo = Math.round((today - then.date) / 86400000);
-          console.log(`%c🦋 POT09 AVOCADO EPIC REVEALED: Now "${newest.file}" | Then "${then.file}" (${daysAgo} days ago — from humble sprout to mighty tree!)`, "color: #228b22; font-size: 18px; font-weight: bold;");
-        }
+		  // For short jumps: if nothing old enough, gracefully show ONLY "Now" (no fallback to ancients!)
+		  if (!then && weeksBack <= 4) {
+		    then = null;  // peace and subtlety
+		  }
 
-        if (id === 'pot09') {
-  			console.log("pot09 full archive (newest to oldest):");
-  			potImgs.forEach((img, idx) => {
-  				console.log(`${idx}: ${img.file} — ${img.date ? img.date.toDateString() : 'no date parsed'} (${img.date ? Math.round((today - img.date) / 86400000) : '?'} days ago)`);
-  			});
-  			console.log(`Chosen "Then": ${then ? then.file + ' (' + Math.round((today - then.date) / 86400000) + ' days ago)' : 'none'}`);
+		  // For longer gazes: if still nothing, summon the absolute oldest for epic contrast
+		  if (!then && weeksBack > 4) {
+		    then = potImgs[potImgs.length - 1];
+		  }
 		}
 
-        if (then && then.file !== newest.file) {
-          const daysAgo = Math.round((today - then.date) / 86400000);
-          photos.insertAdjacentHTML('beforeend', `
-            <div style="display:inline-block; margin:15px; text-align:center;">
-              <img src="assets/images/pots/${then.file}" loading="lazy" style="max-height:280px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.2);">
-              <div style="margin-top:8px; font-style:italic; color:#a33; font-weight:bold;">${daysAgo} days ago</div>
-            </div>`);
-        }
+		// pot09 spotlight for your delight
+		if (id === 'pot09') {
+		  if (then) {
+		    const daysAgo = Math.round((today - then.date) / 86400000);
+		    console.log(`%c🦋 POT09 TRANSFORMATION: Now "${newest.file}" | Then "${then.file}" (${daysAgo} days ago)`, "color: #228b22; font-weight: bold;");
+		  } else {
+		    console.log(`%c🦋 POT09 whispers subtlety — only "Now" for this short gaze.`, "color: #228b22;");
+		  }
+		}
+
+		if (then && then.file !== newest.file) {
+		  const daysAgo = Math.round((today - then.date) / 86400000);
+		  photos.insertAdjacentHTML('beforeend', `
+		    <div style="display:inline-block; margin:15px; text-align:center;">
+		      <img src="assets/images/pots/${then.file}" loading="lazy" style="max-height:280px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.2);">
+		      <div style="margin-top:8px; font-style:italic; color:#a33; font-weight:bold;">${daysAgo} days ago</div>
+		    </div>`);
+		}
       }
 
       card.appendChild(photos);
