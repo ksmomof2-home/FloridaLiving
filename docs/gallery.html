@@ -109,10 +109,7 @@
     function renderGallery(weeksBack) {
       if (!data) return;
 
-      console.clear();
-      console.log("%c🌟 TIME JUMP DECREED! 🌟", "color: #9370db; font-size: 20px; font-weight: bold;");
-
-      const gallery = document.getElementById('gallery');
+     const gallery = document.getElementById('gallery');
       gallery.innerHTML = '';
 
       const potIds = Object.keys(data.pots)
@@ -125,8 +122,6 @@
        
       potIds.forEach(id => {
         if (data.pots[id].hidden) return;
-		if (id === 'pot09')
-		  console.log("cutoff: " + cutoff);
         const card = document.createElement('div');
         card.className = 'pot-card';
         card.innerHTML = `<div class="pot-header">Pot ${id.slice(3)}</div>`;
@@ -172,19 +167,7 @@
           if (!then) then = potImgs[potImgs.length - 1];
         }
 
-        // pot09 spotlight for testing joy
-        if (id === 'pot09' && then) {
-          const daysAgo = Math.round((today - then.date) / 86400000);
-          console.log(`%c🦋 POT09 TIME JUMP: Chosen "${then.file}" (${daysAgo} days ago) for ${weeksBack}-week decree`, "color: #228b22; font-weight: bold;");
-        }
-        // pot09 royal insight
-        if (id === 'pot09') {
-          console.log("%c👑 POT09 TIME FLOW:", "color: gold; font-weight: bold;");
-          potImgs.forEach((img, idx) => {
-            const days = Math.round((today - img.date) / 86400000);
-            console.log(`${idx}: ${img.file} (${days} days ago)`);
-          });
-          console.log(`Cutoff: ${cutoff.toDateString()}`);
+        console.log(`Cutoff: ${cutoff.toDateString()}`);
           if (then) {
             const days = Math.round((today - then.date) / 86400000);
             console.log(`%cChosen Then: ${then.file} (${days} days ago)`, "color: green; font-weight: bold;");
