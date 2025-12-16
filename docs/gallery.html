@@ -142,11 +142,13 @@
         } else {
           const newest = potImgs[0];
 
-          photos.insertAdjacentHTML('beforeend', `
-            <div style="display:inline-block; margin:15px; text-align:center;">
-              <img src="assets/images/pots/${newest.file}" loading="lazy" style="max-height:280px; border-radius:12px;">
-              <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
-            </div>`);
+         photos.insertAdjacentHTML('beforeend', `
+  <div style="display:inline-block; margin:15px; text-align:center;">
+    <a href="pot-history.html?id=${id}">
+      <img src="assets/images/pots/${newest.file}" loading="lazy" style="max-height:280px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.2);">
+    </a>
+    <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
+  </div>`);
 
                   // "Then" — graceful and true to time's flow
         let then = null;
@@ -189,10 +191,12 @@
           if (then && then.file !== newest.file) {
             const daysAgo = Math.round((today - then.date) / 86400000);
             photos.insertAdjacentHTML('beforeend', `
-              <div style="display:inline-block; margin:15px; text-align:center;">
-                <img src="assets/images/pots/${then.file}" loading="lazy" style="max-height:280px; border-radius:12px;">
-                <div style="margin-top:8px; font-style:italic; color:#a33; font-weight:bold;">${daysAgo} days ago</div>
-              </div>`);
+  <div style="display:inline-block; margin:15px; text-align:center;">
+    <a href="pot-history.html?id=${id}">
+      <img src="assets/images/pots/${then.file}" loading="lazy" style="max-height:280px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.2);">
+    </a>
+    <div style="margin-top:8px; font-style:italic; color:#a33; font-weight:bold;">${daysAgo} days ago</div>
+  </div>`);
           }
         }
 
