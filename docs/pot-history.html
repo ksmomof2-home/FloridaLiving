@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>♛ Pot History Chronicle ♛</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body { font-family: 'Georgia', serif; background: #f8f7f2; color: #2d1e12; padding: 2rem; }
+    h1 { text-align: center; color:#4a7043; font-size:2.8rem; margin-bottom:0; }
+    .subtitle { text-align:center; font-style:italic; color:#7a5; margin:1rem 0 3rem; }
+    .history-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .history-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1rem;
+    }
+    .history-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: zoom-in;
+      transition: transform 0.3s;
+    }
+    .history-card img:hover { transform: scale(1.05); }
+    .date-label {
+      margin-top: 0.8rem;
+      font-style: italic;
+      color: #654;
+      font-size: 1rem;
+    }
+    .back { text-align:center; margin:3rem 0; }
+    .back a { color:#4a7043; font-size:1.2rem; text-decoration:none; border-bottom:2px dashed #a8d5ba; }
+    /* Full-screen lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      cursor: zoom-out;
+    }
+    #lightbox img {
+      max-width: 95%;
+      max-height: 95%;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <h1 id="potTitle">♛ Pot Chronicle ♛</h1>
+  <p class="subtitle">The full glorious timeline – click any portrait for solitary magnificence</p>
+
+  <div id="history" class="history-grid">
+    <!-- Magical chronicles appear here -->
+  </div>
+
+  <div class="back"><a href="gallery.html">← Return to the Royal Portrait Gallery</a></div>
+
+  <!-- Lightbox for full-size glory -->
+  <div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightboxImg" src="" alt="Full glory">
+  </div>
+
+  <script src="js/image-list.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const potId = params.get('id'); // e.g. pot09
+
+    if (!potId) {
+      document.body.innerHTML = '<h1 style="text-align:center;color:#a33;">No pot summoned... return to the gallery!</h1>';
+    } else {
+      document.getElementById('potTitle').textContent = `♛ ${potId.toUpperCase().replace('POT','Pot ')} Chronicle ♛`;
+
+      const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
+
+      const potHistory = images
+        .filter(f => f.startsWith(potId + '_'))
+        .map(f => {
+          const dateMatch = f.match(/_(\d{8})/);
+          const dateStr = dateMatch ? `${dateMatch[1].slice(0,4)}-${dateMatch[1].slice(4,6)}-${dateMatch[1].slice(6,8)}` : 'Unknown date';
+          return {file: f, dateStr};
+        })
+        .sort((a,b) => b.dateStr.localeCompare(a.dateStr)); // newest first
+
+      const grid = document.getElementById('history');
+
+      if (potHistory.length === 0) {
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;font-size:1.5rem;color:#999;">This pot is mysteriously camera-shy...</p>';
+      } else {
+        potHistory.forEach(img => {
+          const card = document.createElement('div');
+          card.className = 'history-card';
+          card.innerHTML = `
+            <img src="assets/images/pots/${img.file}" alt="${potId} on ${img.dateStr}" loading="lazy"
+                 onclick="document.getElementById('lightboxImg').src=this.src; document.getElementById('lightbox').style.display='flex';">
+            <div class="date-label">${img.dateStr.replace(/-/g, '.')}</div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
