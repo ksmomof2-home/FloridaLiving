@@ -151,11 +151,17 @@
           if (potImgs.length > 1) {
             for (let i = potImgs.length - 1; i >= 1; i--) {
               if (potImgs[i].date <= cutoff) {
+				if (id === 'pot09') {
+					console.log("choosing pot less than cutoff: ");
+					console.log(potImgs[i].date);
+				}					
                 then = potImgs[i];
                 break;
               }
             }
             if (!then && weeksBack > 4) {
+				if (id === 'pot09')
+					console.log("choosing last image");
               then = potImgs[potImgs.length - 1];
             }
           }
