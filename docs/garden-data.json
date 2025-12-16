@@ -183,7 +183,13 @@
       "harvestInfo": "Harvest cilantro leaves 30–50 days from sowing. Jalapeño (when added) ~70–90 days to first peppers."
     },
     "pot18": { "whimsy": "The quiet flex — ready for anything!" },
-"pot20": { "whimsy": "A blank canvas for botanical surprises 🎨" }
+    "pot19": {
+  "whimsy": "Poblano palace in waiting — soon to sizzle with spicy dreams 🔥🌶️"
+},
+"pot20": { "whimsy": "A blank canvas for botanical surprises 🎨" },
+    "pot21": {
+  "whimsy": "Basil boulevard under construction — Genovese & Thai tenants arriving soon 🍃✨"
+},
     "pot22": {
       "name": "Wandering Jew",
       "species": "Tradescantia zebrina or fluminensis",
