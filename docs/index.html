@@ -30,16 +30,21 @@
     Temporarily peek at the Aquarium sister site
   </a>
 </p>
-  
-  <h1>🌱 Kelly’s Florida Garden</h1>
-
-  <div style="text-align:center; margin:2rem 0; font-size:1.4rem;">
-  <div id="moonPhase" style="display:inline-block; padding:1rem; background:#f0e6ff; border-radius:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-    🌙 <strong>Loading lunar wisdom...</strong> 🌙
-  </div>
+  <div id="moonPhaseCorner" style="position:fixed; top:10px; right:10px; background:#f0e6ff; padding:1rem 1.5rem; border-radius:30px; box-shadow:0 6px 20px rgba(147,112,219,0.3); z-index:999; text-align:center; font-size:1rem; max-width:200px;">
+  🌙 <strong>Loading lunar whispers...</strong> 🌙
 </div>
 
 <script>
+  // Your existing moon phase calculator script here (unchanged)
+  // At the end, update the corner div instead:
+  document.getElementById('moonPhaseCorner').innerHTML = `
+    ${phase.name}<br>
+    <em style="font-size:0.85rem; color:#654;">${phase.advice}</em>
+  `;
+</script>
+  
+
+ <script>
   // Pure JS moon phase calculator — no external libraries needed!
   function getMoonPhase(date) {
     const year = date.getFullYear();
@@ -82,6 +87,8 @@
     <em style="font-size:0.9rem; color:#654;">${phase.advice}</em>
   `;
 </script>
+
+  <h1>🌱 Kelly’s Florida Garden</h1>
 
 <div style="text-align:center; margin:2rem 0; padding:1.5rem; background:#e8f5e9; border-radius:16px; font-size:1.1rem;">
   <strong>Quick Garden Pulse</strong><br>
