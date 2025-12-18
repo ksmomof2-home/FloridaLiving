@@ -107,7 +107,7 @@
   <script src="js/image-list.js?v=2"></script>
 <script>
  // const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
- const images =  window.GARDEN_IMAGE_LIST || [];
+ //const images =  window.GARDEN_IMAGE_LIST || [];
 
   function parseDate(f) {
     const m = f.match(/_(\d{8})/);
@@ -118,7 +118,7 @@
 
   let data = null;
 
-  function renderGallery(weeksBack = 1) {
+  function renderGallery(weeksBack = 1, images = []) {
     if (!data) return;
 
     const gallery = document.getElementById('gallery');
@@ -202,9 +202,16 @@
     .then(r => r.json())
     .then(json => {
       data = json;
+
+//Trying the images assignment here
+       // const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
+      const images =  window.GARDEN_IMAGE_LIST || [];
+      windows.galleryImages = images;
+      
       const select = document.getElementById('timeJump');
       if (select) select.onchange = e => renderGallery(+e.target.value);
-      renderGallery(1);
+      
+      renderGallery(1, window.galleryImages); // send in weeks back and images
     });
 </script>
 </body>
