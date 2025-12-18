@@ -30,12 +30,12 @@
     Temporarily peek at the Aquarium sister site
   </a>
 </p>
-  <div id="moonPhaseCorner" style="position:fixed; top:10px; right:10px; background:#f0e6ff; padding:1rem 1.5rem; border-radius:30px; box-shadow:0 6px 20px rgba(147,112,219,0.3); z-index:999; text-align:center; font-size:1rem; max-width:200px;">
+  <div id="PhaseCorner" style="position:fixed; top:10px; right:10px; background:#f0e6ff; padding:1rem 1.5rem; border-radius:30px; box-shadow:0 6px 20px rgba(147,112,219,0.3); z-index:999; text-align:center; font-size:1rem; max-width:200px;">
   🌙 <strong>Loading lunar whispers...</strong> 🌙
 </div>
 
 <script>
-  // Your existing moon phase calculator script here (unchanged)
+  // Your existing  phase calculator script here (unchanged)
   // At the end, update the corner div instead:
   document.getElementById('moonPhaseCorner').innerHTML = `
     ${phase.name}<br>
@@ -82,7 +82,7 @@
   const today = new Date();
   const phase = getMoonPhase(today);
 
-  document.getElementById('moonPhase').innerHTML = `
+  document.getElementById('moonPhaseCorner').innerHTML = `
     ${phase.name} <br>
     <em style="font-size:0.9rem; color:#654;">${phase.advice}</em>
   `;
