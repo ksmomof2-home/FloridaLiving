@@ -117,11 +117,8 @@
 
   let data = null;
 
-  function renderGallery(weeksBack) {
+  function renderGallery(weeksBack = 1) {
     if (!data) return;
-
-    console.clear();
-    console.log("%c🌟 ROYAL TIME JUMP DECREED! 🌟", "color: #9370db; font-size: 22px; font-weight: bold; padding: 10px; background: #f5f0ff;");
 
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
@@ -144,6 +141,7 @@
       const photos = document.createElement('div');
       photos.className = 'photos';
 
+      // Flat structure — match filenames starting with potXX_
       const potImgs = images
         .filter(f => f.startsWith(id + '_'))
         .map(f => ({file: f, date: parseDate(f)}))
@@ -155,7 +153,6 @@
       } else {
         const newest = potImgs[0];
 
-        // "Now" with link to history
         photos.insertAdjacentHTML('beforeend', `
           <div style="display:inline-block; margin:15px; text-align:center;">
             <a href="pot-history.html?id=${id}">
@@ -164,7 +161,6 @@
             <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
           </div>`);
 
-        // "Then" — variable declared at block level for safety
         let thenPhoto = null;
         if (potImgs.length > 1) {
           if (weeksBack === 999 || weeksBack >= 26) {
@@ -205,7 +201,8 @@
     .then(r => r.json())
     .then(json => {
       data = json;
-      document.getElementById('timeJump').onchange = e => renderGallery(+e.target.value);
+      const select = document.getElementById('timeJump');
+      if (select) select.onchange = e => renderGallery(+e.target.value);
       renderGallery(1);
     });
 </script>
