@@ -106,10 +106,9 @@
     
 <script src="js/image-list.js"></script>
 <script>
-  // Fresh start: Summon the image army (modern name from your generator)
+  // Summon the image army by its true name
   const images = window.GARDEN_IMAGE_LIST || [];
 
-  // Date parser for your YYYYMMDD filenames
   function parseDate(f) {
     const m = f.match(/_(\d{8})/);
     if (!m) return null;
@@ -117,7 +116,6 @@
     return new Date(+s.slice(0,4), +s.slice(4,6)-1, +s.slice(6,8));
   }
 
-  // The render magic — clean and timeless
   function renderGallery(data, weeksBack = 1) {
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
@@ -151,7 +149,6 @@
       } else {
         const newest = potImgs[0];
 
-        // Now — clickable to history
         photos.insertAdjacentHTML('beforeend', `
           <div style="display:inline-block; margin:15px; text-align:center;">
             <a href="pot-history.html?id=${id}">
@@ -160,11 +157,10 @@
             <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
           </div>`);
 
-        // Then — smart selection
         let thenPhoto = null;
         if (potImgs.length > 1) {
           if (weeksBack === 999 || weeksBack >= 26) {
-            thenPhoto = potImgs[potImgs.length - 1]; // absolute oldest for epic
+            thenPhoto = potImgs[potImgs.length - 1];
           } else {
             for (let i = potImgs.length - 1; i >= 1; i--) {
               if (potImgs[i].date <= cutoff) {
@@ -197,19 +193,16 @@
     });
   }
 
-  // Summon the garden blueprint and paint the gallery
+  // Wait for DOM, fetch data, then paint
   document.addEventListener('DOMContentLoaded', () => {
     fetch('garden-data.json')
       .then(r => r.json())
       .then(json => {
-        renderGallery(json, 1); // initial with 1 week
+        renderGallery(json, 1);
 
         const select = document.getElementById('timeJump');
-        if (select) {
-          select.onchange = e => renderGallery(json, +e.target.value);
-        }
-      })
-      .catch(err => console.error('Garden blueprint tangled in vines!', err));
+        if (select) select.onchange = e => renderGallery(json, +e.target.value);
+      });
   });
 </script>
 </body>
