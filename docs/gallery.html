@@ -206,7 +206,7 @@
 //Trying the images assignment here
        // const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
       const images =  window.GARDEN_IMAGE_LIST || [];
-      windows.galleryImages = images;
+      window.galleryImages = images;
       
       const select = document.getElementById('timeJump');
       if (select) select.onchange = e => renderGallery(+e.target.value);
