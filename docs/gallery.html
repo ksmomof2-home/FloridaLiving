@@ -119,9 +119,13 @@
   function renderGallery(data, weeksBack = 1, images = []) {
 //    const images = window.GARDEN_IMAGE_LIST || [];
 
+
+    console.log(images.length);
+    
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
 
+    
     const potIds = Object.keys(data.pots)
       .filter(k => /^pot\d+$/.test(k))
       .sort((a,b) => +a.slice(3) - +b.slice(3));
@@ -225,6 +229,8 @@
     if (images.length === 0) {
       console.warn('Image army empty — check image-list.js load');
       return;
+    } else {
+      console.log('Images loaded');
     }
 
     
