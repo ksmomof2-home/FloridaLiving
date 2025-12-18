@@ -116,8 +116,8 @@
     return new Date(+s.slice(0,4), +s.slice(4,6)-1, +s.slice(6,8));
   }
 
-  function renderGallery(data, weeksBack = 1) {
-    const images = window.GARDEN_IMAGE_LIST || [];
+  function renderGallery(data, weeksBack = 1 images = []) {
+//    const images = window.GARDEN_IMAGE_LIST || [];
 
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
@@ -227,13 +227,15 @@
       return;
     }
 
+    
+
     fetch('garden-data.json')
       .then(r => r.json())
       .then(json => {
-        renderGallery(json, 1); // pass images if needed, or use global
+        renderGallery(json, 1, images); // pass images if needed, or use global
 
         const select = document.getElementById('timeJump');
-        if (select) select.onchange = e => renderGallery(json, +e.target.value);
+        if (select) select.onchange = e => renderGallery(json, +e.target.value, images);
       })
       .catch(err => console.error('Garden blueprint lost!', err));
   });
