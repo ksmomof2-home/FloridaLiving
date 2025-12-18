@@ -34,16 +34,6 @@
   🌙 <strong>Loading lunar whispers...</strong> 🌙
 </div>
 
-<script>
-  // Your existing  phase calculator script here (unchanged)
-  // At the end, update the corner div instead:
-  document.getElementById('moonPhaseCorner').innerHTML = `
-    ${phase.name}<br>
-    <em style="font-size:0.85rem; color:#654;">${phase.advice}</em>
-  `;
-</script>
-  
-
  <script>
   // Pure JS moon phase calculator — no external libraries needed!
   function getMoonPhase(date) {
