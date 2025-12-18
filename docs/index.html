@@ -30,54 +30,6 @@
     Temporarily peek at the Aquarium sister site
   </a>
 </p>
-  <!-- <div id="PhaseCorner" style="position:fixed; top:10px; right:10px; background:#f0e6ff; padding:1rem 1.5rem; border-radius:30px; box-shadow:0 6px 20px rgba(147,112,219,0.3); z-index:999; text-align:center; font-size:1rem; max-width:200px;">
-  🌙 <strong>Loading lunar whispers...</strong> 🌙
-</div>
-
- <script>
-  // Pure JS moon phase calculator — no external libraries needed!
-  function getMoonPhase(date) {
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-
-    let jd;
-    if (month === 1 || month === 2) {
-      const y = year - 1;
-      const m = month + 12;
-      jd = Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + day - 1524.5;
-    } else {
-      jd = Math.floor(365.25 * (year + 4716)) + Math.floor(30.6001 * (month + 1)) + day - 1524.5;
-    }
-
-    const daysSinceNew = jd - 2451550.1;
-    const phaseFraction = (daysSinceNew / 29.530588853) % 1;
-    if (phaseFraction < 0) phaseFraction += 1;
-
-    const phases = [
-      {max: 0.0625, name: "New Moon 🌑", advice: "Rest & plan — the garden dreams anew!"},
-      {max: 0.1875, name: "Waxing Crescent 🌒", advice: "Sow leafy greens — energy rises!"},
-      {max: 0.3125, name: "First Quarter 🌓", advice: "Plant above-ground crops — balance reigns."},
-      {max: 0.4375, name: "Waxing Gibbous 🌔", advice: "Fertilize & water — growth surges!"},
-      {max: 0.5625, name: "Full Moon 🌕", advice: "Harvest fruits & flowers at peak power!"},
-      {max: 0.6875, name: "Waning Gibbous 🌖", advice: "Prune & compost — release what no longer serves."},
-      {max: 0.8125, name: "Last Quarter 🌗", advice: "Tend roots & soil — energy flows downward."},
-      {max: 1.0, name: "Waning Crescent 🌘", advice: "Weed, rest, & prepare — the cycle renews soon."}
-    ];
-
-    const current = phases.find(p => phaseFraction <= p.max) || phases[phases.length-1];
-    return current;
-  }
-
-  const today = new Date();
-  const phase = getMoonPhase(today);
-
-  document.getElementById('moonPhaseCorner').innerHTML = `
-    ${phase.name} <br>
-    <em style="font-size:0.9rem; color:#654;">${phase.advice}</em>
-  `;
-</script> -->
-
   <h1>🌱 Kelly’s Florida Garden</h1>
 
 <div style="text-align:center; margin:2rem 0; padding:1.5rem; background:#e8f5e9; border-radius:16px; font-size:1.1rem;">
