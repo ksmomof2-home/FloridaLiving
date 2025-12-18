@@ -107,7 +107,7 @@
 <script src="js/image-list.js"></script>
 <script>
   // Summon the image army by its true name
-  const images = window.GARDEN_IMAGE_LIST || [];
+//  const images = window.GARDEN_IMAGE_LIST || [];
 
   function parseDate(f) {
     const m = f.match(/_(\d{8})/);
@@ -117,6 +117,8 @@
   }
 
   function renderGallery(data, weeksBack = 1) {
+    const images = window.GARDEN_IMAGE_LIST || [];
+
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
 
@@ -193,8 +195,19 @@
     });
   }
 
-  // Wait for DOM, fetch data, then paint
-  document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('load', () => {
+    // Army is now guaranteed ready
+    if (!window.GARDEN_IMAGE_LIST || window.GARDEN_IMAGE_LIST.length === 0) {
+      console.warn('Image army still assembling — retrying in 100ms');
+      setTimeout(() => renderGallery(data, weeksBack), 100); // gentle retry
+      return;
+    }
+    });
+
+    // Wait for DOM, fetch data, then paint
+
+        document.addEventListener('DOMContentLoaded', () => {
+
     fetch('garden-data.json')
       .then(r => r.json())
       .then(json => {
