@@ -116,7 +116,7 @@
     return new Date(+s.slice(0,4), +s.slice(4,6)-1, +s.slice(6,8));
   }
 
-  function renderGallery(data, weeksBack = 1 images = []) {
+  function renderGallery(data, weeksBack = 1, images = []) {
 //    const images = window.GARDEN_IMAGE_LIST || [];
 
     const gallery = document.getElementById('gallery');
