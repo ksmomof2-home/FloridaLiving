@@ -104,11 +104,12 @@
     <p>May your scroll be gentle and your butterflies plentiful 🌿✨</p>
   </footer
     
-  <script src="js/image-list.js?v=2"></script>
+<script src="js/image-list.js"></script>
 <script>
- // const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
- //const images =  window.GARDEN_IMAGE_LIST || [];
+  // Fresh start: Summon the image army (modern name from your generator)
+  const images = window.GARDEN_IMAGE_LIST || [];
 
+  // Date parser for your YYYYMMDD filenames
   function parseDate(f) {
     const m = f.match(/_(\d{8})/);
     if (!m) return null;
@@ -116,11 +117,8 @@
     return new Date(+s.slice(0,4), +s.slice(4,6)-1, +s.slice(6,8));
   }
 
-  let data = null;
-
-  function renderGallery(weeksBack = 1, images = []) {
-    if (!data) return;
-
+  // The render magic — clean and timeless
+  function renderGallery(data, weeksBack = 1) {
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
 
@@ -142,7 +140,6 @@
       const photos = document.createElement('div');
       photos.className = 'photos';
 
-      // Flat structure — match filenames starting with potXX_
       const potImgs = images
         .filter(f => f.startsWith(id + '_'))
         .map(f => ({file: f, date: parseDate(f)}))
@@ -154,6 +151,7 @@
       } else {
         const newest = potImgs[0];
 
+        // Now — clickable to history
         photos.insertAdjacentHTML('beforeend', `
           <div style="display:inline-block; margin:15px; text-align:center;">
             <a href="pot-history.html?id=${id}">
@@ -162,10 +160,11 @@
             <div style="margin-top:8px; font-style:italic; color:#4a7043; font-weight:bold;">Now</div>
           </div>`);
 
+        // Then — smart selection
         let thenPhoto = null;
         if (potImgs.length > 1) {
           if (weeksBack === 999 || weeksBack >= 26) {
-            thenPhoto = potImgs[potImgs.length - 1];
+            thenPhoto = potImgs[potImgs.length - 1]; // absolute oldest for epic
           } else {
             for (let i = potImgs.length - 1; i >= 1; i--) {
               if (potImgs[i].date <= cutoff) {
@@ -198,21 +197,20 @@
     });
   }
 
-  fetch('garden-data.json')
-    .then(r => r.json())
-    .then(json => {
-      data = json;
+  // Summon the garden blueprint and paint the gallery
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('garden-data.json')
+      .then(r => r.json())
+      .then(json => {
+        renderGallery(json, 1); // initial with 1 week
 
-//Trying the images assignment here
-       // const images = window.allImages || window.GARDEN_IMAGE_LIST || [];
-      const images =  window.GARDEN_IMAGE_LIST || [];
-      window.galleryImages = images;
-      
-      const select = document.getElementById('timeJump');
-      if (select) select.onchange = e => renderGallery(+e.target.value);
-      
-      renderGallery(1, window.galleryImages); // send in weeks back and images
-    });
+        const select = document.getElementById('timeJump');
+        if (select) {
+          select.onchange = e => renderGallery(json, +e.target.value);
+        }
+      })
+      .catch(err => console.error('Garden blueprint tangled in vines!', err));
+  });
 </script>
 </body>
 </html>
