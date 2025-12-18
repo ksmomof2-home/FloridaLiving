@@ -195,27 +195,47 @@
     });
   }
 
-    window.addEventListener('load', () => {
-    // Army is now guaranteed ready
-    if (!window.GARDEN_IMAGE_LIST || window.GARDEN_IMAGE_LIST.length === 0) {
-      console.warn('Image army still assembling — retrying in 100ms');
-      setTimeout(() => renderGallery(data, weeksBack), 100); // gentle retry
+  //   window.addEventListener('load', () => {
+  //   // Army is now guaranteed ready
+  //   if (!window.GARDEN_IMAGE_LIST || window.GARDEN_IMAGE_LIST.length === 0) {
+  //     console.warn('Image army still assembling — retrying in 100ms');
+  //     setTimeout(() => renderGallery(data, weeksBack), 100); // gentle retry
+  //     return;
+  //   }
+  //   });
+
+  //   // Wait for DOM, fetch data, then paint
+
+  //       document.addEventListener('DOMContentLoaded', () => {
+
+  //   fetch('garden-data.json')
+  //     .then(r => r.json())
+  //     .then(json => {
+  //       renderGallery(json, 1);
+
+  //       const select = document.getElementById('timeJump');
+  //       if (select) select.onchange = e => renderGallery(json, +e.target.value);
+  //     });
+  // });
+//NEW CODE
+    // Wait for everything (including image-list.js) to load
+  window.addEventListener('load', () => {
+    const images = window.GARDEN_IMAGE_LIST || [];
+
+    if (images.length === 0) {
+      console.warn('Image army empty — check image-list.js load');
       return;
     }
-    });
-
-    // Wait for DOM, fetch data, then paint
-
-        document.addEventListener('DOMContentLoaded', () => {
 
     fetch('garden-data.json')
       .then(r => r.json())
       .then(json => {
-        renderGallery(json, 1);
+        renderGallery(json, 1); // pass images if needed, or use global
 
         const select = document.getElementById('timeJump');
         if (select) select.onchange = e => renderGallery(json, +e.target.value);
-      });
+      })
+      .catch(err => console.error('Garden blueprint lost!', err));
   });
 </script>
 </body>
