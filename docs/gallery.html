@@ -208,7 +208,7 @@
       gallery.appendChild(card);
     }
   }
-
+  }
   fetch('garden-data.json')
     .then(r => r.json())
     .then(json => {
@@ -216,6 +216,7 @@
       document.getElementById('timeJump').onchange = e => renderGallery(+e.target.value);
       renderGallery(1);
     });
+  
 </script>
   <div class="back" style="text-align:center; margin:4rem 0 2rem; font-size:1.2rem;">
   <a href="index.html" style="color:#4a7043; text-decoration:none; border-bottom:2px dashed #a8d5ba;">
