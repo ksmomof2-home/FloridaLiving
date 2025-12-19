@@ -312,18 +312,18 @@
         // "Then" — variable declared at block level for safety
         let thenPhoto = null;
         if (potImgs.length > 1) {
-          if (weeksBack === 999 || weeksBack >= 26) {
-            thenPhoto = potImgs[potImgs.length - 1];
-          } else {
-            for (let i = potImgs.length - 1; i >= 1; i--) {
-              if (potImgs[i].date <= cutoff) {
-                thenPhoto = potImgs[i];
-                break;
+          let bestDiff = Infinity;
+          for (let i = 1; i < potImgs.length; i++) {
+              const photo = potImgs[i];
+              if (photo.date <= cutoff) {
+                bestDiff = diff;
+                thenPhoto = photo;
               }
             }
-            if (!thenPhoto) thenPhoto = potImgs[potImgs.length - 1];
           }
-        }
+        // If nothing old enough, fall back to absolute oldest for drama
+            if (!thenPhoto) thenPhoto = potImgs[potImgs.length - 1];
+      }
 
         if (thenPhoto && thenPhoto.file !== newest.file) {
           const daysAgo = Math.round((today - thenPhoto.date) / 86400000);
