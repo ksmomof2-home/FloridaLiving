@@ -316,8 +316,11 @@
           for (let i = 1; i < potImgs.length; i++) {
               const photo = potImgs[i];
               if (photo.date <= cutoff) {
+                 const diff = cutoff.getTime() - photo.date.getTime(); // positive difference
+              if (diff < bestDiff) {
                 bestDiff = diff;
                 thenPhoto = photo;
+              }
               } // if photo.date
             } // for i < ptoimgs.length
           } // if potImgs.length > 1
