@@ -326,7 +326,7 @@
           } // if potImgs.length > 1
         // If nothing old enough, fall back to absolute oldest for drama
             if (!thenPhoto) thenPhoto = potImgs[potImgs.length - 1];
-      } // else
+  
 
 
  // ATTEMPT TO REPLACE
@@ -363,7 +363,7 @@
 
       gallery.appendChild(card);
     }
-  
+  }
 
   fetch('garden-data.json')
     .then(r => r.json())
