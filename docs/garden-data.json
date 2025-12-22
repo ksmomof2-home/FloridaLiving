@@ -227,6 +227,22 @@
     }
   },
   "log": [
+        {
+      "date": "2025-12-21",
+      "action": "NEW BUDS - Check out all these buds@",
+      "pots": ["pot07"],
+      "details": "A week ago these were tiny, look at them now",
+      "note": "Not sure, but I think the fertilizer is working",
+      "whimsy": "✨ “The lime tree looked at the calendar, saw ‘Mid December,’ and thought, ‘Perfect time to debut my gazillion-bud holiday light display.’ Someone get this tree a crown.”"
+    },
+    {
+      "date": "2025-12-10",
+      "action": "fertilized",
+      "pots": "all",
+      "details": "Miracle Gro across every pot in the lineup",
+       "note": "Another full-garden feeding for this winter season. Everyone got a festive solstice boost.",
+       "whimsy": "The fertilizer fairy returned with solstice gifts: every pot got a splash of ocean smoothie. The lime tree is now convinced it’s about to drop the juiciest holiday album ever, complete with gazillion-bud backup dancers."
+    }, 
     {
       "date": "2025-12-12",
       "action": "applied annual pesticide",
