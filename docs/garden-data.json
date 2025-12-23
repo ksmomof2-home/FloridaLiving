@@ -236,6 +236,7 @@
 },
 {"date": "2025-12-23",
 "action": "Pests found!",
+  "pots": ["pot11"],
 "details": "When harvested the Oregano I found a few black aphids at the very bottom.",
 "note": "Sprayed the plant with water.",
 "whimsy": "Discovered a tiny black aphid convention uninvited on the oregano. Eviction notice served (neem oil on standby). The rosemary looked on smugly, whispering 'Amateurs.'"
