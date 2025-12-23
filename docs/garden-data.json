@@ -227,6 +227,19 @@
     }
   },
   "log": [
+{ "date": "2025-12-22",
+"action": "Harvested Oregano and Rosemary",
+"pots": ["pot11"],
+"details": "Decided to cut both back because there was so much growth. Hoping to make a rosemary wreath and to dry the oregano",
+"note": "30 6 inch Oregano sprigs, 20 7 inch Rosemary sprigs",
+"whimsy": "Conducted a royal herb coronation ceremony: snipped generous bouquets of oregano and rosemary. The kitchen is now perfumed like an Italian grandmother’s dream, and the plants are already plotting their triumphant regrowth."
+},
+{"date": "2025-12-22",
+"action": "Pests found!",
+"details": "When harvested the Oregano I found a few black aphids at the very bottom.",
+"note": "Sprayed the plant with water.",
+"whimsy": "Discovered a tiny black aphid convention uninvited on the oregano. Eviction notice served (neem oil on standby). The rosemary looked on smugly, whispering 'Amateurs.'"
+},
         {
       "date": "2025-12-21",
       "action": "NEW BUDS - Check out all these buds@",
