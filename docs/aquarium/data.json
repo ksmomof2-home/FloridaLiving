@@ -9,7 +9,7 @@
       "filtration": "Two Fluval canisters + one wall-mounted spare filter",
       "heating": "None — the room is always cozy",
       "decor": "",
-      "photo": "./assets/images/tanks/living-room-tank-20251205_201047.jpg",
+      "photo": "images/tanks/living-room-tank-20251205_201047.jpg",
       "backgroundClass": "living",
       "inhabitants": [
         { "count": "3",     "name": "Yoyo Loaches",          "emoji": "🐡", "note": "the giggling cleanup crew" },
@@ -43,12 +43,12 @@
     {
       "name": "Anubias",
       "description": "Indestructible leaf shields even snails respect",
-      "photo": "assets/images/plants/anubias-20251205_201100.jpg"
+      "photo": "images/plants/anubias-20251205_201100.jpg"
     },
     {
       "name": "Water Sprite",
       "description": "Feathery clouds of oxygen and hiding spots",
-      "photo": "assets/images/plants/water-sprite-20251205_201105.jpg"
+      "photo": "images/plants/water-sprite-20251205_201105.jpg"
     },
     {
       "name": "Moneywort",
