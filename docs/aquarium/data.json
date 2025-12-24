@@ -9,7 +9,7 @@
       "filtration": "Two Fluval canisters + one wall-mounted spare filter",
       "heating": "None — the room is always cozy",
       "decor": "",
-      "photo": "assets/images/living-room-tank.jpg",
+      "photo": "assets/images/tanks/living-room-tank-20251205_201047.jpg",
       "backgroundClass": "living",
       "inhabitants": [
         { "count": "3",     "name": "Yoyo Loaches",          "emoji": "🐡", "note": "the giggling cleanup crew" },
@@ -28,7 +28,7 @@
       "filtration": "One Fluval filter",
       "heating": "Heater keeping it tropical",
       "decor": "Little house + bridge ornament",
-      "photo": "assets/images/office-tank.jpg",
+      "photo": "assets/images/tanks/office-tank-20251205_201541.jpg",
       "backgroundClass": "office",
       "inhabitants": [
         { "count": "13",    "name": "Assassin Snails",       "emoji": "🐌", "note": "silent pest-snail assassins" },
@@ -40,8 +40,20 @@
     }
   ],
   "plants": [
-    { "name": "Anubias",        "description": "Indestructible leaf shields even snails respect",       "photo": "assets/images/anubias.jpg" },
-    { "name": "Water Sprite",   "description": "Feathery clouds of oxygen and hiding spots",          "photo": "assets/images/water-sprite.jpg" },
-    { "name": "Moneywort",      "description": "Long emerald stems reaching for the surface light",    "photo": "assets/images/moneywort.jpg" }
+    {
+      "name": "Anubias",
+      "description": "Indestructible leaf shields even snails respect",
+      "photo": "assets/images/plants/anubiasanubias-20251205_201100.jpg"
+    },
+    {
+      "name": "Water Sprite",
+      "description": "Feathery clouds of oxygen and hiding spots",
+      "photo": "assets/images/plants/water-sprite-20251205_201105.jpg"
+    },
+    {
+      "name": "Moneywort",
+      "description": "Long emerald stems reaching for the surface light (presently on a mystical hiatus—may return someday!)",
+      "photo": ""
+    }
   ]
 }
