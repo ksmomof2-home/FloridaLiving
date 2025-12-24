@@ -226,6 +226,20 @@
       "plantingComments": "Perfect future home for Mediterranean herbs. Your wall is their dream climate."
     }
   },
+  "pests": [
+  {
+    "id": "black-aphids",
+    "name": "Black Aphids",
+    "scientificName": "Aphis fabae (and friends)",
+    "plantsAffected": ["rosemary", "oregano", "basil", "dill", "fennel", "tomatoes", "peppers"],
+    "description": "Tiny shiny black (or dark green) sap-suckers that cluster on tender new growth and stems. They throw wild honeydew parties that invite ants and sooty mold to the festivities.",
+    "signs": "Curled/distorted leaves, sticky honeydew shine, black sooty mold, crowds of tiny dots marching in formation.",
+    "organicControls": "Strong hose blast, insecticidal soap spray, neem oil, reflective mulch, or invite ladybugs and lacewings to dine.",
+    "whimsy": "Miniature gothic vampires hosting underground raves on your herbs. Send in the polka-dot cavalry! 🧛‍♀️🖤✨",
+    "image": "black-aphids-pot11_20251222_152017.jpg",
+    "isBeneficial": false
+  }
+],
   "log": [
 { "date": "2025-12-22",
 "action": "Harvested Oregano and Rosemary",
