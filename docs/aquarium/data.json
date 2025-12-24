@@ -55,5 +55,84 @@
       "description": "Long emerald stems reaching for the surface light (presently on a mystical hiatus—may return someday!)",
       "photo": ""
     }
+  ],
+  "inhabitantGalleries": [
+    {
+      "species": "Yoyo Loach",
+      "caption": "The giggling cleanup crew striking poses",
+      "photos": [
+        "images/inhabitants/yoyo/YoYos-2-20251205_201056.jpg",
+        "images/inhabitants/yoyo/yoyo2-20251205_201218.jpg"
+      ]
+    },
+    {
+      "species": "Bronze Corydoras",
+      "caption": "Tiny armored vacuum cleaners and their momma",
+      "photos": [
+        "images/inhabitants/cory/Corys-20251205_201206.jpg",
+        "images/inhabitants/cory/Momma-Cory-20251205_201130.jpg",
+        "images/inhabitants/cory/Momma-Cory-Yoyo-20251205_201447.jpg"
+      ]
+    },
+    {
+      "species": "Orange Swordtail",
+      "caption": "Elegant livebearer royalty",
+      "photos": [
+        "images/inhabitants/orange-swordtail/Orange-Swordtail-Male-20251205_201452.jpg",
+        "images/inhabitants/orange-swordtail/Orange-Swordtail-Male1-20251205_201225.jpg",
+        "images/inhabitants/orange-swordtail/Orange-Swordtail-Mom-20251205_201223.jpg",
+        "images/inhabitants/orange-swordtail/Orange-Swordtail-Momma-20251205_201237.jpg"
+      ]
+    },
+    {
+      "species": "Assassin Snail",
+      "caption": "Silent pest-snail avengers",
+      "photos": [
+        "images/inhabitants/assassin-snail/assasin-snail-20251205_201624.jpg",
+        "images/inhabitants/assassin-snail/assasin-snail-20251205_201828.jpg"
+      ]
+    },
+    {
+      "species": "Nerite Snail",
+      "caption": "Algae-munching wanderers",
+      "photos": [
+        "images/inhabitants/nerite-snail/Nerite-snail-20251205_201254.jpg"
+      ]
+    },
+    {
+      "species": "Neon Tetra",
+      "caption": "Tiny glowing embers",
+      "photos": [
+        "images/inhabitants/neon-tetra/Tetras-Neon-20251205_201551.jpg"
+      ]
+    },
+    {
+      "species": "Zebra Danio",
+      "caption": "Zippy striped rockets",
+      "photos": [
+        "images/inhabitants/zebra/zebra-20251205_201726.jpg",
+        "images/inhabitants/zebra/zebras-all4-20251205_201600.jpg"
+      ]
+    }
+  ],
+  "decorations": [
+    {
+      "name": "Graceful Bridge",
+      "caption": "A pathway for dashing adventures and hide-and-seek",
+      "photo": "images/decorations/bridge-20251205_201658.jpg"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Fluval Filters",
+      "caption": "Keepers of crystal-clear currents (the twin canisters)",
+      "photo": "images/tools/Fluval-2-Filters-20251205_201319.jpg"
+    },
+    {
+      "name": "AquaClear Filter",
+      "caption": "The wall-mounted wonder assisting the flow",
+      "photo": "images/tools/AquaClear-Filter-20251205_201314.jpg"
+    }
   ]
 }
+
