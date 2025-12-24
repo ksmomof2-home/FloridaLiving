@@ -80,6 +80,66 @@
                         `).join('')}
                     </div>`;
                 app.appendChild(plantsSec);
+
+                                // === Inhabitant Galleries ===
+                const inhabitantsSec = document.createElement('section');
+                inhabitantsSec.className = 'gallery';
+                inhabitantsSec.innerHTML = `
+                    <h2 id="inhabitants">Portraits of the Underwater Citizens</h2>
+                    <p>A rogue's gallery of close-ups from the depths</p>
+                    <div class="photo-grid">
+                        ${data.inhabitantGalleries.map(g => `
+                            <div class="species-card">
+                                <h3>${g.species}</h3>
+                                <p class="caption">${g.caption}</p>
+                                <div class="species-photos">
+                                    ${g.photos.map(p => `<img src="${p}" alt="${g.species}" class="critter">`).join('')}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                app.appendChild(inhabitantsSec);
+
+                // === Decorations ===
+                if (data.decorations && data.decorations.length > 0) {
+                    const decorSec = document.createElement('section');
+                    decorSec.className = 'gallery';
+                    decorSec.innerHTML = `
+                        <h2>Enchanted Accents</h2>
+                        <p>Hidden nooks and charming hideaways</p>
+                        <div class="photo-grid">
+                            ${data.decorations.map(d => `
+                                <div class="plant"> <!-- Reuse plant style for consistency -->
+                                    <img src="${d.photo}" alt="${d.name}">
+                                    <h3>${d.name}</h3>
+                                    <p>${d.caption}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    app.appendChild(decorSec);
+                }
+
+                // === Tools ===
+                if (data.tools && data.tools.length > 0) {
+                    const toolsSec = document.createElement('section');
+                    toolsSec.className = 'gallery';
+                    toolsSec.innerHTML = `
+                        <h2>Behind the Bubbles: The Wizard's Toolkit</h2>
+                        <p>Artifacts that sustain the underwater magic</p>
+                        <div class="photo-grid">
+                            ${data.tools.map(t => `
+                                <div class="plant">
+                                    <img src="${t.photo}" alt="${t.name}">
+                                    <h3>${t.name}</h3>
+                                    <p>${t.caption}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    app.appendChild(toolsSec);
+                }
             });
     </script>
 </body>
