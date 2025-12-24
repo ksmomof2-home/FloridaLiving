@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Same head as your other pages: title, meta, CSS links, etc. -->
+  <title>Garden Guardians & Tiny Troublemakers 🦋🦗</title>
+</head>
+<body>
+  <header>
+    <h1>Guardians & Tiny Troublemakers</h1>
+    <p class="subtitle">The uninvited (and very invited) guests in our fence-line fairy realm</p>
+    <a href="index.html">← Back to the Garden Grid</a>
+  </header>
+
+  <div class="pest-gallery" id="pestGallery"></div>
+
+  <script src="js/garden.js"></script>
+  <script>
+    fetch('garden-data.json')
+      .then(response => response.json())
+      .then(data => {
+        const gallery = document.getElementById('pestGallery');
+        const troublemakers = data.pests.filter(p => !p.isBeneficial);
+        const guardians = data.pests.filter(p => p.isBeneficial);
+
+        const makeCard = (p) => `
+          <div class="pest-card ${p.isBeneficial ? 'guardian' : 'gremlin'}">
+            ${p.image ? `<img src="assets/images/pests/${p.image}" alt="${p.name}">` : ''}
+            <h2>${p.name} ${p.isBeneficial ? '🦸‍♀️' : '🦹‍♀️'}</h2>
+            ${p.scientificName ? `<p class="sci"><em>${p.scientificName}</em></p>` : ''}
+            <p>${p.description}</p>
+            ${p.signs ? `<p><strong>Signs of mischief:</strong> ${p.signs}</p>` : ''}
+            ${p.organicControls ? `<p><strong>Organic defenses:</strong> ${p.organicControls}</p>` : ''}
+            ${p.whimsy ? `<div class="whimsy-box">${p.whimsy}</div>` : ''}
+          </div>
+        `;
+
+        gallery.innerHTML = `
+          <h2 class="section-title gremlin">Tiny Troublemakers 🦹‍♀️</h2>
+          ${troublemakers.map(makeCard).join('')}
+          <h2 class="section-title guardian">Garden Guardians 🦸‍♀️🦸</h2>
+          ${guardians.map(makeCard).join('')}
+        `;
+      });
+  </script>
+
+  <!-- Reuse your existing CSS for .whimsy-box, cards, etc. Add colors: gremlin red/purple, guardian green/gold -->
+</body>
+</html>
