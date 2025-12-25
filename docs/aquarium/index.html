@@ -93,7 +93,7 @@
                                 <h3>${g.species}</h3>
                                 <p class="caption">${g.caption}</p>
                                 <div class="species-photos">
-                                    ${g.photos.map(p => `<img src="${p}" alt="${g.species}" class="critter">`).join('')}
+                                    ${g.photos.map(p => `<img src="assets/${p}" alt="${g.species}" class="critter">`).join('')}
                                 </div>
                             </div>
                         `).join('')}
@@ -111,7 +111,7 @@
                         <div class="photo-grid">
                             ${data.decorations.map(d => `
                                 <div class="plant"> <!-- Reuse plant style for consistency -->
-                                    <img src="${d.photo}" alt="${d.name}">
+                                    <img src="assets/${d.photo}" alt="${d.name}">
                                     <h3>${d.name}</h3>
                                     <p>${d.caption}</p>
                                 </div>
@@ -131,7 +131,7 @@
                         <div class="photo-grid">
                             ${data.tools.map(t => `
                                 <div class="plant">
-                                    <img src="${t.photo}" alt="${t.name}">
+                                    <img src="assets/${t.photo}" alt="${t.name}">
                                     <h3>${t.name}</h3>
                                     <p>${t.caption}</p>
                                 </div>
