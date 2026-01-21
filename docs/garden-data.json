@@ -241,21 +241,39 @@
   }
 ],
   "log": [
-{ "date": "2025-12-22",
-"action": "Harvested Oregano and Rosemary",
-"pots": ["pot11"],
-"details": "Decided to cut both back because there was so much growth. Hoping to make a rosemary wreath and to dry the oregano",
-"note": "30 6 inch Oregano sprigs, 20 7 inch Rosemary sprigs",
-"whimsy": "Conducted a royal herb coronation ceremony: snipped generous bouquets of oregano and rosemary. The kitchen is now perfumed like an Italian grandmother’s dream, and the plants are already plotting their triumphant regrowth."
-},
-{"date": "2025-12-23",
-"action": "Pests found!",
-  "pots": ["pot11"],
-"details": "When harvested the Oregano I found a few black aphids at the very bottom.",
-"note": "Sprayed the plant with water.",
-"whimsy": "Discovered a tiny black aphid convention uninvited on the oregano. Eviction notice served (neem oil on standby). The rosemary looked on smugly, whispering 'Amateurs.'"
-},
-        {
+     {
+      "date": "2026-01-11",
+      "action": "fertilized",
+      "pots": ["pot01", "pot02", "pot03", "pot05", "pot07","pot08", "pot09", "pot19", "pot21", "pot23"],
+      "details": "Miracle Gro across every pot in the lineup",
+      "note": "Gave the whole crew another gentle winter boost with diluted liquid fertilizer. Roots happy, leaves perky.",
+"whimsy": "Today the fertilizer fairy showed up wearing roller skates and zoomed around flinging sparkly green goodness. The tomato immediately started breakdancing across the pot rim in celebration."
+     },
+    { 
+      "date": "2026-01-08",
+      "action": "Harvested Parsley",
+      "pots": ["pot10"],
+      "details": "The parsley was getting overgrown, cut at least 60 stalks",
+      "note": "Big parsley harvest today—filled a whole salad spinner. Plant still looks happy and bushy; plenty left for continuous picking.",
+      "whimsy": "Staged a peaceful coup in pot10: parsley surrendered a mountain of curly green hostages to the kitchen. The remaining stems are now plotting their revenge regrowth with extra sass and extra flavor."
+      },
+    { 
+      "date": "2025-12-22",
+      "action": "Harvested Oregano and Rosemary",
+      "pots": ["pot11"],
+      "details": "Decided to cut both back because there was so much growth. Hoping to make a rosemary wreath and to dry the oregano",
+      "note": "30 6 inch Oregano sprigs, 20 7 inch Rosemary sprigs",
+      "whimsy": "Conducted a royal herb coronation ceremony: snipped generous bouquets of oregano and rosemary. The kitchen is now perfumed like an Italian grandmother’s dream, and the plants are already plotting their triumphant regrowth."
+      },
+    {
+      "date": "2025-12-23",
+      "action": "Pests found!",
+      "pots": ["pot11"],
+      "details": "When harvested the Oregano I found a few black aphids at the very bottom.",
+      "note": "Sprayed the plant with water.",
+      "whimsy": "Discovered a tiny black aphid convention uninvited on the oregano. Eviction notice served (neem oil on standby). The rosemary looked on smugly, whispering 'Amateurs.'"
+      },
+    {
       "date": "2025-12-21",
       "action": "NEW BUDS - Check out all these buds@",
       "pots": ["pot07"],
